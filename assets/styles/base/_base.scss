@@ -24,3 +24,17 @@ img {
     background-color: #f4f7f9;
     min-height: 100vh;
 }
+
+.overlay-model{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1000;
+
+    &.active {
+        display: flex;
+    }
+}
