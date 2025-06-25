@@ -1,0 +1,126 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.banner-container {
+    position: relative;
+    background-color: #404eed;
+    color: white;
+
+    .banner__bg {
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(64, 78, 237, 0.8),
+            #404eed
+        );
+    }
+
+    .banner__bg-img {
+        position: absolute;
+        opacity: 0.2;
+        inset: 0;
+        background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029&auto=format&fit=crop');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .banner__content {
+        position: relative;
+        margin: 0 auto;
+        padding: 64px 16px;
+        max-width: 1200px;
+        color: white;
+        text-align: center;
+
+        &-title {
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: white;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 40px;
+
+            @media (min-width: 768px) {
+                font-size: 48px;
+                line-height: 1;
+            }
+        }
+
+        &-description {
+            opacity: 0.9;
+            margin: 0 auto;
+            margin-bottom: 32px;
+            max-width: 768px;
+            color: white;
+            font-size: 18px;
+            line-height: 28px;
+
+            @media (min-width: 768px) {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+        .banner__search-form {
+            margin: 0 auto;
+            max-width: 672px;
+
+            .banner__search-bar {
+                position: relative;
+                z-index: 20;
+
+                .banner__search-icon {
+                    display: flex;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    align-items: center;
+                    padding-left: 12px;
+                    pointer-events: none;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                        color: $gray-500;
+                    }
+                }
+
+                .banner__search-input {
+                    display: block;
+                    border: none;
+                    border-radius: 9999px;
+                    padding-top: 12px;
+                    padding-right: 16px;
+                    padding-bottom: 12px;
+                    padding-left: 40px;
+                    width: 100%;
+                    color: $gray-900;
+                    font-size: 16px;
+                    line-height: 24px;
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: 0 0 0 2px #5865f2;
+                    }
+
+                    &::placeholder {
+                        color: $gray-500;
+                    }
+                }
+            }
+        }
+    }
+
+    .banner__footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        line-height: 0;
+
+        svg {
+            width: 100%;
+        }
+    }
+}
