@@ -1,0 +1,24 @@
+# Assets directory difination
+
+-   **image/** - Contains all images
+-   **plugins/** - All third-party libraries like wow.js , animate.css , bootstrap will be here. By default this framework included 4 libraries. They are -
+    -   [Twitter Bootstrap](https://github.com/twbs/bootstrap) - The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
+    -   [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) - The iconic font and CSS toolkit
+    -   [jquery](https://github.com/jquery/jquery) - Javascript library for make javascript easy
+    -   [JQuery MeanMenu](https://github.com/meanthemes/meanMenu) - Jquery plugin for responsive mobile menu.
+-   **styles/**
+    -   **style.scss** - Contains all scss pertials
+    -   **abstracts/**
+        -   **\_functions.scss** - This file contains all application-wide Sass functions.
+        -   **\_mixins.scss** - This file contains all application-wide Sass mixins.
+        -   **\_mixins.scss** - This file contains all application-wide Sass mixins.
+        -   **\_variables.scss** - This file contains all application-wide Sass variables.
+    -   **base/**
+        -   **\_base.scss** - This file contains very basic styles.
+        -   **\_fonts.scss** - This file contains all @font-face declarations, if any.
+        -   **\_helpers.scss** - This file contains CSS helper classes.
+        -   **\_typography.scss** - Basic typography style for copy text
+    -   **components/** - This directory will holds your project's components partials scss files such as `_buttons.scss` , `_tab.scss` , `_accordion.scss` ...
+    -   **layout/** - This directory contains all styles of application layouts such as `_header.scss` , `_sidebar.scss` etc...
+    -   **pages/** - Page specific scss partials file will be here.
+    -   **themes/** - If your project has several theme , then these theme specified scss pertials will be here.
