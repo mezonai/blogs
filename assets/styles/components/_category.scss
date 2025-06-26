@@ -19,8 +19,17 @@
     &-icon {
       width: 32px;
       height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 8px;
-      background: $brand-color;
+      background-color: $brand-color;
+
+      svg {
+        width: 20px;
+        width: 20px;
+        color: $light-grey;
+      }
     }
 
     &-name {
@@ -143,10 +152,19 @@
         gap: 12px;
 
         &-icon {
-          width: 30px;
-          height: 30px;
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           border-radius: 8px;
           background-color: $brand-color;
+
+          svg {
+            width: 20px;
+            width: 20px;
+            color: $light-grey;
+          }
         }
 
         &-name {
