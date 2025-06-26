@@ -15,9 +15,11 @@ $font-roboto: 'Roboto', sans-serif;
 
 $text-color: rgb(34, 34, 34) !default;
 
+$title-color: rgb(31 41 55);
+
 $brand-color: rgb(229, 0, 80) !default;
 
-$light-grey: rgb(237, 237, 237) !default;
+$light-grey:rgb(255 255 255) !default;
 
 $mid-grey: rgb(153, 153, 153) !default;
 
@@ -29,6 +31,10 @@ $gray-500: rgb(107, 114, 128) !default;
 $gray-600: rgb(75, 85, 99) !default;
 $gray-700: rgb(55, 65, 81) !default;
 $gray-900: rgb(17, 24, 39) !default;
+
+$category-selected: rgb(88 101 242);
+
+$category-hover: rgb(243 244 246);
 
 $assets-dir: 'assets/' !default;
 $images-dir: 'assets/images/' !default;

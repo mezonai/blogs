@@ -1,3 +1,22 @@
+const categoryDropdown = document.getElementById("categoryDropdown");
+const overlayModal = document.getElementById("overlayModel");
+const closeBtn = document.getElementById("closeBtn");
+
+categoryDropdown.addEventListener("click", () => {
+    overlayModal.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+    overlayModal.classList.remove("active");
+});
+
+// Optional: click outside to close
+overlayModal.addEventListener("click", (e) => {
+    if (e.target === overlayModal) {
+        overlayModal.classList.remove("active");
+    }
+});
+
 const header = document.querySelector('#header');
 const menuBar = document.querySelector('.menu__bar');
 const mobileMenu = document.querySelector('.mobile-menu');
