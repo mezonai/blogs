@@ -58,28 +58,33 @@
 .category-modal{
   width: 100%;
 
-  .category__header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-
-    &-title{
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 28px;
-      color: $title-color;
-    }
-
-    &-close--btn{
-      height: 36px;
-      width: 36px;
-      padding: 8px;
-      border-radius: 9999px;
-      cursor: pointer;
-
-      &:hover{
-        background-color: $category-hover;
+  .category {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    
+    .category__header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+  
+      &-title{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: $title-color;
+      }
+  
+      &-close--btn{
+        height: 36px;
+        width: 36px;
+        padding: 8px;
+        border-radius: 9999px;
+        cursor: pointer;
+  
+        &:hover{
+          background-color: $category-hover;
+        }
       }
     }
   }
