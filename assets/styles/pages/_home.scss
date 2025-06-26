@@ -7,21 +7,33 @@
     .main-container {
         background-color: #f6f6f7;
         padding-bottom: 48px;
-        min-height: 100vh;
+        // min-height: 100vh;
 
         .main-content {
-            padding-left: 32px;
-            padding-right: 32px;
-            margin-top: 32px;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-top: 16px;
             margin-left: auto;
             margin-right: auto;
+            max-width: 1200px;
+            width: 100%;
+
+            @include min-media(large) {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+
+            @include min-media(tablet) {
+                padding-left: 24px;
+                padding-right: 24px;
+                margin-top: 32px;
+            }
 
             &__wrap {
                 margin: auto;
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
-                max-width: 1200px;
 
                 @include min-media(large) {
                     flex-direction: row;

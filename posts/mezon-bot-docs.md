@@ -29,7 +29,7 @@ Creating a Bot account is a pretty straightforward process.
 
     ![mezon-bot-003](/assets/images/mezon-bot-003.png)
 
--   Use `Bot Id` as token to login when using **[Mezon SDK](mezon-sdk-docs.md)**
+-   Use `Bot Id` as token to login when using **[Mezon SDK](/posts/mezon-sdk-docs)**
 
 ## Inviting Your Bot
 

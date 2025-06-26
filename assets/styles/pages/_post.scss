@@ -1,9 +1,16 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
 .post-container {
     margin: 0 auto;
     background-color: #f6f6f7;
     padding-bottom: 48px;
     max-width: 1200px;
     min-height: 100vh;
+
+    @include min-media(small) {
+        padding: 0 16px;
+    }
 
     &__back {
         display: flex;
