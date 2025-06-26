@@ -144,7 +144,8 @@ title: Mezon Blog
         <div class="doc">
             <div class="doc__title">3 Results found</div>
             <div class="doc__wrap">
-                <div class="doc__wrap-item">
+                {% for post in posts %}
+                <a href="{{ post.url }}" class="doc__wrap-item">
                     <div class="doc__wrap-item-image">
                         <img src="https://mezon.ai/clans/no_banner.8e68bd3bc32b0ede.jpg" />
                     </div>
@@ -153,9 +154,9 @@ title: Mezon Blog
                             <div class="item__group-image">
                                 <img src="assets/images/Logo_mezon_light.png" alt="mezon" />
                             </div>
-                            <div class="item__group-name">MEZON MONTHLY BOT CHALLENGE</div>
+                            <div class="item__group-name">{{ post.title }}</div>
                         </div>
-                        <div class="item__type">Community clan</div>
+                        <div class="item__type">{{ post.author }}</div>
                         <div class="item__group">
                             <div class="item__group-online">
                                 <div class="item__group-online-icon"></div>
@@ -176,73 +177,8 @@ title: Mezon Blog
                             </span>
                         </div>
                     </div>
-                </div>
-                <div class="doc__wrap-item">
-                    <div class="doc__wrap-item-image">
-                        <img src="https://mezon.ai/clans/no_banner.8e68bd3bc32b0ede.jpg" />
-                    </div>
-                    <div class="doc__wrap-item-content">
-                        <div class="item__group">
-                            <div class="item__group-image">
-                                <img src="assets/images/Logo_mezon_light.png" alt="mezon" />
-                            </div>
-                            <div class="item__group-name">MEZON MONTHLY BOT CHALLENGE</div>
-                        </div>
-                        <div class="item__type">Community clan</div>
-                        <div class="item__group">
-                            <div class="item__group-online">
-                                <div class="item__group-online-icon"></div>
-                                <div class="item__group-online-text">6 Online</div>
-                            </div>
-                            <div class="item__group-dot"></div>
-                            <div class="item__group-members">350 Members</div>
-                        </div>
-                        <div>
-                            <span class="item__status">
-                                <svg class="w-3 h-3 sm:w-4 sm:h-4 text-gray-400" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                VERIFIED
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="doc__wrap-item">
-                    <div class="doc__wrap-item-image">
-                        <img src="https://mezon.ai/clans/no_banner.8e68bd3bc32b0ede.jpg" />
-                    </div>
-                    <div class="doc__wrap-item-content">
-                        <div class="item__group">
-                            <div class="item__group-image">
-                                <img src="assets/images/Logo_mezon_light.png" alt="mezon" />
-                            </div>
-                            <div class="item__group-name">MEZON MONTHLY BOT CHALLENGE</div>
-                        </div>
-                        <div class="item__type">Community clan</div>
-                        <div class="item__group">
-                            <div class="item__group-online">
-                                <div class="item__group-online-icon"></div>
-                                <div class="item__group-online-text">6 Online</div>
-                            </div>
-                            <div class="item__group-dot"></div>
-                            <div class="item__group-members">350 Members</div>
-                        </div>
-                        <div>
-                            <span class="item__status">
-                                <svg class="w-3 h-3 sm:w-4 sm:h-4 text-gray-400" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                VERIFIED
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                </a>
+                {% endfor %}
             </div>
         </div>
     </div>
