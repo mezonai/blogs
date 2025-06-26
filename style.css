@@ -2690,11 +2690,6 @@ ul.linear-list li {
   color: #5865f2;
   text-decoration: none;
 }
-#header .header-container .header-content .menu__nav .menu__nav-items .menu__nav-item:last-child {
-  text-decoration-line: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
 #header .header-container .header-content .menu__bar {
   width: fit-content;
 }
@@ -2724,11 +2719,62 @@ ul.linear-list li {
   background-color: rgb(243, 244, 246);
   color: rgb(17, 24, 39);
 }
+#header .mobile-menu {
+  display: none;
+  position: fixed;
+  top: 72px;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgb(243, 244, 246);
+  background-color: white;
+}
+@media all and (min-width: 768px) {
+  #header .mobile-menu {
+    display: none;
+  }
+}
+#header .mobile-menu .mobile-menu__content {
+  margin: 0 auto;
+  padding: 12px 16px;
+  max-width: 1200px;
+}
+#header .mobile-menu .mobile-menu__content .mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#header .mobile-menu .mobile-menu__content .mobile-menu__nav .mobile-menu__nav-item {
+  transition: color 0.2s ease;
+  transition-property: background-color, border-color;
+  padding: 12px 16px;
+  padding: 8px 0;
+  color: rgb(75, 85, 99);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+}
+#header .mobile-menu .mobile-menu__content .mobile-menu__nav .mobile-menu__nav-item:hover {
+  color: #5865f2;
+}
 
 #header.scrolled {
   backdrop-filter: blur(12px);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.selected {
+  color: #5865f2 !important;
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 4px !important;
+}
+
+.mobile-menu.active {
+  display: block !important;
 }
 
 /* --------------------- 2.2 Footer --------------------- */
@@ -2938,6 +2984,7 @@ ul.linear-list li {
   line-height: 0;
 }
 .banner-container .banner__footer svg {
+  transform: translateY(1px);
   width: 100%;
 }
 
