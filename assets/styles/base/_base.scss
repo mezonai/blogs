@@ -25,7 +25,7 @@ img {
     min-height: 100vh;
 }
 
-.overlay-model{
+.overlay-model {
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.4);
@@ -39,26 +39,45 @@ img {
     }
 }
 
-.bg-gradient-all{
-    background-image: linear-gradient(to bottom right, #818cf8 , #a855f7);
+.bg-gradient-all {
+    background-image: linear-gradient(to bottom right, #818cf8, #a855f7);
 }
 
 .bg-gradient-gaming {
-    background-image: linear-gradient(to bottom right, #34d399 , #14b8a6);
+    background-image: linear-gradient(to bottom right, #34d399, #14b8a6);
 }
 
 .bg-gradient-entertainment {
-    background-image: linear-gradient(to bottom right, #facc15 , #f97316);
+    background-image: linear-gradient(to bottom right, #facc15, #f97316);
 }
 
 .bg-gradient-education {
-    background-image: linear-gradient(to bottom right, #4ade80 , #059669);
+    background-image: linear-gradient(to bottom right, #4ade80, #059669);
 }
 
 .bg-gradient-science {
-    background-image: linear-gradient(to bottom right, #60a5fa , #06b6d4);
+    background-image: linear-gradient(to bottom right, #60a5fa, #06b6d4);
 }
 
 .bg-gradient-music {
-    background-image: linear-gradient(to bottom right, #f472b6 , #f43f5e);
+    background-image: linear-gradient(to bottom right, #f472b6, #f43f5e);
+}
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6366f1;
+    border-radius: 9999px;
+
+    &:hover {
+        background: #cbd5e1;
+    }
 }
