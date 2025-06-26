@@ -107,6 +107,19 @@ img {
   background: #cbd5e1;
 }
 
+.copy__icon--button-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.copy__icon--button-inner:hover {
+  background: #c6c7c9;
+}
+
 /* --------------------- 1.2 Fonts --------------------- */
 @font-face {
   font-family: "gg sans";
@@ -3577,10 +3590,6 @@ pre {
   white-space: pre;
   padding: 1em;
   border-radius: 0.5rem;
-}
-
-pre code {
-  white-space: pre;
 }
 
 /**
