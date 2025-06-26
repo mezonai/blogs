@@ -7,8 +7,13 @@
     padding-bottom: 48px;
     max-width: 1200px;
     min-height: 100vh;
+    overflow-wrap: break-word;
 
-    @include min-media(small) {
+    @include media-width(1200) {
+        padding: 0 32px;
+    }
+
+    @include media(medium) {
         padding: 0 16px;
     }
 
@@ -34,11 +39,12 @@
 
 table {
     margin: 20px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     border-collapse: collapse;
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    display: block;
+    max-width: 100%;
 }
 
 table th,
