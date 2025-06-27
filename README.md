@@ -1,24 +1,96 @@
-# Assets directory difination
+# Mezon Blogs with Eleventy (11ty)
 
--   **image/** - Contains all images
--   **plugins/** - All third-party libraries like wow.js , animate.css , bootstrap will be here. By default this framework included 4 libraries. They are -
-    -   [Twitter Bootstrap](https://github.com/twbs/bootstrap) - The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
-    -   [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) - The iconic font and CSS toolkit
-    -   [jquery](https://github.com/jquery/jquery) - Javascript library for make javascript easy
-    -   [JQuery MeanMenu](https://github.com/meanthemes/meanMenu) - Jquery plugin for responsive mobile menu.
--   **styles/**
-    -   **style.scss** - Contains all scss pertials
-    -   **abstracts/**
-        -   **\_functions.scss** - This file contains all application-wide Sass functions.
-        -   **\_mixins.scss** - This file contains all application-wide Sass mixins.
-        -   **\_mixins.scss** - This file contains all application-wide Sass mixins.
-        -   **\_variables.scss** - This file contains all application-wide Sass variables.
-    -   **base/**
-        -   **\_base.scss** - This file contains very basic styles.
-        -   **\_fonts.scss** - This file contains all @font-face declarations, if any.
-        -   **\_helpers.scss** - This file contains CSS helper classes.
-        -   **\_typography.scss** - Basic typography style for copy text
-    -   **components/** - This directory will holds your project's components partials scss files such as `_buttons.scss` , `_tab.scss` , `_accordion.scss` ...
-    -   **layout/** - This directory contains all styles of application layouts such as `_header.scss` , `_sidebar.scss` etc...
-    -   **pages/** - Page specific scss partials file will be here.
-    -   **themes/** - If your project has several theme , then these theme specified scss pertials will be here.
+A simple, fast, and modern static blog built using [Eleventy (11ty)](https://www.11ty.dev/) — a powerful and flexible static site generator.
+
+## 🚀 Features
+
+-   Markdown-based blog posts
+-   Clean and minimal layout
+-   SEO-friendly (meta tags, sitemap, etc.)
+-   Local development with hot reload
+
+## 🛠️ Tech Stack
+
+-   [Eleventy (11ty)](https://www.11ty.dev/)
+-   [Nunjucks](https://mozilla.github.io/nunjucks/)
+-   Markdown
+-   SCSS / CSS
+-   JSON data files
+
+---
+
+## 📂 Project Structure
+
+```plaintext
+.
+├── _data/             # Global data files (e.g., posts.json)
+├── _includes/         # Reusable layout/templates (Nunjucks/HTML)
+├── _site/             # Build output (auto-generated)
+├── assets/            # Static assets
+│   ├── fonts/         # Custom fonts
+│   ├── images/        # Images used in posts/templates
+│   ├── plugins/       # Optional JS/CSS plugins
+│   ├── styles/        # Custom SCSS/CSS styles
+│   └── main.js        # Main JS entry point
+├── posts/             # Markdown blog posts
+├── style.css          # Compiled CSS
+├── .eleventy.js       # Eleventy config file
+├── index.html         # Main homepage layout
+├── package.json       # Project metadata & scripts
+└── README.md          # Project documentation
+```
+
+## 🚀 Getting Started
+
+Follow these steps to get the blog running locally on your machine.
+
+1. Clone the repository.
+
+```
+git clone https://github.com/mezonai/blogs.git
+cd blogs
+```
+
+2. Install dependencies.
+
+```
+npm install
+```
+
+3. Run the development server
+
+```
+npm run build  // Compile the site once into the _site/ folder
+npm run start  // Starts local dev server at http://localhost:8080 with auto-reload
+npm run dev    // Same as 'start' but explicitly includes file watching (--watch)
+
+```
+
+4. Add new post.
+
+-   Create a new Markdown file inside the posts/ directory:
+
+```
+---
+layout: postLayout.html
+title: "post-title"
+---
+Write your content here in **Markdown**.
+```
+
+-   Add new data in \_data/post.json
+
+```
+example:
+{
+    "title": "Mezon Webhook Docs",
+    "author": "Mezon",
+    "url": "posts/mezon-webhook-docs",
+    "views": 999,
+    "likes": 928
+}
+```
+
+> [!NOTE]
+> your-file-name.md
+> The post url must be 'posts/your-file-name'

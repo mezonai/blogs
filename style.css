@@ -3592,6 +3592,11 @@ pre {
   border-radius: 0.5rem;
 }
 
+pre code {
+  white-space: pre;
+  overflow-x: auto;
+}
+
 /**
  * ---------------------------------------------------
  * 	5.  Themes
