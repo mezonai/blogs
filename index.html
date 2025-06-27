@@ -160,10 +160,14 @@ title: Mezon Blog
                         <div class="item__group">
                             <div class="item__group-online">
                                 <div class="item__group-online-icon"></div>
-                                <div class="item__group-online-text">6 Online</div>
+                                <div class="item__group-online-text">{{ post.views }} {% if post.views > 1 %}views{%
+                                    else %}view{% endif
+                                    %}</div>
                             </div>
                             <div class="item__group-dot"></div>
-                            <div class="item__group-members">350 Members</div>
+                            <div class="item__group-members">{{ post.likes }} {% if post.likes > 1 %}likes{% else
+                                %}like{% endif
+                                %}</div>
                         </div>
                         <div class="item__status">
                             <span class="item__status-wrap">
