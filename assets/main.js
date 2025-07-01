@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Optional: click outside to close
     if (overlayModal) {
         overlayModal.addEventListener('click', (e) => {
             if (e.target === overlayModal) {
@@ -56,8 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-// handle copy btn for text markdown
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("pre > code").forEach((codeBlock) => {

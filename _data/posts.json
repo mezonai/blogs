@@ -2,16 +2,22 @@
     {
         "title": "Mezon Bot Docs",
         "author": "Mezon",
-        "url": "posts/mezon-bot-docs"
+        "url": "posts/mezon-bot-docs",
+        "views": 1,
+        "likes": 1
     },
     {
         "title": "Mezon SDK Docs",
         "author": "Mezon",
-        "url": "posts/mezon-sdk-docs"
+        "url": "posts/mezon-sdk-docs",
+        "views": 59,
+        "likes": 38
     },
     {
         "title": "Mezon Webhook Docs",
         "author": "Mezon",
-        "url": "posts/mezon-webhook-docs"
+        "url": "posts/mezon-webhook-docs",
+        "views": 999,
+        "likes": 928
     }
 ]

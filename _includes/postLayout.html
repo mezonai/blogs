@@ -25,7 +25,7 @@
             <div class="header-container">
                 <div class="header-content">
                     <div class="menu__nav">
-                        <a href="" class="header__logo">
+                        <a href="/" class="header__logo">
                             <img class="header__logo-img" src="/assets/images/Logo_mezon_light.png" alt="logo">
                             <span class="header__logo-text">mezon</span>
                         </a>
@@ -117,7 +117,7 @@
                     </div>
                     <div class="footer-bottom">
                         <div class="footer-bottom__logo">
-                            <a href="">
+                            <a href="/">
                                 <img src="/assets/images/Logo_mezon_dark.png" alt="">
                                 <span>Mezon</span>
                             </a>
@@ -129,7 +129,6 @@
     </div>
 
     <script>
-        // scroll to anchor
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const id = this.getAttribute('href');
@@ -138,7 +137,7 @@
                 if (target) {
                     e.preventDefault();
 
-                    const topOffset = 120; // position of header
+                    const topOffset = 120;
                     const elementPosition = target.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.scrollY - topOffset;
 
