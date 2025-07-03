@@ -62,12 +62,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if(backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
 
     document.querySelectorAll("pre > code").forEach((codeBlock, key) => {
     const svgCopy = `

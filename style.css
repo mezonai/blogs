@@ -3347,6 +3347,7 @@ ul.linear-list li {
   margin: 0;
 }
 .doc__wrap-item-content .item__group-name {
+  flex: 1;
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
