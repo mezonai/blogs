@@ -33,7 +33,7 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addFilter("docUrl", function (filename) {
-        return `${pathPrefix}/posts/${filename}`;
+        return `${pathPrefix}posts/${filename}`;
     });
 
     return {
