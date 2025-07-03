@@ -1,29 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const categoryDropdown = document.getElementById('categoryDropdown');
-    const overlayModal = document.getElementById('overlayModel');
-    const closeBtn = document.getElementById('closeBtn');
     const backToTop = document.getElementById('back-to-top');
-
-    if (categoryDropdown && overlayModal) {
-        categoryDropdown.addEventListener('click', () => {
-            overlayModal.classList.add('active');
-        });
-    }
-
-    if (closeBtn && overlayModal) {
-        closeBtn.addEventListener('click', () => {
-            overlayModal.classList.remove('active');
-        });
-    }
-
-    if (overlayModal) {
-        overlayModal.addEventListener('click', (e) => {
-            if (e.target === overlayModal) {
-                overlayModal.classList.remove('active');
-            }
-        });
-    }
-
     const header = document.querySelector('#header');
     const menuBar = document.querySelector('.menu__bar');
     const mobileMenu = document.querySelector('.mobile-menu');

@@ -128,49 +128,9 @@
                             line-height: 24px;
                         }
                     }
-
-                    &-online {
-                        display: flex;
-                        align-items: center;
-                        gap: 6px;
-
-                        &-icon {
-                            width: 8px;
-                            height: 8px;
-                            background-color: rgb(34 197 94);
-                            border-radius: 9999px;
-                        }
-
-                        &-text{
-                            font-size: 10px;
-                            color: $gray-500;
-
-                            @include min-media(medium) {
-                                font-size: 12px;
-                                line-height: 16px;
-                            }
-                        }
-                    }
-
-                    &-dot{
-                        background-color: rgb(209 213 219);
-                        width: 4px;
-                        height: 4px;
-                        border-radius: 9999px;
-                    }
-
-                    &-members{
-                        font-size: 10px;
-                        color: rgb(107 114 128);
-
-                        @include min-media(medium) {
-                            font-size: 12px;
-                            line-height: 16px;
-                        }
-                    }
                 }
 
-                .item__type{
+                .item__description{
                     font-size: 12px;
                     line-height: 16px;
                     color: rgb(55 65 81 );
@@ -179,39 +139,6 @@
                         font-size: 14px;
                         line-height: 20px;
                     }
-                }
-
-                .item__status{
-                    display: flex;
-                    
-                    &-wrap{
-                        background-color: rgb(229 231 235);
-                        display: inline-flex;
-                        align-items: center;
-                        gap: 4px;
-                        padding: 1px 6px;
-                        border-radius: 4px;
-                        font-size: 10px;
-                        color: rgb(156 163 175); 
-
-                        @include min-media(medium) {
-                            font-size: 12px;
-                            line-height: 16px;
-                            padding: 2px 8px;
-                        }
-    
-                        svg{
-                            width: 12px;
-                            height: 12px;
-                            color: rgb(156 163 175);
-    
-                            @include min-media(tablet) {
-                                width: 16px;
-                                height: 16px;
-                            }
-                        }
-                    }
-
                 }
             }
         }
