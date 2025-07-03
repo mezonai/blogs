@@ -1,6 +1,9 @@
 ---
 layout: postLayout.html
 title: Mezon Webhook
+author: Mezon
+views: 999
+likes: 928
 ---
 
 # Mezon Webhook
@@ -15,15 +18,15 @@ Creating a webhook is a pretty straightforward process.
 
 1. Go to the channel you want to create a webhook for, right-click to bring up a popup of actions that can be performed on that channel.
 
-    ![mezon-webhook-001](/assets/images/mezon-webhook-001.png)
+    ![mezon-webhook-001]({{ "mezon-webhook-001.png" | imgUrl }})
 
 2. Click on the **`Edit Channel`** option and then go to the **`Integrations`** tab.
 
-    ![mezon-webhook-002](/assets/images/mezon-webhook-002.png)
+    ![mezon-webhook-002]({{ "mezon-webhook-002.png" | imgUrl }})
 
 3. Click on **`New Webhook`** to proceed with creating a new webhook.
 
-    ![mezon-webhook-003](/assets/images/mezon-webhook-003.png)
+    ![mezon-webhook-003]({{ "mezon-webhook-003.png" | imgUrl }})
 
 -   You will have one user (here named Spidey bot) and can customize this bot's name and avatar.
 
@@ -150,4 +153,4 @@ This object encapsulates the content and metadata of the message.
 
 **Result**
 
-![mezon-webhook-004](/assets/images/mezon-webhook-004.png)
+![mezon-webhook-004]({{ "mezon-webhook-004.png" | imgUrl }})

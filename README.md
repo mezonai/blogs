@@ -74,23 +74,9 @@ npm run dev    // Same as 'start' but explicitly includes file watching (--watch
 ---
 layout: postLayout.html
 title: "post-title"
+author: Mezon
+"views": 999,
+"likes": 928
 ---
 Write your content here in **Markdown**.
 ```
-
--   Add new data in \_data/post.json
-
-```
-example:
-{
-    "title": "Mezon Webhook Docs",
-    "author": "Mezon",
-    "url": "posts/mezon-webhook-docs",
-    "views": 999,
-    "likes": 928
-}
-```
-
-> [!NOTE]
-> your-file-name.md
-> The post url must be 'posts/your-file-name'

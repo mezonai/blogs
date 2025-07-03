@@ -6,6 +6,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('assets');
     eleventyConfig.addPassthroughCopy('style.css');
     eleventyConfig.addPassthroughCopy('main.js');
+    
+    const pathPrefix = '/';
 
     const markdownLib = markdownIt({
         html: true,
@@ -22,6 +24,18 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setLibrary('md', markdownLib);
 
+    eleventyConfig.addCollection("posts", function (collectionApi) {
+        return collectionApi.getFilteredByGlob("posts/*.md");
+    });
+
+    eleventyConfig.addFilter("imgUrl", function (filename) {
+        return `${pathPrefix}assets/images/${filename}`;
+    });
+
+    eleventyConfig.addFilter("docUrl", function (filename) {
+        return `${pathPrefix}/posts/${filename}`;
+    });
+
     return {
         dir: {
             input: '.',
@@ -29,7 +43,7 @@ module.exports = function (eleventyConfig) {
             data: '_data',
             output: '_site'
         },
-        pathPrefix: '/',
+        pathPrefix: pathPrefix,
         templateFormats: ['md', 'njk', 'html'],
         markdownTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',

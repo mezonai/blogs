@@ -1,6 +1,6 @@
 ---
 layout: layout.html
-title: Mezon Blog
+title: Mezon Blogs
 ---
 
 <div class="banner-container">
@@ -142,30 +142,32 @@ title: Mezon Blog
             </div>
         </div>
         <div class="doc">
-            <div class="doc__title">{{ posts.length }} Results found</div>
+            <div class="doc__title">{{ collections.posts.length }} Results found</div>
             <div class="doc__wrap">
-                {% for post in posts %}
-                <a href="{{ post.url }}" class="doc__wrap-item">
+                {% for post in collections.posts %}
+                <a href="{{ post.url | url }}" class="doc__wrap-item">
                     <div class="doc__wrap-item-image">
                         <img src="https://mezon.ai/clans/no_banner.8e68bd3bc32b0ede.jpg" />
                     </div>
                     <div class="doc__wrap-item-content">
                         <div class="item__group">
                             <div class="item__group-image">
-                                <img src="assets/images/Logo_mezon_light.png" alt="mezon" />
+                                <img src="{{ '/assets/images/Logo_mezon_light.png' | url }}" alt="mezon" />
                             </div>
-                            <div class="item__group-name">{{ post.title }}</div>
+                            <div class="item__group-name">{{ post.data.title }}</div>
                         </div>
-                        <div class="item__type">{{ post.author }}</div>
+                        <div class="item__type">{{ post.data.author }}</div>
                         <div class="item__group">
                             <div class="item__group-online">
                                 <div class="item__group-online-icon"></div>
-                                <div class="item__group-online-text">{{ post.views }} {% if post.views > 1 %}views{%
+                                <div class="item__group-online-text">{{ post.data.views }} {% if post.data.views > 1
+                                    %}views{%
                                     else %}view{% endif
                                     %}</div>
                             </div>
                             <div class="item__group-dot"></div>
-                            <div class="item__group-members">{{ post.likes }} {% if post.likes > 1 %}likes{% else
+                            <div class="item__group-members">{{ post.data.likes }} {% if post.data.likes > 1 %}likes{%
+                                else
                                 %}like{% endif
                                 %}</div>
                         </div>

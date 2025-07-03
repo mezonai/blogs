@@ -1,9 +1,12 @@
 ---
 layout: postLayout.html
 title: Mezon SDK
+author: Mezon
+views: 59
+likes: 38
 ---
 
-<div id="top">
+<div>
 
 <!-- HEADER STYLE: BANNER -->
 <div align="center">
@@ -244,7 +247,7 @@ This project simplifies Mezon applications and bots development by providing a c
 
 ### Prerequisites
 
-In order to work with the library and the Mezon API in general, you must first create a **[Mezon Bot](/posts/mezon-bot-docs)** account.
+In order to work with the library and the Mezon API in general, you must first create a **[Mezon Bot]({{ "mezon-bot-docs" | docUrl }})** account.
 
 To use the `mezon-sdk`, you'll need the following installed on your system:
 
@@ -1574,7 +1577,7 @@ Contributions are welcome! Here's how you can help:
 <br>
 <p align="left">
    <a href="https://github.com/mezonai/mezon-js/graphs/contributors">
-      <img src="https://github.com/huybuidoanquang/MEZON/blob/main/images/contributor-graph.png">
+      <img src="{{ 'contributor-graph.png' | imgUrl }}">
    </a>
 </p>
 </details>
@@ -1592,13 +1595,5 @@ Mezon-sdk is protected under the [LICENSE](https://choosealicense.com/licenses) 
 -   Credit `contributors`, `inspiration`, `references`, etc.
 -   Thanks to all developers who have contributed to the libraries and tools used in this project.
 -   The Mezon community for their feedback and support.
-
-<div align="right">
-
-[![][back-to-top]](#top)
-
-</div>
-
-[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
 
 </div>

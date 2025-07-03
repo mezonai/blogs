@@ -3503,6 +3503,7 @@ ul.linear-list li {
   max-width: 1200px;
   min-height: 100vh;
   overflow-wrap: break-word;
+  position: relative;
 }
 @media all and (max-width: 1200px) {
   .post-container {
@@ -3530,6 +3531,32 @@ ul.linear-list li {
 .post-container__back svg {
   width: 24px;
   height: 24px;
+}
+.post-container #back-to-top {
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 100;
+}
+.post-container #back-to-top:hover {
+  background-color: #5865f2;
+  color: #fff;
+}
+.post-container #back-to-top:active {
+  transform: scale(0.9);
+}
+.post-container #back-to-top svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 table {
