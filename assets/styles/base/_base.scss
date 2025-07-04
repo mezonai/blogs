@@ -80,20 +80,3 @@ img {
         background: #cbd5e1;
     }
 }
-
-.copy__icon--button {
-
-    &-inner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 4px;
-      cursor: pointer;
-    
-      &:hover {
-        background: #c6c7c9;
-      }
-    }
-}

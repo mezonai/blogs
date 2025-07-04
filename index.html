@@ -1,60 +1,135 @@
----
-layout: layout.html
-title: Mezon Blogs
----
+<!doctype html>
+<html class="no-js" lang="en">
 
-<div class="banner-container">
-    <div class="banner__bg"></div>
-    <div class="banner__bg-img"></div>
-    <div class="banner__content">
-        <h1 class="banner__content-title">Find Your Comunity On Mezon</h1>
-        <p class="banner__content-description">Discover clans where you can hang out with people who
-            share your interests and passions.
-        </p>
-        <form action="" class="banner__search-form">
-            <div class="banner__search-bar">
-                <div class="banner__search-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    <title>Mezon Blogs</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/assets/plugins/meanMenu/meanmenu.min.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/assets/plugins/Modernizr/modernizr-2.8.3.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header id="header">
+            <div class="header-container">
+                <div class="header-content">
+                    <div class="menu__nav">
+                        <a href="/" class="header__logo">
+                            <img class="header__logo-img" src="/assets/images/Logo_mezon_light.png"
+                                alt="logo">
+                            <span class="header__logo-text">mezon</span>
+                        </a>
+                        <nav class="menu__nav-items">
+                            <a class="menu__nav-item" href="https://mezon.ai" target="_blank">Home</a>
+                            <a class="menu__nav-item" href="https://mezon.ai/developers" target="_blank">Developers</a>
+                            <a class="menu__nav-item" href="https://top.mezon.ai" target="_blank">Bots/Apps</a>
+                            <a class="menu__nav-item" href="https://mezon.ai/docs" target="_blank">Documents</a>
+                            <a class="menu__nav-item selected" href="https://mezon.ai/clans"
+                                target="_blank">Discover</a>
+                        </nav>
+                    </div>
+                    <div class="menu__bar">
+                        <button class="menu__bar-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-                <input type="text" class="banner__search-input" placeholder="Explore communities">
             </div>
-        </form>
-    </div>
-    <div class="banner__footer">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#f6f6f7" viewBox="0 0 1440 100">
-            <path
-                d="M0,56L60,65.3C120,75,240,93,360,93.3C480,93,600,75,720,65.3C840,56,960,56,1080,60.7C1200,65,1320,75,1380,79.3L1440,84L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z">
-            </path>
-        </svg>
-    </div>
-</div>
-<div class="main-content">
-    <div class="main-content__wrap">
-        <div class="doc">
-            <div class="doc__title">{{ collections.posts.length }} Results found</div>
-            <div class="doc__wrap">
-                {% for post in collections.posts %}
-                <a href="{{ post.url | url }}" class="doc__wrap-item">
-                    <div class="doc__wrap-item-image">
-                        <img src="https://mezon.ai/clans/no_banner.8e68bd3bc32b0ede.jpg" />
-                    </div>
-                    <div class="doc__wrap-item-content">
-                        <div class="item__group">
-                            <div class="item__group-image">
-                                <img src="{{ '/assets/images/Logo_mezon_light.png' | url }}" alt="mezon" />
-                            </div>
-                            <div class="item__group-name">{{ post.data.title }}</div>
-                        </div>
-                        <div class="item__description">
-                            shot description
-                        </div>
-                    </div>
-                </a>
-                {% endfor %}
+            <div class="mobile-menu">
+                <div class="mobile-menu__content">
+                    <nav class="mobile-menu__nav">
+                        <a class="mobile-menu__nav-item" href="https://mezon.ai" target="_blank">Home</a>
+                        <a class="mobile-menu__nav-item" href="https://mezon.ai/developers/applications"
+                            target="_blank">Developers</a>
+                        <a class="mobile-menu__nav-item" href="https://top.mezon.ai" target="_blank">Bots/Apps</a>
+                        <a class="mobile-menu__nav-item" href="https://mezon.ai/docs/" target="_blank">Documents</a>
+                        <a class="mobile-menu__nav-item selected" href="https://mezon.ai/clans"
+                            target="_blank">Discover</a>
+                    </nav>
+                </div>
             </div>
+        </header>
+        <div id="main">
+            <div class="main-container">
+
+            </div>
+            <footer id="footer">
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <div>
+                            <h3 class="content-item__title">Mezon</h3>
+                            <ul class="content-item__list">
+                                <li><a href="https://mezon.ai" target="_blank">Home</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Download</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Clans</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Safety</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="content-item__title">Company</h3>
+                            <ul class="content-item__list">
+                                <li><a href="https://mezon.ai" target="_blank">About</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Jobs</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Branding</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Newsroom</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="content-item__title">Resources</h3>
+                            <ul class="content-item__list">
+                                <li><a href="https://mezon.ai" target="_blank">College</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Support</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Safety</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Blog</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Feedback</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Developers</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="content-item__title">Policies</h3>
+                            <ul class="content-item__list">
+                                <li><a href="https://mezon.ai" target="_blank">Terms</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Privacy</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Guidelines</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Acknowledgements</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">License</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="footer-bottom__logo">
+                            <a href="/">
+                                <img src="/assets/images/Logo_mezon_dark.png" alt="">
+                                <span>Mezon</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
-</div>
+
+    <script src="/assets/plugins/jquery/jquery-1.11.2.min.js"></script>
+    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/plugins/meanMenu/jquery.meanmenu.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+    <script src="/assets/main.js"></script>
+</body>
+
+</html>
