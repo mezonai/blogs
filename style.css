@@ -22,7 +22,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -3167,6 +3167,54 @@ ul.linear-list li {
   width: 18px;
   height: 18px;
   stroke: currentColor;
+}
+
+/* --------------------- 4.2 Post page --------------------- */
+.post-container {
+  max-width: 896px;
+  margin: 0 auto;
+  padding: 0 16px;
+  margin-top: 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.post-container .content__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.post-container .content__header .content__header-info {
+  display: flex;
+  flex-direction: column;
+}
+.post-container .content__header .content__header-info .header-info__stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 64px;
+}
+.post-container .content__header .content__header-info .header-info__stats .stats__avatar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.post-container .content__header .content__header-info .header-info__stats .stats__avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+}
+.post-container .content__header .content__header-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post-container .content__header .content__header-banner img {
+  width: 80% !important;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
 /**

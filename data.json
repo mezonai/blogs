@@ -1,0 +1,74 @@
+{
+    "posts": [
+        {
+            "id": "post-001",
+            "title": "Tối ưu hiệu suất website với Lazy Loading",
+            "slug": "toi-uu-hieu-suat-website-voi-lazy-loading",
+            "summary": "Tìm hiểu cách Lazy Loading giúp tăng tốc độ tải trang và cải thiện trải nghiệm người dùng.",
+            "content": "<p>Lazy Loading là kỹ thuật trì hoãn việc tải nội dung không cần thiết cho đến khi người dùng cuộn đến phần đó trên trang. Kỹ thuật này thường áp dụng cho ảnh, video, hoặc iframe để giảm thời gian tải trang ban đầu.</p><p>Ví dụ, nếu một trang có 20 hình ảnh nhưng người dùng chỉ xem phần đầu trang, thì chỉ những ảnh ở phần đầu được tải ngay lập tức. Những ảnh còn lại sẽ được tải khi người dùng cuộn đến chúng.</p><p>Lazy Loading giúp tiết kiệm băng thông, tăng tốc độ tải trang, và cải thiện trải nghiệm người dùng trên thiết bị di động hoặc mạng chậm.</p>",
+            "coverImage": "https://external.fdad3-5.fna.fbcdn.net/emg1/v/t13/9617189710960888635?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1_xxnED2boQ%2Fmaxresdefault.jpg&fb_obo=1&utld=ytimg.com&stp=c0.5000x0.5000f_dst-jpg_flffffff_p500x261_q75_tt6&_nc_gid=TiJw2hMnW8x7YaNdpvmpXg&_nc_oc=AdmkprjADU2aQThoiWHFnAXzGtZEth5-e8KauTFYQpgGjG9RBc-IN4_OfhzJKR4xwXI&ccb=13-1&oh=06_Q3-0AZ_142iuwn-CyN7T9kfpJesLbBMuZER8QDGJ7LogeYQ_&oe=68695453&_nc_sid=c63717",
+            "createdAt": "2025-07-01",
+            "updatedAt": "2025-07-02",
+            "author": {
+                "name": "Nguyễn Văn A",
+                "avatar": "https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-1/475446299_3983528268641342_5180580003411504372_n.jpg?stp=cp0_dst-jpg_s24x24_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=tQ6qQaSoaesQ7kNvwFwdUaL&_nc_oc=Adnt9BvmKpPqv70kNxYf-j9RKlW5JLNZaaKkNouQULoG-oFuSzQ9om4WRfqOxf64clY&_nc_zt=24&_nc_ht=scontent.fdad3-5.fna&_nc_gid=XGVzza3Oaui5jT404vZS7Q&oh=00_AfNsoXIonTNkqo90JdsNCxORFyAo5XZ4ZA_ic8GtMGeQbA&oe=686D386F"
+            }
+        },
+        {
+            "id": "post-002",
+            "title": "Hướng dẫn cơ bản về Tailwind CSS",
+            "slug": "huong-dan-co-ban-tailwind-css",
+            "summary": "Tailwind CSS là một framework tiện lợi cho việc xây dựng giao diện nhanh chóng với utility-first.",
+            "content": "<p>Tailwind CSS cung cấp các class tiện ích (utility classes) để bạn có thể xây dựng giao diện một cách nhanh chóng và hiệu quả mà không cần viết CSS thủ công.</p><p>Ví dụ: để tạo một button đơn giản, bạn chỉ cần thêm class như <code>bg-blue-500 text-white py-2 px-4 rounded</code>. Điều này giúp code gọn, dễ bảo trì và linh hoạt khi thay đổi layout hoặc theme.</p><p>Tailwind cũng hỗ trợ responsive, dark mode, custom theme và nhiều plugin hữu ích. Bạn có thể kết hợp với PostCSS, PurgeCSS để giảm dung lượng file CSS khi build production.</p>",
+            "coverImage": "https://scontent.fdad3-4.fna.fbcdn.net/v/t39.30808-6/509001205_653976724357534_6155315908164448488_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=PHvI-KQvMdQQ7kNvwFb5grz&_nc_oc=AdkRiIfPu8IU3gwNTaPngEm37dT6moUOQJTOW7Gl0fYXpTqrayhE1V96cJm2Nherb24&_nc_zt=23&_nc_ht=scontent.fdad3-4.fna&_nc_gid=4Xj6Ayo4ZERZdEl8Zof-mQ&oh=00_AfPYZUun_Y_E8-68ykbcXp3IhYG8oR5gFPZNnnoHmDkjLQ&oe=686D67D0",
+            "createdAt": "2025-06-25",
+            "updatedAt": "2025-06-26",
+            "author": { 
+                "name": "Nguyễn Văn B",
+                "avatar": "https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-1/475446299_3983528268641342_5180580003411504372_n.jpg?stp=cp0_dst-jpg_s24x24_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=tQ6qQaSoaesQ7kNvwFwdUaL&_nc_oc=Adnt9BvmKpPqv70kNxYf-j9RKlW5JLNZaaKkNouQULoG-oFuSzQ9om4WRfqOxf64clY&_nc_zt=24&_nc_ht=scontent.fdad3-5.fna&_nc_gid=XGVzza3Oaui5jT404vZS7Q&oh=00_AfNsoXIonTNkqo90JdsNCxORFyAo5XZ4ZA_ic8GtMGeQbA&oe=686D386F"
+            }
+        },
+        {
+            "id": "post-003",
+            "title": "Sự khác biệt giữa var, let và const trong JavaScript",
+            "slug": "khac-biet-var-let-const-javascript",
+            "summary": "Nắm vững cách sử dụng var, let, const để tránh lỗi khi khai báo biến.",
+            "content": "<p>JavaScript cung cấp ba cách để khai báo biến: <code>var</code>, <code>let</code>, và <code>const</code>. Mỗi cách có phạm vi và đặc điểm khác nhau.</p><p><strong>var</strong>: Có phạm vi theo function (function-scoped). Có thể khai báo lại và gán lại. Dễ gây lỗi nếu không cẩn thận do hoisting.</p><p><strong>let</strong>: Có phạm vi theo block (block-scoped). Không thể khai báo lại trong cùng phạm vi nhưng có thể gán lại.</p><p><strong>const</strong>: Cũng block-scoped như let, nhưng không thể gán lại giá trị mới sau khi khai báo. Tuy nhiên, nếu là object/array, bạn vẫn có thể thay đổi thuộc tính bên trong.</p><p>Việc lựa chọn đúng sẽ giúp code rõ ràng, dễ debug và tránh bug khó chịu.</p>",
+            "coverImage": "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/506501083_653976794357527_8658620902957882948_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JyJh_guh-5EQ7kNvwFj2tk7&_nc_oc=AdnnRAQma3F5dvKobvj_zYuLGLUOaTl-YafG8V3f7YA9NsIl0HBNFENzjk7cOT9eGHU&_nc_zt=23&_nc_ht=scontent.fdad3-1.fna&_nc_gid=eWELrkj_0YSdNXyPcF9ZZg&oh=00_AfNcGgGb7mdQ5nM2dY3FpBDb4clVWQmOI3Po8H7vxchvBA&oe=686D4FFB",
+            "createdAt": "2025-06-20",
+            "updatedAt": "2025-06-20",
+            "author": {
+                "name": "Nguyễn Văn C",
+                "avatar": "https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-1/475446299_3983528268641342_5180580003411504372_n.jpg?stp=cp0_dst-jpg_s24x24_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=tQ6qQaSoaesQ7kNvwFwdUaL&_nc_oc=Adnt9BvmKpPqv70kNxYf-j9RKlW5JLNZaaKkNouQULoG-oFuSzQ9om4WRfqOxf64clY&_nc_zt=24&_nc_ht=scontent.fdad3-5.fna&_nc_gid=XGVzza3Oaui5jT404vZS7Q&oh=00_AfNsoXIonTNkqo90JdsNCxORFyAo5XZ4ZA_ic8GtMGeQbA&oe=686D386F"
+            }
+        },
+        {
+            "id": "post-004",
+            "title": "Giới thiệu về React Hooks",
+            "slug": "gioi-thieu-react-hooks",
+            "summary": "Hooks giúp bạn viết component dễ hiểu hơn mà không cần class.",
+            "content": "<p>React Hooks được giới thiệu từ phiên bản 16.8, cho phép bạn sử dụng state và các tính năng khác của React trong function component.</p><p>Hook phổ biến nhất là <code>useState</code> để lưu state nội bộ, <code>useEffect</code> để xử lý side effects (như gọi API), <code>useRef</code> để tham chiếu đến DOM hoặc lưu giá trị không trigger re-render.</p><p>Sử dụng Hooks giúp code gọn hơn, dễ test và tái sử dụng logic qua custom hook. Điều này đặc biệt có lợi cho team phát triển khi codebase lớn.</p>",
+            "coverImage": "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/505424426_653976774357529_1555207546029966856_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BP5fC0USff0Q7kNvwGP3qRo&_nc_oc=AdmGCY5wouKSgKLA3m-LVBvaxWmNhNkzKx5cwf_prxqlaV3DmrJrPK1R_99uTpffGOs&_nc_zt=23&_nc_ht=scontent.fdad3-1.fna&_nc_gid=wdY1afeyDQkPq6ki-4_BkQ&oh=00_AfN5RCirGBKh923oW_dAE-6rdj7M0r0E8QHiN4XLCL4Mww&oe=686D5B9E",
+            "createdAt": "2025-07-01",
+            "updatedAt": "2025-07-01",
+            "author": {
+                "name": "Nguyễn Văn D",
+                "avatar": "https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-1/475446299_3983528268641342_5180580003411504372_n.jpg?stp=cp0_dst-jpg_s24x24_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=tQ6qQaSoaesQ7kNvwFwdUaL&_nc_oc=Adnt9BvmKpPqv70kNxYf-j9RKlW5JLNZaaKkNouQULoG-oFuSzQ9om4WRfqOxf64clY&_nc_zt=24&_nc_ht=scontent.fdad3-5.fna&_nc_gid=XGVzza3Oaui5jT404vZS7Q&oh=00_AfNsoXIonTNkqo90JdsNCxORFyAo5XZ4ZA_ic8GtMGeQbA&oe=686D386F"
+            }
+        },
+        {
+            "id": "post-005",
+            "title": "Top 5 công cụ hỗ trợ lập trình viên năm 2025",
+            "slug": "top-5-cong-cu-ho-tro-lap-trinh-2025",
+            "summary": "Danh sách các công cụ giúp bạn tăng năng suất lập trình trong năm 2025.",
+            "content": "<p>Đây là danh sách 5 công cụ nổi bật giúp lập trình viên làm việc hiệu quả hơn trong năm 2025:</p><ol><li><strong>VS Code</strong>: Editor phổ biến, nhẹ, nhiều plugin hỗ trợ.</li><li><strong>GitHub Copilot</strong>: AI hỗ trợ code, gợi ý cú pháp thông minh.</li><li><strong>Postman</strong>: Test API nhanh chóng, hỗ trợ mock server.</li><li><strong>Figma</strong>: Thiết kế UI, giao tiếp với designer mượt mà.</li><li><strong>Docker</strong>: Môi trường dev linh hoạt, dễ triển khai production.</li></ol><p>Kết hợp các công cụ này sẽ giúp tiết kiệm thời gian, giảm lỗi và tối ưu quy trình làm việc.</p>",
+            "coverImage": "https://scontent.fdad3-4.fna.fbcdn.net/v/t39.30808-6/509928441_653976771024196_3618368059281310446_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=15UXGEVLKSIQ7kNvwGL8RSb&_nc_oc=AdltBZwYeG8su7ZSax9GmDXvmdBrjYF5JWcBPg9w5x53yOA4LMXo3L4qRgN1S6ezhls&_nc_zt=23&_nc_ht=scontent.fdad3-4.fna&_nc_gid=aQddk1Tyr80nuT0f6qAX-g&oh=00_AfPyVAETVMmQ23Zw-LBg9t7WLnnWwpORMeCK0WueS8swSA&oe=686D71B3",
+            "createdAt": "2025-07-03",
+            "updatedAt": "2025-07-03",
+            "author": {
+                "name": "Nguyễn Văn E",
+                "avatar": "https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-1/475446299_3983528268641342_5180580003411504372_n.jpg?stp=cp0_dst-jpg_s24x24_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=tQ6qQaSoaesQ7kNvwFwdUaL&_nc_oc=Adnt9BvmKpPqv70kNxYf-j9RKlW5JLNZaaKkNouQULoG-oFuSzQ9om4WRfqOxf64clY&_nc_zt=24&_nc_ht=scontent.fdad3-5.fna&_nc_gid=XGVzza3Oaui5jT404vZS7Q&oh=00_AfNsoXIonTNkqo90JdsNCxORFyAo5XZ4ZA_ic8GtMGeQbA&oe=686D386F"
+            }
+        }
+    ]
+}
