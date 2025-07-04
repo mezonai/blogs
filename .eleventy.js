@@ -1,26 +1,17 @@
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
-const slugifyLib = require('slugify');
+const pathPrefix = '/';
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('assets');
     eleventyConfig.addPassthroughCopy('style.css');
     eleventyConfig.addPassthroughCopy('main.js');
 
-    const markdownLib = markdownIt({
-        html: true,
-        breaks: true,
-        linkify: true
-    }).use(markdownItAnchor, {
-        slugify: (s) =>
-            slugifyLib(s, {
-                lower: true,
-                strict: true,
-                trim: true
-            })
+    eleventyConfig.addFilter('imgUrl', function (filename) {
+        return `${pathPrefix}assets/images/${filename}`;
     });
 
-    eleventyConfig.setLibrary('md', markdownLib);
+    eleventyConfig.addFilter('slugUrl', function (slug) {
+        return `${pathPrefix}${slug}`;
+    });
 
     return {
         dir: {
@@ -29,8 +20,8 @@ module.exports = function (eleventyConfig) {
             data: '_data',
             output: '_site'
         },
-        pathPrefix: '/',
-        templateFormats: ['md', 'njk', 'html'],
+        pathPrefix: pathPrefix,
+        templateFormats: ['njk', 'html'],
         markdownTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',
         dataTemplateEngine: 'njk'

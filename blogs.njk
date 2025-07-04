@@ -1,20 +1,28 @@
+---
+pagination:
+ data: posts
+ size: 1
+ alias: post
+permalink: "{{ post.slug }}/index.html"
+---
+
 <!doctype html>
 <html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="icon" href="/assets/images/favicon.ico">
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | url }}">
     <title>{{ title }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/assets/plugins/meanMenu/meanmenu.min.css">
-    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ '/assets/plugins/meanMenu/meanmenu.min.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/plugins/font-awesome/css/font-awesome.min.css' | url }}">
 
-    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/style.css">
-    <script src="/assets/plugins/Modernizr/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="{{ '/assets/plugins/bootstrap/css/bootstrap.min.css' | url }}">
+    <link rel="stylesheet" href="{{ '/style.css' | url }}">
+    <script src="{{ '/assets/plugins/Modernizr/modernizr-2.8.3.min.js' | url }}"></script>
 
 </head>
 
@@ -26,7 +34,7 @@
                 <div class="header-content">
                     <div class="menu__nav">
                         <a href="/" class="header__logo">
-                            <img class="header__logo-img" src="/assets/images/Logo_mezon_light.png" alt="logo">
+                            <img class="header__logo-img" src="{{ '/assets/images/Logo_mezon_light.png' | url }}" alt="logo">
                             <span class="header__logo-text">mezon</span>
                         </a>
                         <nav class="menu__nav-items">
@@ -61,8 +69,19 @@
             </div>
         </header>
         <div id="main">
-            <div class="main-container">
-                {{ content | safe }}
+            <div class="post-container">
+                <a href="/" class="post-container__back">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    <span>Back to Home</span>
+                </a>
+                <h1>{{ post.title }}</h1>
+                <p>{{ post.author.name }}</p>
+                <img src="{{ post.author.avatar | url }}" alt="">
+                <p>{{ post.summary }}</p> 
+                <p>{{ permalink }}</p> 
             </div>
             <footer id="footer">
                 <div class="footer-container">
@@ -111,7 +130,7 @@
                     <div class="footer-bottom">
                         <div class="footer-bottom__logo">
                             <a href="/">
-                                <img src="/assets/images/Logo_mezon_dark.png" alt="">
+                                <img src="{{ '/assets/images/Logo_mezon_dark.png' | url }}" alt="">
                                 <span>Mezon</span>
                             </a>
                         </div>
@@ -122,9 +141,9 @@
     </div>
 
     <script src="/assets/plugins/jquery/jquery-1.11.2.min.js"></script>
-    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/assets/plugins/meanMenu/jquery.meanmenu.min.js"></script>
-    <script src="/assets/main.js"></script>
+    <script src="{{ '/assets/plugins/bootstrap/js/bootstrap.min.js' | url }}"></script>
+    <script src="{{ '/assets/plugins/meanMenu/jquery.meanmenu.min.js' | url }}"></script>
+    <script src="{{ '/assets/main.js' | url }}"></script>
 </body>
 
 </html>

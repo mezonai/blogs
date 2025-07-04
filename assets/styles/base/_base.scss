@@ -16,51 +16,12 @@ a {
 }
 
 img {
-    margin: 8px 0;
     max-width: 100%;
 }
 
 .wrapper {
     background-color: #f4f7f9;
     min-height: 100vh;
-}
-
-.overlay-model {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    display: none;
-    justify-content: center;
-    align-items: flex-end;
-    z-index: 1000;
-
-    &.active {
-        display: flex;
-    }
-}
-
-.bg-gradient-all {
-    background-image: linear-gradient(to bottom right, #818cf8, #a855f7);
-}
-
-.bg-gradient-gaming {
-    background-image: linear-gradient(to bottom right, #34d399, #14b8a6);
-}
-
-.bg-gradient-entertainment {
-    background-image: linear-gradient(to bottom right, #facc15, #f97316);
-}
-
-.bg-gradient-education {
-    background-image: linear-gradient(to bottom right, #4ade80, #059669);
-}
-
-.bg-gradient-science {
-    background-image: linear-gradient(to bottom right, #60a5fa, #06b6d4);
-}
-
-.bg-gradient-music {
-    background-image: linear-gradient(to bottom right, #f472b6, #f43f5e);
 }
 
 ::-webkit-scrollbar {
@@ -78,22 +39,5 @@ img {
 
     &:hover {
         background: #cbd5e1;
-    }
-}
-
-.copy__icon--button {
-
-    &-inner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 4px;
-      cursor: pointer;
-    
-      &:hover {
-        background: #c6c7c9;
-      }
     }
 }

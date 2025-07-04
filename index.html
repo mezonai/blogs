@@ -1,290 +1,141 @@
----
-layout: layout.html
-title: Mezon Blog
----
+<!doctype html>
+<html class="no-js" lang="en">
 
-<div class="banner-container">
-    <div class="banner__bg"></div>
-    <div class="banner__bg-img"></div>
-    <div class="banner__content">
-        <h1 class="banner__content-title">Find Your Comunity On Mezon</h1>
-        <p class="banner__content-description">Discover clans where you can hang out with people who
-            share your interests and passions.
-        </p>
-        <form action="" class="banner__search-form">
-            <div class="banner__search-bar">
-                <div class="banner__search-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                </div>
-                <input type="text" class="banner__search-input" placeholder="Explore communities">
-            </div>
-        </form>
-    </div>
-    <div class="banner__footer">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#f6f6f7" viewBox="0 0 1440 100">
-            <path
-                d="M0,56L60,65.3C120,75,240,93,360,93.3C480,93,600,75,720,65.3C840,56,960,56,1080,60.7C1200,65,1320,75,1380,79.3L1440,84L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z">
-            </path>
-        </svg>
-    </div>
-</div>
-<div class="main-content">
-    <div class="main-content__wrap">
-        <div class="category-dropdown" id="categoryDropdown">
-            <div class="item__group">
-                <div class="item__group-icon bg-gradient-all">
-                    <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </div>
-                <div class="item__group-name">All</div>
-            </div>
-            <div class="icon-selected-chevron">
-                <svg class="w-5 h-5 text-gray-500 transition-transform duration-200 " fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </div>
-        </div>
-        <div class="category-normal">
-            <div class="category">
-                <div class="category__title">Categories</div>
-                <div class="category__wrap">
-                    <div class="category__wrap-item category__wrap-item--selected">
-                        <div class="item__group">
-                            <div class="item__group-icon bg-gradient-all">
-                                <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 6h16M4 12h16m-7 6h7"></path>
-                                </svg>
-                            </div>
-                            <div class="item__group-name">All</div>
-                        </div>
-                        <div class="category__wrap-item-count">44,899</div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | url }}">
+    <title>Mezon Blogs</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ '/assets/plugins/meanMenu/meanmenu.min.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/plugins/font-awesome/css/font-awesome.min.css' | url }}">
+
+    <link rel="stylesheet" href="{{ '/assets/plugins/bootstrap/css/bootstrap.min.css' | url }}">
+    <link rel="stylesheet" href="{{ '/style.css' | url }}">
+    <script src="{{ '/assets/plugins/Modernizr/modernizr-2.8.3.min.js' | url }}"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header id="header">
+            <div class="header-container">
+                <div class="header-content">
+                    <div class="menu__nav">
+                        <a href="/" class="header__logo">
+                            <img class="header__logo-img" src="{{ '/assets/images/Logo_mezon_light.png' | url }}"
+                                alt="logo">
+                            <span class="header__logo-text">mezon</span>
+                        </a>
+                        <nav class="menu__nav-items">
+                            <a class="menu__nav-item" href="https://mezon.ai" target="_blank">Home</a>
+                            <a class="menu__nav-item" href="https://mezon.ai/developers/applications"
+                                target="_blank">Developers</a>
+                            <a class="menu__nav-item" href="https://top.mezon.ai" target="_blank">Bots/Apps</a>
+                            <a class="menu__nav-item" href="https://mezon.ai/docs/" target="_blank">Documents</a>
+                            <a class="menu__nav-item selected" href="https://mezon.ai/clans"
+                                target="_blank">Discover</a>
+                        </nav>
                     </div>
-                    <div class="category__wrap-item">
-                        <div class="item__group">
-                            <div class="item__group-icon bg-gradient-gaming">
-                                <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="item__group-name">Gaming</div>
-                        </div>
-                        <div class="category__wrap-item-count">23,868</div>
-                    </div>
-                    <div class="category__wrap-item">
-                        <div class="item__group">
-                            <div class="item__group-icon bg-gradient-entertainment">
-                                <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="item__group-name">Entertainment</div>
-                        </div>
-                        <div class="category__wrap-item-count">13,316</div>
-                    </div>
-                    <div class="category__wrap-item">
-                        <div class="item__group">
-                            <div class="item__group-icon bg-gradient-education">
-                                <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="item__group-name">Education</div>
-                        </div>
-                        <div class="category__wrap-item-count">2,512</div>
-                    </div>
-                    <div class="category__wrap-item">
-                        <div class="item__group">
-                            <div class="item__group-icon bg-gradient-science">
-                                <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="item__group-name">Science & Tech</div>
-                        </div>
-                        <div class="category__wrap-item-count">2,406</div>
-                    </div>
-                    <div class="category__wrap-item">
-                        <div class="item__group">
-                            <div class="item__group-icon bg-gradient-music">
-                                <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="item__group-name">Music</div>
-                        </div>
-                        <div class="category__wrap-item-count">2,276</div>
+                    <div class="menu__bar">
+                        <button class="menu__bar-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="doc">
-            <div class="doc__title">{{ posts.length }} Results found</div>
-            <div class="doc__wrap">
+            <div class="mobile-menu">
+                <div class="mobile-menu__content">
+                    <nav class="mobile-menu__nav">
+                        <a class="mobile-menu__nav-item" href="https://mezon.ai" target="_blank">Home</a>
+                        <a class="mobile-menu__nav-item" href="https://mezon.ai/developers/applications"
+                            target="_blank">Developers</a>
+                        <a class="mobile-menu__nav-item" href="https://top.mezon.ai" target="_blank">Bots/Apps</a>
+                        <a class="mobile-menu__nav-item" href="https://mezon.ai/docs/" target="_blank">Documents</a>
+                        <a class="mobile-menu__nav-item selected" href="https://mezon.ai/clans"
+                            target="_blank">Discover</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="main">
+            <div class="main-container">
                 {% for post in posts %}
-                <a href="{{ post.url }}" class="doc__wrap-item">
-                    <div class="doc__wrap-item-image">
-                        <img src="https://mezon.ai/clans/no_banner.8e68bd3bc32b0ede.jpg" />
+                    <div class="post-item">
+                        <h2 class="post-item__title">{{ post.title }}</h2>
+                        <p class="post-item__summary">{{ post.summary }}</p>
+                        <a href="{{ post.slug | slugUrl }}" class="post-item__link">{{ post.slug | slugUrl }}</a>
                     </div>
-                    <div class="doc__wrap-item-content">
-                        <div class="item__group">
-                            <div class="item__group-image">
-                                <img src="assets/images/Logo_mezon_light.png" alt="mezon" />
-                            </div>
-                            <div class="item__group-name">{{ post.title }}</div>
-                        </div>
-                        <div class="item__type">{{ post.author }}</div>
-                        <div class="item__group">
-                            <div class="item__group-online">
-                                <div class="item__group-online-icon"></div>
-                                <div class="item__group-online-text">{{ post.views }} {% if post.views > 1 %}views{%
-                                    else %}view{% endif
-                                    %}</div>
-                            </div>
-                            <div class="item__group-dot"></div>
-                            <div class="item__group-members">{{ post.likes }} {% if post.likes > 1 %}likes{% else
-                                %}like{% endif
-                                %}</div>
-                        </div>
-                        <div class="item__status">
-                            <span class="item__status-wrap">
-                                <svg class="w-3 h-3 sm:w-4 sm:h-4 text-gray-400" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                VERIFIED
-                            </span>
-                        </div>
-                    </div>
-                </a>
                 {% endfor %}
             </div>
+            <footer id="footer">
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <div>
+                            <h3 class="content-item__title">Mezon</h3>
+                            <ul class="content-item__list">
+                                <li><a href="https://mezon.ai" target="_blank">Home</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Download</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Clans</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Safety</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="content-item__title">Company</h3>
+                            <ul class="content-item__list">
+                                <li><a href="https://mezon.ai" target="_blank">About</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Jobs</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Branding</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Newsroom</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="content-item__title">Resources</h3>
+                            <ul class="content-item__list">
+                                <li><a href="https://mezon.ai" target="_blank">College</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Support</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Safety</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Blog</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Feedback</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Developers</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="content-item__title">Policies</h3>
+                            <ul class="content-item__list">
+                                <li><a href="https://mezon.ai" target="_blank">Terms</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Privacy</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Guidelines</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">Acknowledgements</a></li>
+                                <li><a href="https://mezon.ai" target="_blank">License</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="footer-bottom__logo">
+                            <a href="/">
+                                <img src="{{ '/assets/images/Logo_mezon_dark.png' | url }}" alt="">
+                                <span>Mezon</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
-</div>
 
-<div class="overlay-model" id="overlayModel">
-    <div class="category-modal">
-        <div class="category">
-            <div class="category__header">
-                <div class="category__header-title">Categories</div>
-                <div class="category__header-close--btn" id="closeBtn">
-                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                        </path>
-                    </svg>
-                </div>
-            </div>
-            <div class="category__wrap">
-                <div class="category__wrap-item category__wrap-item--selected">
-                    <div class="item__group">
-                        <div class="item__group-icon bg-gradient-all">
-                            <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16m-7 6h7"></path>
-                            </svg>
-                        </div>
-                        <div class="item__group-name">All</div>
-                    </div>
-                    <div class="category__wrap-item-count">44,899</div>
-                </div>
-                <div class="category__wrap-item">
-                    <div class="item__group">
-                        <div class="item__group-icon bg-gradient-gaming">
-                            <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="item__group-name">Gaming</div>
-                    </div>
-                    <div class="category__wrap-item-count">23,868</div>
-                </div>
-                <div class="category__wrap-item">
-                    <div class="item__group">
-                        <div class="item__group-icon bg-gradient-entertainment">
-                            <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="item__group-name">Entertainment</div>
-                    </div>
-                    <div class="category__wrap-item-count">13,316</div>
-                </div>
-                <div class="category__wrap-item">
-                    <div class="item__group">
-                        <div class="item__group-icon bg-gradient-education">
-                            <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="item__group-name">Education</div>
-                    </div>
-                    <div class="category__wrap-item-count">2,512</div>
-                </div>
-                <div class="category__wrap-item">
-                    <div class="item__group">
-                        <div class="item__group-icon bg-gradient-science">
-                            <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="item__group-name">Science & Tech</div>
-                    </div>
-                    <div class="category__wrap-item-count">2,406</div>
-                </div>
-                <div class="category__wrap-item">
-                    <div class="item__group">
-                        <div class="item__group-icon bg-gradient-music">
-                            <svg class="w-5 h-5 text-white transition-transform duration-300 hover:rotate-12"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="item__group-name">Music</div>
-                    </div>
-                    <div class="category__wrap-item-count">2,276</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <script src="{{ '/assets/plugins/jquery/jquery-1.11.2.min.js' | url }}"></script>
+    <script src="{{ '/assets/plugins/bootstrap/js/bootstrap.min.js' | url }}"></script>
+    <script src="{{ '/assets/plugins/meanMenu/jquery.meanmenu.min.js' | url }}"></script>
+    <script src="{{ '/assets/main.js' | url }}"></script>
+</body>
+
+</html>

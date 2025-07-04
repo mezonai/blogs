@@ -1,23 +1,90 @@
 [
     {
-        "title": "Mezon Bot Docs",
-        "author": "Mezon",
-        "url": "posts/mezon-bot-docs",
-        "views": 1,
-        "likes": 1
+        "title": "Executive Summary",
+        "summary": "This section provides a concise overview of the project's vision, purpose, and strategic direction. It highlights key takeaways to give stakeholders a quick understanding of the entire initiative.",
+        "banner": "https://mezon.ai/assets/images/logo.png",
+        "author": {
+            "name": "KOMU",
+            "avatar": "https://cdn.mezon.vn/1779484504377790464/1779484617246511104/1716858422929New_Project__1_.png"
+        },
+        "slug": "executive-summary",
+        "created_at": "2025-01-01"
     },
     {
-        "title": "Mezon SDK Docs",
-        "author": "Mezon",
-        "url": "posts/mezon-sdk-docs",
-        "views": 59,
-        "likes": 38
+        "title": "Problem Statement",
+        "summary": "This section identifies and defines the core challenges in the current market or technological landscape that the project aims to solve. It sets the foundation for understanding the need for this solution.",
+        "banner": "https://mezon.ai/assets/images/logo.png",
+        "author": {
+            "name": "Mezon",
+            "avatar": "https://cdn.mezon.ai/1840679737102438400/1840680230897848320/1840679852986863600/1744946507417_undefinedLogo_design_for_gaming_club.jpg"
+        },
+        "slug": "problem-statement",
+        "created_at": "2025-01-01"
     },
     {
-        "title": "Mezon Webhook Docs",
-        "author": "Mezon",
-        "url": "posts/mezon-webhook-docs",
-        "views": 999,
-        "likes": 928
+        "title": "Solution",
+        "summary": "Outlines the innovative approach and technology stack the project utilizes to address the identified problems. It describes the core features, benefits, and competitive advantages of the solution.",
+        "banner": "https://mezon.ai/assets/images/logo.png",
+        "author": {
+            "name": "Mezon bot",
+            "avatar": "https://cdn.mezon.ai/1840677019319275520/1840677401831411712/1800478701561843700/1747636680119_undefinedavatar__1_.png"
+        },
+        "slug": "solution",
+        "created_at": "2025-01-01"
+    },
+    {
+        "title": "Blockchain Economy",
+        "summary": "Explains how blockchain technology is integrated into the project, detailing the economic model, token utility, and its role in creating a decentralized ecosystem that supports transparency and trust.",
+        "banner": "https://mezon.ai/assets/images/logo.png",
+        "author": {
+            "name": "Mezon",
+            "avatar": "https://cdn.mezon.vn/1779484504377790464/1779484617246511104/1716858422929New_Project__1_.png"
+        },
+        "slug": "blockchain-economy",
+        "created_at": "2025-01-01"
+    },
+    {
+        "title": "Technical Architecture",
+        "summary": "Presents the underlying technical structure of the project, including system components, data flow, infrastructure, and integration layers that enable scalable and secure operations.",
+        "banner": "https://mezon.ai/assets/images/logo.png",
+        "author": {
+            "name": "Mezon",
+            "avatar": "https://cdn.mezon.vn/1779484504377790464/1779484617246511104/1716858422929New_Project__1_.png"
+        },
+        "slug": "technica-architecture",
+        "created_at": "2025-01-01"
+    },
+    {
+        "title": "Readmap",
+        "summary": "Outlines the development roadmap, including key milestones, phases of product release, and timelines for achieving strategic goals. It shows the vision for short-term and long-term progress.",
+        "banner": "https://mezon.ai/assets/images/logo.png",
+        "author": {
+            "name": "Mezon",
+            "avatar": "https://cdn.mezon.vn/1779484504377790464/1779484617246511104/1716858422929New_Project__1_.png"
+        },
+        "slug": "readmap",
+        "created_at": "2025-01-01"
+    },
+    {
+        "title": "Tokenomics",
+        "summary": "Details the token distribution model, use cases, governance mechanisms, and incentives for stakeholders. It explains how the token fuels the ecosystem and sustains value creation.",
+        "banner": "https://mezon.ai/assets/images/logo.png",
+        "author": {
+            "name": "Mezon",
+            "avatar": "https://cdn.mezon.vn/1779484504377790464/1779484617246511104/1716858422929New_Project__1_.png"
+        },
+        "slug": "tokenomics",
+        "created_at": "2025-01-01"
+    },
+    {
+        "title": "Team",
+        "summary": "Introduces the core team members behind the project, highlighting their experience, expertise, and roles. This section aims to build trust and showcase the team’s capability to deliver.",
+        "banner": "https://mezon.ai/assets/images/logo.png",
+        "author": {
+            "name": "Mezon",
+            "avatar": "https://cdn.mezon.vn/1779484504377790464/1779484617246511104/1716858422929New_Project__1_.png"
+        },
+        "slug": "team",
+        "created_at": "2025-01-01"
     }
 ]
