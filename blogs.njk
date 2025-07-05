@@ -42,7 +42,8 @@ permalink: "{{ post.slug }}/index.html"
                             <a class="menu__nav-item" href="https://mezon.ai/developers/applications" target="_blank">Developers</a>
                             <a class="menu__nav-item" href="https://top.mezon.ai" target="_blank">Bots/Apps</a>
                             <a class="menu__nav-item" href="https://mezon.ai/docs/" target="_blank">Documents</a>
-                            <a class="menu__nav-item selected" href="https://mezon.ai/clans" target="_blank">Discover</a>
+                            <a class="menu__nav-item" href="https://mezon.ai/clans" target="_blank">Discover</a>
+                            <a class="menu__nav-item selected" href="https://mezon.ai/blogs">Blogs</a>
                         </nav>
                     </div>
                     <div class="menu__bar">
@@ -63,25 +64,27 @@ permalink: "{{ post.slug }}/index.html"
                         <a class="mobile-menu__nav-item" href="https://mezon.ai/developers/applications" target="_blank">Developers</a>
                         <a class="mobile-menu__nav-item" href="https://top.mezon.ai" target="_blank">Bots/Apps</a>
                         <a class="mobile-menu__nav-item" href="https://mezon.ai/docs/" target="_blank">Documents</a>
-                        <a class="mobile-menu__nav-item selected" href="https://mezon.ai/clans" target="_blank">Discover</a>
+                        <a class="mobile-menu__nav-item" href="https://mezon.ai/clans" target="_blank">Discover</a>
+                        <a class="mobile-menu__nav-item selected" href="https://mezon.ai/blogs">Blogs</a>
                     </nav>
                 </div>
             </div>
         </header>
         <div id="main">
-            <div class="post-container">
-                <a href="/" class="post-container__back">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                    </svg>
-                    <span>Back to Home</span>
-                </a>
-                <h1>{{ post.title }}</h1>
-                <p>{{ post.author.name }}</p>
-                <img src="{{ post.author.avatar | url }}" alt="">
-                <p>{{ post.summary }}</p> 
-                <p>{{ permalink }}</p> 
+            <div class="blog__detail">
+                <div class="content__header">
+                    <div class="content__header-info">
+                        <span class="header-info__title">
+                            <h1>{{ post.title }}</h1>
+                        </span>
+                    </div>
+                    <div class="content__header-banner">
+                        <img src="{{ post.author.avatar | url }}" alt="">
+                    </div>
+                </div>
+                <div class="content__body">
+                    {{ post.summary }}
+                </div> 
             </div>
             <footer id="footer">
                 <div class="footer-container">

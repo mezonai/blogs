@@ -2,5 +2,20 @@
 @use '../abstracts/variables' as *;
 
 #main {
-    padding-top: 80px;
+  padding-top: 80px;
+
+  .main-container {
+    margin: 0 auto;
+    padding: 32px;
+    width: calc(100% * 10 / 12);
+
+    @include media(large) {
+      width: 100%;
+    }
+
+    @include media(medium) {
+      padding: 14px 16px;
+      width: 100%;
+    }
+  }
 }
