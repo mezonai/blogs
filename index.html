@@ -72,7 +72,7 @@
                     <div class="blogs__list">
                         {% for post in posts %}
                             <a class="blog__card" href="{{ post.slug | slugUrl }}">
-                                <img class="blog__card-image" src="{{ post.author.avatar }}" alt="banner" />
+                                <img class="blog__card-image" src="{{ post.banner }}" alt="banner" />
                                 <div class="blog__card-content">
                                     <div class="content__body">
                                         <div class="content__body-title">{{ post.title }}</div>

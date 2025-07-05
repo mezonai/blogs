@@ -13,7 +13,7 @@ permalink: "{{ post.slug }}/index.html"
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="icon" href="{{ '/assets/images/favicon.ico' | url }}">
-    <title>{{ title }}</title>
+    <title>{{ post.title }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -71,20 +71,29 @@ permalink: "{{ post.slug }}/index.html"
             </div>
         </header>
         <div id="main">
-            <div class="blog__detail">
+            <div class="post-container">
                 <div class="content__header">
                     <div class="content__header-info">
                         <span class="header-info__title">
                             <h1>{{ post.title }}</h1>
                         </span>
+                        <div class="header-info__stats">
+                            <span class="stats__avatar">
+                                <img src="{{ post.author.avatar }}" alt="avatar">
+                            </span>
+                            <span>
+                                <div class="stats__author">By: {{ post.author.name }}</div>
+                                <div class="stats__date">{{ post.created_at }}</div>
+                            </span>
+                        </div>
                     </div>
                     <div class="content__header-banner">
-                        <img src="{{ post.author.avatar | url }}" alt="">
+                        <img src="{{ post.banner }}" alt="">
                     </div>
                 </div>
                 <div class="content__body">
-                    {{ post.summary }}
-                </div> 
+                    {{ post.content | safe }}
+                </div>
             </div>
             <footer id="footer">
                 <div class="footer-container">

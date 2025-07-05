@@ -43,7 +43,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .wrapper {
@@ -92,15 +92,10 @@ img {
 }
 /* --------------------- 1.3 Typography --------------------- */
 body {
-  color: rgb(68, 68, 68);
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   font-family: "gg sans", sans-serif;
-}
-
-p {
-  color: rgb(68, 68, 68);
 }
 
 a {
@@ -113,7 +108,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: rgb(68, 68, 68);
   font-style: normal;
   font-weight: 700;
   font-family: "gg sans", sans-serif;
@@ -2937,36 +2931,34 @@ ul.linear-list li {
     width: 100%;
   }
 }
-
-/* --------------------- 4.2 Post page --------------------- */
-.blogs__title {
+#main .main-container .blogs__title {
   font-weight: 600;
   margin-top: 0px;
   margin-bottom: 32px;
-  color: #181A2A;
+  color: #181a2a;
 }
-.blogs__description {
-  color: #6D6E76;
+#main .main-container .blogs__description {
+  color: #6d6e76;
   margin-bottom: 32px;
 }
-.blogs__list {
+#main .main-container .blogs__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 @media all and (max-width: 1024px) {
-  .blogs__list {
+  #main .main-container .blogs__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 }
 @media all and (max-width: 640px) {
-  .blogs__list {
+  #main .main-container .blogs__list {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 }
-.blogs__list .blog__card {
+#main .main-container .blogs__list .blog__card {
   text-decoration: none;
   background: #fff;
   border-radius: 16px;
@@ -2977,47 +2969,47 @@ ul.linear-list li {
   cursor: pointer;
   transition: box-shadow 0.2s;
 }
-.blogs__list .blog__card:hover {
+#main .main-container .blogs__list .blog__card:hover {
   box-shadow: 0 4px 24px 0 rgba(24, 26, 42, 0.12);
 }
-.blogs__list .blog__card-image {
+#main .main-container .blogs__list .blog__card-image {
   width: 100%;
   height: 180px;
   object-fit: cover;
   background: #f5f5f5;
 }
-.blogs__list .blog__card-content {
+#main .main-container .blogs__list .blog__card-content {
   padding: 20px 20px 16px 20px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
-.blogs__list .blog__card-content .content__header {
+#main .main-container .blogs__list .blog__card-content .content__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
   margin-bottom: 8px;
 }
-.blogs__list .blog__card-content .content__header-author {
-  color: #FF7A00;
+#main .main-container .blogs__list .blog__card-content .content__header-author {
+  color: #ff7a00;
   font-size: 14px;
   font-weight: 600;
 }
-.blogs__list .blog__card-content .content__header-date {
-  color: #6D6E76;
+#main .main-container .blogs__list .blog__card-content .content__header-date {
+  color: #6d6e76;
   font-size: 14px;
 }
-.blogs__list .blog__card-content .content__body {
+#main .main-container .blogs__list .blog__card-content .content__body {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 16px;
 }
-.blogs__list .blog__card-content .content__body-title {
+#main .main-container .blogs__list .blog__card-content .content__body-title {
   font-size: 18px;
   font-weight: 700;
-  color: #181A2A;
+  color: #181a2a;
   line-height: 1.3;
   min-height: 48px;
   overflow: hidden;
@@ -3026,8 +3018,8 @@ ul.linear-list li {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-.blogs__list .blog__card-content .content__body-desc {
-  color: #6D6E76;
+#main .main-container .blogs__list .blog__card-content .content__body-desc {
+  color: #6d6e76;
   flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3035,11 +3027,11 @@ ul.linear-list li {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-.blogs__list .blog__card-content .content__footer {
+#main .main-container .blogs__list .blog__card-content .content__footer {
   display: flex;
   justify-content: flex-start;
 }
-.blogs__list .blog__card-content .content__footer .read-more {
+#main .main-container .blogs__list .blog__card-content .content__footer .read-more {
   color: #2563eb;
   font-weight: 600;
   text-decoration: none;
@@ -3049,56 +3041,57 @@ ul.linear-list li {
   font-size: 14px;
   transition: color 0.2s;
 }
-.blogs__list .blog__card-content .content__footer .read-more:hover {
+#main .main-container .blogs__list .blog__card-content .content__footer .read-more:hover {
   color: #1d4ed8;
   text-decoration: underline;
 }
-.blogs__list .blog__card-content .content__footer .read-more svg {
+#main .main-container .blogs__list .blog__card-content .content__footer .read-more svg {
   width: 18px;
   height: 18px;
   stroke: currentColor;
 }
 
-.blog__detail {
-  max-width: 896px;
-  margin: 32px auto;
-  padding: 16px;
-  border-radius: 16px;
-  background-color: #fff;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+/* --------------------- 4.2 Post page --------------------- */
+.post-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+  margin-top: 32px;
 }
-.blog__detail .content__header {
+.post-container .content__header {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.blog__detail .content__header .content__header-info {
+.post-container .content__header .content__header-info {
   display: flex;
   flex-direction: column;
 }
-.blog__detail .content__header .content__header-info .header-info__stats {
+.post-container .content__header .content__header-info .header-info__stats {
   display: flex;
   align-items: center;
   gap: 8px;
   padding-right: 64px;
 }
-.blog__detail .content__header .content__header-info .header-info__stats .stats__avatar {
+.post-container .content__header .content__header-info .header-info__stats .stats__avatar {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.blog__detail .content__header .content__header-info .header-info__stats .stats__avatar img {
+.post-container .content__header .content__header-info .header-info__stats .stats__avatar img {
   width: 40px;
   height: 40px;
   border-radius: 10%;
+  border: 1px solid #E0E0E0;
 }
-.blog__detail .content__header .content__header-banner {
+.post-container .content__header .content__header-banner {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 110%;
+  margin-left: -5%;
 }
-.blog__detail .content__header .content__header-banner img {
-  width: 80% !important;
+.post-container .content__header .content__header-banner img {
   border-radius: 8px;
   object-fit: cover;
   display: block;
