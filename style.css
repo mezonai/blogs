@@ -3058,6 +3058,11 @@ ul.linear-list li {
   padding: 0 16px;
   margin-top: 32px;
 }
+@media all and (max-width: 768px) {
+  .post-container {
+    font-size: 14px;
+  }
+}
 .post-container .content__header {
   display: flex;
   flex-direction: column;
@@ -3066,30 +3071,51 @@ ul.linear-list li {
 .post-container .content__header .content__header-info {
   display: flex;
   flex-direction: column;
+  padding: 0 32px;
+}
+@media all and (max-width: 768px) {
+  .post-container .content__header .content__header-info {
+    padding: 0 0;
+  }
 }
 .post-container .content__header .content__header-info .header-info__stats {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding-right: 64px;
+  justify-content: space-between;
 }
-.post-container .content__header .content__header-info .header-info__stats .stats__avatar {
+@media all and (max-width: 320px) {
+  .post-container .content__header .content__header-info .header-info__stats {
+    transition: 0.5s;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.post-container .content__header .content__header-info .header-info__stats .header-info__stats--left {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.post-container .content__header .content__header-info .header-info__stats .stats__avatar img {
+.post-container .content__header .content__header-info .header-info__stats .header-info__stats--left .stats__avatar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.post-container .content__header .content__header-info .header-info__stats .header-info__stats--left .stats__avatar img {
   width: 40px;
   height: 40px;
   border-radius: 10%;
   border: 1px solid #E0E0E0;
 }
+.post-container .content__header .content__header-info .header-info__stats .header-info__stats--right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .post-container .content__header .content__header-banner {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 110%;
-  margin-left: -5%;
 }
 .post-container .content__header .content__header-banner img {
   border-radius: 8px;
@@ -3098,6 +3124,14 @@ ul.linear-list li {
   margin-top: 16px;
   margin-bottom: 16px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+.post-container .content__body {
+  padding: 0 32px;
+}
+@media all and (max-width: 768px) {
+  .post-container .content__body {
+    padding: 0 0;
+  }
 }
 
 /**
