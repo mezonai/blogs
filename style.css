@@ -3055,8 +3055,7 @@ ul.linear-list li {
 .post-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 16px;
-  margin-top: 32px;
+  padding: 16px;
 }
 @media all and (max-width: 768px) {
   .post-container {
@@ -3071,12 +3070,14 @@ ul.linear-list li {
 .post-container .content__header .content__header-info {
   display: flex;
   flex-direction: column;
-  padding: 0 32px;
 }
 @media all and (max-width: 768px) {
   .post-container .content__header .content__header-info {
     padding: 0 0;
   }
+}
+.post-container .content__header .content__header-info .header-info__title h1 {
+  margin: 8px 0;
 }
 .post-container .content__header .content__header-info .header-info__stats {
   display: flex;
@@ -3125,15 +3126,6 @@ ul.linear-list li {
   margin-bottom: 16px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
-.post-container .content__body {
-  padding: 0 32px;
-}
-@media all and (max-width: 768px) {
-  .post-container .content__body {
-    padding: 0 0;
-  }
-}
-
 /**
  * ---------------------------------------------------
  * 	5.  Themes

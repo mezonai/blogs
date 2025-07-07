@@ -4,8 +4,7 @@
 .post-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 16px;
-    margin-top: 32px;
+    padding: 16px;
 
     @include media(medium) {
         font-size: 14px;
@@ -19,10 +18,15 @@
         .content__header-info {
             display: flex;
             flex-direction: column;
-            padding: 0 32px;
 
             @include media(medium) {
                 padding: 0 0;
+            }
+
+            .header-info__title {
+                h1 {
+                    margin: 8px 0;
+                }
             }
 
             .header-info__stats {
@@ -81,10 +85,9 @@
     }
 
     .content__body {
-        padding: 0 32px;
 
         @include media(medium) {
-            padding: 0 0;
+            
         }
     }
 }

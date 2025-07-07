@@ -3,7 +3,7 @@
         "title": "Executive Summary",
         "summary": "This section provides a concise overview of the project's vision, purpose, and strategic direction. It highlights key takeaways to give stakeholders a quick understanding of the entire initiative.",
         "content": "<h2>Vision & Purpose</h2><p>Our project aims to revolutionize the decentralized ecosystem by introducing an all-in-one platform for secure, scalable, and user-centric blockchain applications.</p><h3>Key Highlights</h3><ul><li><strong>Mission-Driven:</strong> To make decentralized technology accessible to everyone.</li><li><strong>Strategic Roadmap:</strong> Clearly defined milestones aligned with industry growth.</li><li><strong>Community-First:</strong> Engaging stakeholders via transparent governance.</li></ul><p>By aligning innovation with usability, our initiative positions itself at the intersection of trust, technology, and transformation.</p>",
-        "banner": "https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/509001205_653976724357534_6155315908164448488_n.jpg?stp=dst-jpg_p526x395_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jidGHAe-1YEQ7kNvwFO05rC&_nc_oc=AdlGkIHLkPXLeLeGD_2zJpZ47eagkuYvMF5404N991dSjkHMQmweF2mRBaEFUpCp_5Y&_nc_zt=23&_nc_ht=scontent.fdad2-1.fna&_nc_gid=JhOW21bGLJw3xCcQ-Jn9ug&oh=00_AfSdKZ27fRLCFa9XN-VjTdmjv-KQOXLZp2Q8_7ypWKAYQg&oe=686F29D0",
+        "banner": "/assets/images/coming-soon.png",
         "author": {
             "name": "KOMU",
             "avatar": "https://cdn.mezon.vn/1779484504377790464/1779484617246511104/1716858422929New_Project__1_.png"
@@ -15,7 +15,7 @@
         "title": "Problem Statement",
         "summary": "This section identifies and defines the core challenges in the current market or technological landscape that the project aims to solve. It sets the foundation for understanding the need for this solution.",
         "content": "<h2>Core Challenges</h2><p>Despite the rapid growth of blockchain, several issues limit its widespread adoption:</p><ol><li><strong>Usability Barriers:</strong> Complex interfaces and poor UX discourage new users.</li><li><strong>Fragmentation:</strong> Siloed solutions across multiple chains create inefficiencies.</li><li><strong>Security Concerns:</strong> Hacks, rug pulls, and protocol failures undermine trust.</li></ol><p>Addressing these pain points is crucial to unlocking the full potential of Web3 technologies.</p>",
-        "banner": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-6/509928441_653976771024196_3618368059281310446_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=15UXGEVLKSIQ7kNvwHtCLaz&_nc_oc=AdkZE55pCysK9W78QmOcT6qBtl0XK90zHDW7aLSRRPdZR_ohTeLic8WBpdG1ZF3LDo4&_nc_zt=23&_nc_ht=scontent.fdad1-3.fna&_nc_gid=JhOW21bGLJw3xCcQ-Jn9ug&oh=00_AfS4UgagbTJ0XAx25dGFB4osO03gaGyN3K9CAusrKhaypw&oe=686EFB73",
+        "banner": "/assets/images/coming-soon.png",
         "author": {
             "name": "Mezon",
             "avatar": "https://cdn.mezon.ai/1840679737102438400/1840680230897848320/1840679852986863600/1744946507417_undefinedLogo_design_for_gaming_club.jpg"
@@ -27,7 +27,7 @@
         "title": "Solution",
         "summary": "Outlines the innovative approach and technology stack the project utilizes to address the identified problems. It describes the core features, benefits, and competitive advantages of the solution.",
         "content": "<h2>Our Approach</h2><p>We offer a modular blockchain platform with tools for developers, enterprises, and users to build, deploy, and scale decentralized apps effortlessly.</p><h3>Key Features</h3><ul><li><strong>Composable SDKs:</strong> Build dApps quickly with minimal code.</li><li><strong>Multi-Chain Interoperability:</strong> Bridge assets and logic across EVM-compatible networks.</li><li><strong>AI-Powered Security:</strong> Real-time threat monitoring and contract auditing tools.</li></ul><p>By combining simplicity with security and scalability, we lower barriers to entry while enabling enterprise-grade performance.</p>",
-        "banner": "https://mezon.ai/clans/no_banner.8e68bd3bc32b0ede.jpg",
+        "banner": "/assets/images/coming-soon.png",
         "author": {
             "name": "Mezon bot",
             "avatar": "https://cdn.mezon.ai/1840677019319275520/1840677401831411712/1800478701561843700/1747636680119_undefinedavatar__1_.png"
@@ -39,7 +39,7 @@
         "title": "Blockchain Economy",
         "summary": "Explains how blockchain technology is integrated into the project, detailing the economic model, token utility, and its role in creating a decentralized ecosystem that supports transparency and trust.",
         "content": "<h2>Token Utility & Incentives</h2><p>The project's native token underpins economic activity across the ecosystem:</p><ul><li><strong>Staking & Rewards:</strong> Token holders can earn rewards by staking and participating in consensus.</li><li><strong>Governance:</strong> Vote on upgrades, treasury usage, and strategic proposals via DAO.</li><li><strong>Access:</strong> Unlock premium features, services, or platform tools.</li></ul><p>Designed to incentivize long-term participation and ensure decentralized value creation, the token serves as the backbone of our blockchain economy.</p>",
-        "banner": "https://mezon.ai/clans/no_banner.8e68bd3bc32b0ede.jpg",
+        "banner": "/assets/images/coming-soon.png",
         "author": {
             "name": "Mezon",
             "avatar": "https://cdn.mezon.vn/1779484504377790464/1779484617246511104/1716858422929New_Project__1_.png"
@@ -51,7 +51,7 @@
         "title": "Technical Architecture",
         "summary": "Presents the underlying technical structure of the project, including system components, data flow, infrastructure, and integration layers that enable scalable and secure operations.",
         "content": "<h2>System Overview</h2><p>Our platform is designed with scalability and security at its core. Key components include:</p><ul><li><strong>Backend:</strong> Node.js microservices containerized via Docker and orchestrated with Kubernetes.</li><li><strong>Blockchain Layer:</strong> EVM-compatible chain with L2 rollup support.</li><li><strong>Storage:</strong> IPFS and Arweave for decentralized file and metadata storage.</li><li><strong>Middleware:</strong> GraphQL APIs for dApp integration and analytics.</li></ul><p>Architecture supports modular upgrades, multi-region deployments, and seamless failover recovery mechanisms.</p>",
-        "banner": "https://mezon.ai/clans/no_banner.8e68bd3bc32b0ede.jpg",
+        "banner": "/assets/images/coming-soon.png",
         "author": {
             "name": "Mezon",
             "avatar": "https://cdn.mezon.vn/1779484504377790464/1779484617246511104/1716858422929New_Project__1_.png"
@@ -63,7 +63,7 @@
         "title": "Readmap",
         "summary": "Outlines the development roadmap, including key milestones, phases of product release, and timelines for achieving strategic goals. It shows the vision for short-term and long-term progress.",
         "content": "<h2>Development Timeline</h2><table border=\"1\" cellpadding=\"6\"><thead><tr><th>Quarter</th><th>Milestone</th></tr></thead><tbody><tr><td>Q1 2025</td><td>MVP Development, Alpha Testing, Community Onboarding</td></tr><tr><td>Q2 2025</td><td>Mainnet Launch, Token Generation Event (TGE)</td></tr><tr><td>Q3 2025</td><td>Governance Portal, Staking Launch, DAO Formation</td></tr><tr><td>Q4 2025</td><td>Cross-Chain Support, Partner Integrations, Marketing Campaign</td></tr></tbody></table><p>Future phases include developer grants, enterprise partnerships, and ecosystem expansion.</p>",
-        "banner": "https://mezon.ai/clans/no_banner.8e68bd3bc32b0ede.jpg",
+        "banner": "/assets/images/coming-soon.png",
         "author": {
             "name": "Mezon",
             "avatar": "https://cdn.mezon.vn/1779484504377790464/1779484617246511104/1716858422929New_Project__1_.png"
@@ -75,7 +75,7 @@
         "title": "Tokenomics",
         "summary": "Details the token distribution model, use cases, governance mechanisms, and incentives for stakeholders. It explains how the token fuels the ecosystem and sustains value creation.",
         "content": "<h2>Token Distribution</h2><p>The total supply of the token is capped and distributed as follows:</p><ul><li><strong>Community & Rewards:</strong> 40%</li><li><strong>Team & Advisors:</strong> 20% (vested over 36 months)</li><li><strong>Investors:</strong> 15%</li><li><strong>Treasury:</strong> 15%</li><li><strong>Liquidity:</strong> 10%</li></ul><h3>Utility</h3><p>Tokens serve multiple purposes:</p><ul><li>Governance voting</li><li>Access to premium features</li><li>Fee discounts</li><li>Staking rewards</li></ul><p>Our tokenomics is built for sustainability, growth, and equitable participation.</p>",
-        "banner": "https://mezon.ai/clans/no_banner.8e68bd3bc32b0ede.jpg",
+        "banner": "/assets/images/coming-soon.png",
         "author": {
             "name": "Mezon",
             "avatar": "https://cdn.mezon.vn/1779484504377790464/1779484617246511104/1716858422929New_Project__1_.png"
@@ -87,7 +87,7 @@
         "title": "Team",
         "summary": "Introduces the core team members behind the project, highlighting their experience, expertise, and roles. This section aims to build trust and showcase the team’s capability to deliver.",
         "content": "<h2>Core Team</h2><ul><li><strong>Jane Nguyen – CEO:</strong> 10+ years in tech entrepreneurship, ex-Google, blockchain advocate since 2016.</li><li><strong>Minh Tran – CTO:</strong> Former lead engineer at Binance Smart Chain, full-stack blockchain developer.</li><li><strong>Lan Pham – CMO:</strong> Growth strategist with experience scaling Web3 projects globally.</li></ul><h3>Advisors</h3><p>We are supported by top advisors from academia, venture capital, and cybersecurity sectors. Their guidance ensures our roadmap aligns with both market dynamics and technological advancements.</p>",
-        "banner": "https://mezon.ai/clans/no_banner.8e68bd3bc32b0ede.jpg",
+        "banner": "/assets/images/coming-soon.png",
         "author": {
             "name": "Mezon",
             "avatar": "https://cdn.mezon.vn/1779484504377790464/1779484617246511104/1716858422929New_Project__1_.png"
