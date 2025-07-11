@@ -2,6 +2,7 @@ const pathPrefix = '/';
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('assets');
+    eleventyConfig.addPassthroughCopy('words');
     eleventyConfig.addPassthroughCopy('style.css');
     eleventyConfig.addPassthroughCopy('main.js');
 
