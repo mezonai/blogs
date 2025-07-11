@@ -5,6 +5,9 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 
     @include media(medium) {
         font-size: 14px;
@@ -13,7 +16,7 @@
     .content__header {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 16px;
 
         .content__header-info {
             display: flex;
@@ -76,8 +79,6 @@
                 border-radius: 8px;
                 object-fit: cover;
                 display: block;
-                margin-top: 16px;
-                margin-bottom: 16px;
                 box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
                     0 4px 6px -4px rgba(0, 0, 0, 0.1);
             }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * ---------------------------------------------------
  * 	Table of contents
@@ -71,21 +72,21 @@ img {
 /* --------------------- 1.2 Fonts --------------------- */
 @font-face {
   font-family: "gg sans";
-  src: url("/assets/fonts/ggsans-Medium.523e1206a60f2c67a464.woff2") format("woff2");
+  src: url("/blogs/assets/fonts/ggsans-Medium.523e1206a60f2c67a464.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "gg sans";
-  src: url("/assets/fonts/ggsans-Semibold.739415029df017604b41.woff2") format("woff2");
+  src: url("/blogs/assets/fonts/ggsans-Semibold.739415029df017604b41.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "gg sans";
-  src: url("/assets/fonts/ggsans-Bold.7e70b94e6d7ca5e2b322.woff2") format("woff2");
+  src: url("/blogs/assets/fonts/ggsans-Bold.7e70b94e6d7ca5e2b322.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -100,6 +101,7 @@ body {
 
 a {
   color: #0969da;
+  word-break: break-word;
 }
 
 h1,
@@ -2937,10 +2939,6 @@ ul.linear-list li {
   margin-bottom: 32px;
   color: #181a2a;
 }
-#main .main-container .blogs__description {
-  color: #6d6e76;
-  margin-bottom: 32px;
-}
 #main .main-container .blogs__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2974,7 +2972,7 @@ ul.linear-list li {
 }
 #main .main-container .blogs__list .blog__card-image {
   width: 100%;
-  height: 180px;
+  height: 230px;
   object-fit: cover;
   background: #f5f5f5;
 }
@@ -3056,6 +3054,9 @@ ul.linear-list li {
   max-width: 1000px;
   margin: 0 auto;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 @media all and (max-width: 768px) {
   .post-container {
@@ -3065,7 +3066,7 @@ ul.linear-list li {
 .post-container .content__header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 .post-container .content__header .content__header-info {
   display: flex;
@@ -3122,10 +3123,939 @@ ul.linear-list li {
   border-radius: 8px;
   object-fit: cover;
   display: block;
-  margin-top: 16px;
-  margin-bottom: 16px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
+/* --------------------- 4.3 Mezon competition page --------------------- */
+.mezon-competition {
+  /* .c9 {
+    max-width: 451.4pt;
+    padding: 72pt 72pt 72pt 72pt;
+  } */
+  /* .c3 {
+    background-color: #ffffff;
+  } */
+}
+.mezon-competition .lst-kix_ngdpakdt69du-3 > li:before {
+  content: "●  ";
+}
+.mezon-competition .lst-kix_ngdpakdt69du-1 > li:before {
+  content: "○  ";
+}
+.mezon-competition .lst-kix_ngdpakdt69du-5 > li:before {
+  content: "■  ";
+}
+.mezon-competition .lst-kix_ngdpakdt69du-2 > li:before {
+  content: "■  ";
+}
+.mezon-competition .lst-kix_ngdpakdt69du-4 > li:before {
+  content: "○  ";
+}
+.mezon-competition ul.lst-kix_ngdpakdt69du-4 {
+  list-style-type: none;
+}
+.mezon-competition ul.lst-kix_ngdpakdt69du-5 {
+  list-style-type: none;
+}
+.mezon-competition ul.lst-kix_ngdpakdt69du-2 {
+  list-style-type: none;
+}
+.mezon-competition ul.lst-kix_ngdpakdt69du-3 {
+  list-style-type: none;
+}
+.mezon-competition ul.lst-kix_ngdpakdt69du-0 {
+  list-style-type: none;
+}
+.mezon-competition ul.lst-kix_ngdpakdt69du-1 {
+  list-style-type: none;
+}
+.mezon-competition .lst-kix_ngdpakdt69du-6 > li:before {
+  content: "●  ";
+}
+.mezon-competition .lst-kix_ngdpakdt69du-7 > li:before {
+  content: "○  ";
+}
+.mezon-competition ul.lst-kix_ngdpakdt69du-8 {
+  list-style-type: none;
+}
+.mezon-competition .lst-kix_ngdpakdt69du-8 > li:before {
+  content: "■  ";
+}
+.mezon-competition .lst-kix_ngdpakdt69du-0 > li:before {
+  content: "●  ";
+}
+.mezon-competition ul.lst-kix_ngdpakdt69du-6 {
+  list-style-type: none;
+}
+.mezon-competition ul.lst-kix_ngdpakdt69du-7 {
+  list-style-type: none;
+}
+.mezon-competition ol {
+  margin: 0;
+  padding: 0;
+}
+.mezon-competition table td,
+.mezon-competition table th {
+  padding: 0;
+}
+.mezon-competition .c1 {
+  -webkit-text-decoration-skip: none;
+  color: #1155cc;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  font-size: 13pt;
+}
+.mezon-competition .c8 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+  height: 11pt;
+}
+.mezon-competition .c6 {
+  padding-top: 12pt;
+  padding-bottom: 12pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.mezon-competition .c5 {
+  -webkit-text-decoration-skip: none;
+  color: #1155cc;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+.mezon-competition .c4 {
+  color: #000000;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-style: normal;
+}
+.mezon-competition .c0 {
+  font-size: 13pt;
+  font-weight: 700;
+}
+.mezon-competition .c2 {
+  font-size: 13pt;
+  font-weight: 400;
+}
+.mezon-competition .c7 {
+  color: #1155cc;
+  text-decoration: inherit;
+}
+.mezon-competition .title {
+  padding-top: 0pt;
+  color: #000000;
+  font-size: 26pt;
+  padding-bottom: 3pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.mezon-competition .subtitle {
+  padding-top: 0pt;
+  color: #666666;
+  font-size: 15pt;
+  padding-bottom: 16pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.mezon-competition li {
+  color: #000000;
+  font-size: 11pt;
+}
+.mezon-competition p {
+  margin: 0;
+  color: #000000;
+  font-size: 11pt;
+}
+.mezon-competition h1 {
+  padding-top: 20pt;
+  color: #000000;
+  font-size: 20pt;
+  padding-bottom: 6pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.mezon-competition h2 {
+  padding-top: 18pt;
+  color: #000000;
+  font-size: 16pt;
+  padding-bottom: 6pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.mezon-competition h3 {
+  color: #434343;
+  font-size: 14pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+  margin: 0;
+}
+.mezon-competition h4 {
+  padding-top: 14pt;
+  color: #666666;
+  font-size: 12pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.mezon-competition h5 {
+  padding-top: 12pt;
+  color: #666666;
+  font-size: 11pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.mezon-competition h6 {
+  padding-top: 12pt;
+  color: #666666;
+  font-size: 11pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  font-style: italic;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+
+/* --------------------- 4.4 Judging panel page --------------------- */
+.judging-panel ol {
+  margin: 0;
+  padding: 0;
+}
+.judging-panel table td,
+.judging-panel table th {
+  padding: 0;
+}
+.judging-panel img.judging-panel__img {
+  border-radius: 8px;
+  margin-top: 16px;
+}
+.judging-panel .c1 {
+  padding-top: 6pt;
+  padding-bottom: 0pt;
+  line-height: 1.5;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel .c0 {
+  color: #080809;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-size: 13pt;
+  font-style: normal;
+}
+.judging-panel .c5 {
+  -webkit-text-decoration-skip: none;
+  color: #1155cc;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  font-size: 13pt;
+}
+.judging-panel .c19 {
+  padding-top: 12pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel .c14 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel .c16 {
+  padding-bottom: 12pt;
+  line-height: 1.5;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel .c11 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel .c3 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.5;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel .c4 {
+  font-size: 13pt;
+  color: #080809;
+  font-weight: 400;
+}
+.judging-panel .c12 {
+  -webkit-text-decoration-skip: none;
+  color: #1155cc;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+.judging-panel .c8 {
+  color: #000000;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-style: normal;
+}
+.judging-panel .c15 {
+  font-weight: 400;
+  font-size: 11pt;
+}
+.judging-panel .c2 {
+  font-size: 13pt;
+  font-weight: 700;
+}
+.judging-panel .c6 {
+  font-size: 13pt;
+  font-weight: 400;
+}
+.judging-panel .c9 {
+  color: inherit;
+  text-decoration: inherit;
+}
+.judging-panel .c17 {
+  color: #080809;
+  text-decoration: none;
+}
+.judging-panel .c10 {
+  vertical-align: baseline;
+  font-style: normal;
+}
+.judging-panel .c13 {
+  height: 30pt;
+}
+.judging-panel .c18 {
+  color: #080809;
+}
+.judging-panel .title {
+  padding-top: 0pt;
+  color: #000000;
+  font-size: 26pt;
+  padding-bottom: 3pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel .subtitle {
+  padding-top: 0pt;
+  color: #666666;
+  font-size: 15pt;
+  padding-bottom: 16pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel li {
+  color: #000000;
+  font-size: 11pt;
+}
+.judging-panel p {
+  margin: 0;
+  color: #000000;
+  font-size: 11pt;
+}
+.judging-panel h1 {
+  padding-top: 20pt;
+  color: #000000;
+  font-size: 20pt;
+  padding-bottom: 6pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel h2 {
+  padding-top: 18pt;
+  color: #000000;
+  font-size: 16pt;
+  padding-bottom: 6pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel h3 {
+  padding-top: 16pt;
+  color: #434343;
+  font-size: 14pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel h4 {
+  padding-top: 14pt;
+  color: #666666;
+  font-size: 12pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel h5 {
+  padding-top: 12pt;
+  color: #666666;
+  font-size: 11pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.judging-panel h6 {
+  padding-top: 12pt;
+  color: #666666;
+  font-size: 11pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  font-style: italic;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+
+/* --------------------- 4.5 Top five page --------------------- */
+.top-five ol {
+  margin: 0;
+  padding: 0;
+}
+.top-five table td,
+.top-five table th {
+  padding: 0;
+}
+.top-five .c3 {
+  padding-top: 6pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+  height: 11pt;
+}
+.top-five .c11 {
+  padding-top: 6pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five .c1 {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-size: 13pt;
+  font-style: normal;
+}
+.top-five .c2 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five .c20 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five .c18 {
+  padding-top: 6pt;
+  padding-bottom: 0pt;
+  line-height: 1.5;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five .c12 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.5;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five .c8 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five .c14 {
+  padding-top: 12pt;
+  padding-bottom: 12pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five .c4 {
+  -webkit-text-decoration-skip: none;
+  color: #1155cc;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+.top-five .c15 {
+  color: #000000;
+  font-weight: 400;
+  font-size: 11pt;
+}
+.top-five .c5 {
+  font-size: 13pt;
+  color: #080809;
+  font-weight: 400;
+}
+.top-five .c9 {
+  font-size: 13pt;
+  font-weight: 400;
+}
+.top-five .c22 {
+  text-decoration: none;
+  vertical-align: baseline;
+  font-style: italic;
+}
+.top-five .c0 {
+  font-size: 13pt;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.top-five .c7 {
+  text-decoration: none;
+  vertical-align: baseline;
+  font-style: normal;
+}
+.top-five .c6 {
+  color: inherit;
+  text-decoration: inherit;
+}
+.top-five .c21 {
+  max-width: 451.4pt;
+  padding: 72pt 72pt 72pt 72pt;
+}
+.top-five .c10 {
+  vertical-align: baseline;
+  font-style: normal;
+}
+.top-five .c13 {
+  height: 11pt;
+}
+.top-five .c19 {
+  color: #080809;
+}
+.top-five .c16 {
+  color: #000000;
+}
+.top-five .title {
+  padding-top: 0pt;
+  color: #000000;
+  font-size: 26pt;
+  padding-bottom: 3pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five .subtitle {
+  padding-top: 0pt;
+  color: #666666;
+  font-size: 15pt;
+  padding-bottom: 16pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five li {
+  color: #000000;
+  font-size: 11pt;
+}
+.top-five p {
+  margin: 0;
+  color: #000000;
+  font-size: 11pt;
+}
+.top-five h1 {
+  padding-top: 20pt;
+  color: #000000;
+  font-size: 20pt;
+  padding-bottom: 6pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five h2 {
+  padding-top: 18pt;
+  color: #000000;
+  font-size: 16pt;
+  padding-bottom: 6pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five h3 {
+  padding-top: 16pt;
+  color: #434343;
+  font-size: 14pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five h4 {
+  padding-top: 14pt;
+  color: #666666;
+  font-size: 12pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five h5 {
+  padding-top: 12pt;
+  color: #666666;
+  font-size: 11pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.top-five h6 {
+  padding-top: 12pt;
+  color: #666666;
+  font-size: 11pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  font-style: italic;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+
+/* --------------------- 4.5 Team winner page --------------------- */
+.team-winner ol {
+  margin: 0;
+  padding: 0;
+}
+.team-winner table td,
+.team-winner table th {
+  padding: 0;
+}
+.team-winner .c17 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+  height: 11pt;
+}
+.team-winner .c1 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+  height: 11pt;
+}
+.team-winner .c24 {
+  padding-top: 12pt;
+  line-height: 1.5;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+  margin-right: 30pt;
+}
+.team-winner .c4 {
+  -webkit-text-decoration-skip: none;
+  color: #1155cc;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  font-size: 13pt;
+}
+.team-winner .c3 {
+  color: #080809;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-size: 13pt;
+  font-style: normal;
+}
+.team-winner .c2 {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-size: 13pt;
+  font-style: normal;
+}
+.team-winner .c7 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.team-winner .c8 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.team-winner .c0 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.5;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.team-winner .c23 {
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.team-winner .c13 {
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 13pt;
+}
+.team-winner .c21 {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 11pt;
+}
+.team-winner .c19 {
+  -webkit-text-decoration-skip: none;
+  color: #1155cc;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+.team-winner .c16 {
+  color: #000000;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-style: italic;
+}
+.team-winner .c14 {
+  font-size: 14pt;
+  font-weight: 700;
+}
+.team-winner .c5 {
+  font-size: 13pt;
+  font-weight: 400;
+}
+.team-winner .c18 {
+  font-size: 13pt;
+  font-weight: 700;
+}
+.team-winner .c20 {
+  -webkit-text-decoration-skip: none;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+.team-winner .c6 {
+  color: #1155cc;
+  text-decoration: inherit;
+}
+.team-winner .c12 {
+  vertical-align: baseline;
+  font-style: normal;
+}
+.team-winner .c15 {
+  max-width: 451.4pt;
+  padding: 72pt 72pt 72pt 72pt;
+}
+.team-winner .c11 {
+  color: #080809;
+}
+.team-winner .c22 {
+  color: #000000;
+}
+.team-winner .c25 {
+  color: #202124;
+}
+.team-winner .c26 {
+  text-decoration: none;
+}
+.team-winner .title {
+  padding-top: 0pt;
+  color: #000000;
+  font-size: 26pt;
+  padding-bottom: 3pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.team-winner .subtitle {
+  padding-top: 0pt;
+  color: #666666;
+  font-size: 15pt;
+  padding-bottom: 16pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.team-winner li {
+  color: #000000;
+  font-size: 11pt;
+}
+.team-winner p {
+  margin: 0;
+  color: #000000;
+  font-size: 11pt;
+}
+.team-winner h1 {
+  padding-top: 20pt;
+  color: #000000;
+  font-size: 20pt;
+  padding-bottom: 6pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.team-winner h2 {
+  padding-top: 18pt;
+  color: #000000;
+  font-size: 16pt;
+  padding-bottom: 6pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.team-winner h3 {
+  padding-top: 16pt;
+  color: #434343;
+  font-size: 14pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.team-winner h4 {
+  padding-top: 14pt;
+  color: #666666;
+  font-size: 12pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.team-winner h5 {
+  padding-top: 12pt;
+  color: #666666;
+  font-size: 11pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.team-winner h6 {
+  padding-top: 12pt;
+  color: #666666;
+  font-size: 11pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  font-style: italic;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+
 /**
  * ---------------------------------------------------
  * 	5.  Themes

@@ -25,7 +25,7 @@
             <div class="header-container">
                 <div class="header-content">
                     <div class="menu__nav">
-                        <a href="/" class="header__logo">
+                        <a href="{{ '/' | url}}" class="header__logo">
                             <img class="header__logo-img" src="{{ '/assets/images/Logo_mezon_light.png' | url }}" alt="logo">
                             <span class="header__logo-text">mezon</span>
                         </a>
@@ -68,18 +68,20 @@
         <div id="main">
             <div class="main-container">
                 <section class="blogs">
-                    <h2 class="blogs__title">Recent NCC Blogs</h2>
+                    <h2 class="blogs__title">Recent Posts</h2>
                     <div class="blogs__list">
                         {% for post in posts %}
-                            <a class="blog__card" href="{{ post.slug | slugUrl }}">
-                                <img class="blog__card-image" src="{{ post.banner }}" alt="banner" />
-                                <div class="blog__card-content">
-                                    <div class="content__body">
-                                        <div class="content__body-title">{{ post.title }}</div>
-                                        <div class="content__body-desc">{{ post.summary }}</div>
+                            {% if not post.isComingSoon %}
+                                <a class="blog__card" href="{{ post.slug | slugUrl }}">
+                                    <img class="blog__card-image" src="{{ post.banner }}" alt="banner" />
+                                    <div class="blog__card-content">
+                                        <div class="content__body">
+                                            <div class="content__body-title">{{ post.title }}</div>
+                                            <div class="content__body-desc">{{ post.summary }}</div>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            {% endif %}
                         {% endfor %}
                     </div>
                 </section> 
@@ -92,7 +94,7 @@
                             <ul class="content-item__list">
                                 <li><a href="https://mezon.ai" target="_blank">Home</a></li>
                                 <li><a href="https://mezon.ai" target="_blank">Download</a></li>
-                                <li><a href="https://mezon.ai" target="_blank">Clans</a></li>
+                                <li><a href="https://mezon.ai/clans" target="_blank">Clans</a></li>
                                 <li><a href="https://mezon.ai" target="_blank">Safety</a></li>
                                 <li><a href="https://mezon.ai" target="_blank">Blog</a></li>
                             </ul>
@@ -110,11 +112,11 @@
                             <h3 class="content-item__title">Resources</h3>
                             <ul class="content-item__list">
                                 <li><a href="https://mezon.ai" target="_blank">College</a></li>
-                                <li><a href="https://mezon.ai" target="_blank">Support</a></li>
+                                <li><a href="https://mezon.ai/invite/1840696977034055680" target="_blank">Support</a></li>
                                 <li><a href="https://mezon.ai" target="_blank">Safety</a></li>
-                                <li><a href="https://mezon.ai" target="_blank">Blog</a></li>
-                                <li><a href="https://mezon.ai" target="_blank">Feedback</a></li>
-                                <li><a href="https://mezon.ai" target="_blank">Developers</a></li>
+                                <li><a href="https://mezon.ai/blogs" target="_blank">Blogs</a></li>
+                                <li><a href="https://mezon.ai/invite/1840696977034055680" target="_blank">Feedback</a></li>
+                                <li><a href="https://mezon.ai/developers" target="_blank">Developers</a></li>
                             </ul>
                         </div>
                         <div>
@@ -122,7 +124,7 @@
                             <ul class="content-item__list">
                                 <li><a href="https://mezon.ai" target="_blank">Terms</a></li>
                                 <li><a href="https://mezon.ai" target="_blank">Privacy</a></li>
-                                <li><a href="https://mezon.ai" target="_blank">Guidelines</a></li>
+                                <li><a href="https://mezon.ai/docs" target="_blank">Guidelines</a></li>
                                 <li><a href="https://mezon.ai" target="_blank">Acknowledgements</a></li>
                                 <li><a href="https://mezon.ai" target="_blank">License</a></li>
                             </ul>
