@@ -72,21 +72,21 @@ img {
 /* --------------------- 1.2 Fonts --------------------- */
 @font-face {
   font-family: "gg sans";
-  src: url("/blogs/assets/fonts/ggsans-Medium.523e1206a60f2c67a464.woff2") format("woff2");
+  src: url("/assets/fonts/ggsans-Medium.523e1206a60f2c67a464.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "gg sans";
-  src: url("/blogs/assets/fonts/ggsans-Semibold.739415029df017604b41.woff2") format("woff2");
+  src: url("/assets/fonts/ggsans-Semibold.739415029df017604b41.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "gg sans";
-  src: url("/blogs/assets/fonts/ggsans-Bold.7e70b94e6d7ca5e2b322.woff2") format("woff2");
+  src: url("/assets/fonts/ggsans-Bold.7e70b94e6d7ca5e2b322.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -3048,6 +3048,45 @@ ul.linear-list li {
   height: 18px;
   stroke: currentColor;
 }
+#main .main-container .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+}
+#main .main-container .pagination .page-btn,
+#main .main-container .pagination .page-number {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 1px #e5e7eb;
+}
+#main .main-container .pagination .page-btn:hover:not(:disabled):not(.active),
+#main .main-container .pagination .page-number:hover:not(:disabled):not(.active) {
+  background-color: #e5e7eb;
+}
+#main .main-container .pagination .page-btn:disabled,
+#main .main-container .pagination .page-number:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#main .main-container .pagination .page-btn.active,
+#main .main-container .pagination .page-number.active {
+  background-color: #6366f1;
+  color: white;
+  font-weight: bold;
+  box-shadow: none;
+}
+#main .main-container .pagination .page-numbers {
+  display: flex;
+  gap: 8px;
+}
 
 /* --------------------- 4.2 Post page --------------------- */
 .post-container {
@@ -4047,6 +4086,172 @@ ul.linear-list li {
   padding-top: 12pt;
   color: #666666;
   font-size: 11pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  font-style: italic;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+
+/* --------------------- 4.5 Team winner page --------------------- */
+.community ol {
+  margin: 0;
+  padding: 0;
+}
+.community table td,
+.community table th {
+  padding: 0;
+}
+.community .c5 {
+  -webkit-text-decoration-skip: none;
+  color: #1155cc;
+  font-weight: 400;
+  text-decoration: underline;
+  vertical-align: baseline;
+  text-decoration-skip-ink: none;
+  font-style: normal;
+}
+.community .c3 {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-style: normal;
+}
+.community .c6 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+  height: 11pt;
+}
+.community .c1 {
+  padding-top: 12pt;
+  padding-bottom: 12pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.community .c9 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.community .c8 {
+  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip: none;
+  color: #1155cc;
+  text-decoration: underline;
+}
+.community .c7 {
+  max-width: 451.4pt;
+  padding: 72pt 72pt 72pt 72pt;
+}
+.community .c2 {
+  color: #080809;
+  font-size: 11.5pt;
+}
+.community .c0 {
+  color: inherit;
+  text-decoration: inherit;
+}
+.community .c4 {
+  font-weight: 700;
+}
+.community .title {
+  padding-top: 0pt;
+  color: #000000;
+  font-size: 26pt;
+  padding-bottom: 3pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.community .subtitle {
+  padding-top: 0pt;
+  color: #666666;
+  font-size: 15pt;
+  padding-bottom: 16pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.community li {
+  color: #000000;
+}
+.community p {
+  margin: 0;
+  color: #000000;
+}
+.community h1 {
+  padding-top: 20pt;
+  color: #000000;
+  font-size: 20pt;
+  padding-bottom: 6pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.community h2 {
+  padding-top: 18pt;
+  color: #000000;
+  font-size: 16pt;
+  padding-bottom: 6pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.community h3 {
+  padding-top: 16pt;
+  color: #434343;
+  font-size: 14pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.community h4 {
+  padding-top: 14pt;
+  color: #666666;
+  font-size: 12pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.community h5 {
+  padding-top: 12pt;
+  color: #666666;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.community h6 {
+  padding-top: 12pt;
+  color: #666666;
   padding-bottom: 4pt;
   line-height: 1.15;
   page-break-after: avoid;

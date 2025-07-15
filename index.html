@@ -72,7 +72,7 @@
                     <div class="blogs__list">
                         {% for post in posts %}
                             {% if not post.isComingSoon %}
-                                <a class="blog__card" href="{{ post.slug | slugUrl }}">
+                                <a class="blog__card" href="{{ post.slug | slugUrl }}" data-post>
                                     <img class="blog__card-image" src="{{ post.banner }}" alt="banner" />
                                     <div class="blog__card-content">
                                         <div class="content__body">
@@ -85,6 +85,15 @@
                         {% endfor %}
                     </div>
                 </section> 
+                <div class="pagination">
+                    <button class="page-btn btn-first">First</button>
+                    <button class="page-btn btn-prev">Prev</button>
+                    
+                    <div class="page-numbers"></div> <!-- dynamic numbers sẽ render vô đây -->
+
+                    <button class="page-btn btn-next">Next</button>
+                    <button class="page-btn btn-last">Last</button>
+                </div>
             </div>
             <footer id="footer">
                 <div class="footer-container">
