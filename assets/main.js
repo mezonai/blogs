@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const posts = [...document.querySelectorAll('[data-post]')];
     const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
 
-    let currentPage = 1;
+    let currentPage = localStorage.getItem('currentPage') || 1;
 
     const btnFirst = document.querySelector('.btn-first');
     const btnPrev = document.querySelector('.btn-prev');
@@ -58,10 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const btn = document.createElement('button');
             btn.textContent = i;
             btn.classList.add('page-number');
-            if (i === currentPage) btn.classList.add('active');
+            if (i == currentPage) btn.classList.add('active');
 
             btn.addEventListener('click', () => {
                 currentPage = i;
+                localStorage.setItem('currentPage', i);
                 renderPosts();
                 renderPageNumbers();
                 updateButtons();
@@ -80,20 +81,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     btnFirst.addEventListener('click', () => {
         currentPage = 1;
+        localStorage.setItem('currentPage', 1);
         renderPosts();
         renderPageNumbers();
         updateButtons();
     });
 
     btnPrev.addEventListener('click', () => {
-        if (currentPage > 1) currentPage--;
+        if (currentPage > 1) {
+            currentPage--;
+            localStorage.setItem('currentPage', currentPage);
+        }
         renderPosts();
         renderPageNumbers();
         updateButtons();
     });
 
     btnNext.addEventListener('click', () => {
-        if (currentPage < totalPages) currentPage++;
+        if (currentPage < totalPages) {
+            currentPage++;
+            localStorage.setItem('currentPage', currentPage);
+        }
         renderPosts();
         renderPageNumbers();
         updateButtons();
@@ -101,6 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     btnLast.addEventListener('click', () => {
         currentPage = totalPages;
+        localStorage.setItem('currentPage', totalPages);
         renderPosts();
         renderPageNumbers();
         updateButtons();
