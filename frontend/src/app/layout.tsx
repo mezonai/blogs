@@ -22,7 +22,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body cz-shortcut-listen="true" className="mt-[75px] font-sans">
+      <body cz-shortcut-listen="true" className="font-sans">
         <Providers>
           <Header />
           <main>{children}</main>
