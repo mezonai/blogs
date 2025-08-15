@@ -179,6 +179,7 @@
   },
   "isStrapiMonorepo": true,
   "dependencies": {
+    "@strapi/plugin-graphql": "workspace:*",
     "pg": "8.16.3"
   }
 }

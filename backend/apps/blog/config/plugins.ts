@@ -17,4 +17,11 @@ module.exports = ({ env }) => ({
       refreshTokenRotation: false,
     },
   },
+  graphql: {
+    enabled: true,
+    config: {
+      defaultLimit: 10,
+      maxLimit: 20,
+    },
+  },
 });
