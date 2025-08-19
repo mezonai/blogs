@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  blogs-database:
+    image: postgres:latest
+    container_name: blogs-database
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mezonblogs
+    ports:
+      - '5439:5432'
+    volumes:
+      - ./database/mezonblogs:/var/lib/postgresql/data
+    restart: always

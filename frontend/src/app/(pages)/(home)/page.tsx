@@ -8,6 +8,8 @@ import {
   CardTitle,
 } from '@/components/atoms/card';
 
+import BlogsPage from '../blog/page';
+
 const HomePage = () => {
   return (
     <main className="px-4 py-10 lg:px-8 lg:py-16 space-y-10 bg-background text-foreground">
@@ -26,6 +28,28 @@ const HomePage = () => {
           <CardContent>
             <p>CTA内容</p>
             <Button className="mt-4">今すぐ申し込む</Button>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section>
+        <Card>
+          <CardHeader>
+            <CardTitle>CTA</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p>CTA内容</p>
+            <Button className="mt-4">今すぐ申し込む</Button>
+          </CardContent>
+        </Card>
+      </section>
+    <section>
+          <Card>
+          <CardHeader>
+            <CardTitle>Công</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <BlogsPage />
           </CardContent>
         </Card>
       </section>
