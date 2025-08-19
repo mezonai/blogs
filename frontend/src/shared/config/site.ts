@@ -1,4 +1,4 @@
 export const siteConfig = {
-  name: 'lp mbs',
+  name: 'Blogs',
   description: '',
 };
