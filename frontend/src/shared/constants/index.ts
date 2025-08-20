@@ -1,6 +1,6 @@
 export const ROUTES = {
   BLOGS: '/blogs',
-  FAQ: '/faq',
+  NOT_FOUND: 'not-found',
 };
 
 export const HEADER_TABS = [
@@ -28,10 +28,6 @@ export const HEADER_TABS = [
     label: 'Blogs',
     path: ROUTES.BLOGS,
   },
-  {
-    label: 'FAQ',
-    path: ROUTES.FAQ,
-  },
 ];
 
 export const MEZON_TABS = [
@@ -54,10 +50,6 @@ export const MEZON_TABS = [
   {
     label: 'Blogs',
     path: ROUTES.BLOGS,
-  },
-  {
-    label: 'FAQ',
-    path: ROUTES.FAQ,
   },
 ];
 
