@@ -164,4 +164,8 @@ apps/**/types/generated
 templates/yarn.lock
 
 database/
+<<<<<<< HEAD
 data/
+=======
+minio_data/
+>>>>>>> a88bb063bfe80a538f03fe019b5654229a842122
