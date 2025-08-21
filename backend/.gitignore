@@ -164,3 +164,4 @@ apps/**/types/generated
 templates/yarn.lock
 
 database/
+minio_data/
