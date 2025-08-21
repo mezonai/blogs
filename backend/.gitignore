@@ -162,3 +162,6 @@ apps/**/types/generated
 
 # Ignore yarn.lock inside templates
 templates/yarn.lock
+
+database/
+minio_data/

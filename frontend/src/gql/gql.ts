@@ -14,10 +14,12 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Learn more about it here: https://the-guild.dev/graphql/codegen/plugins/presets/preset-client#reducing-bundle-size
  */
 type Documents = {
-    "\n  query Faq($documentId: ID!) {\n    faq(documentId: $documentId) {\n      question\n      answer\n    }\n  }\n": typeof types.FaqDocument,
+    "\n  query GetBlogList(\n    $pagination: PaginationArg\n    $sort: [String]\n    $status: PublicationStatus\n  ) {\n    blogs_connection(pagination: $pagination, sort: $sort, status: $status) {\n      nodes {\n        title\n        slug\n        content\n        createdAt\n        documentId\n        image {\n          url\n          alternativeText\n        }\n      }\n      pageInfo {\n        page\n        pageCount\n        pageSize\n        total\n      }\n    }\n  }\n": typeof types.GetBlogListDocument,
+    "\n  query GetBlogDetailBySlug(\n    $filters: BlogFiltersInput\n    $status: PublicationStatus\n  ) {\n    blogs(filters: $filters, status: $status) {\n      content\n      documentId\n      image {\n        url\n        alternativeText\n      }\n      slug\n      title\n    }\n  }\n": typeof types.GetBlogDetailBySlugDocument,
 };
 const documents: Documents = {
-    "\n  query Faq($documentId: ID!) {\n    faq(documentId: $documentId) {\n      question\n      answer\n    }\n  }\n": types.FaqDocument,
+    "\n  query GetBlogList(\n    $pagination: PaginationArg\n    $sort: [String]\n    $status: PublicationStatus\n  ) {\n    blogs_connection(pagination: $pagination, sort: $sort, status: $status) {\n      nodes {\n        title\n        slug\n        content\n        createdAt\n        documentId\n        image {\n          url\n          alternativeText\n        }\n      }\n      pageInfo {\n        page\n        pageCount\n        pageSize\n        total\n      }\n    }\n  }\n": types.GetBlogListDocument,
+    "\n  query GetBlogDetailBySlug(\n    $filters: BlogFiltersInput\n    $status: PublicationStatus\n  ) {\n    blogs(filters: $filters, status: $status) {\n      content\n      documentId\n      image {\n        url\n        alternativeText\n      }\n      slug\n      title\n    }\n  }\n": types.GetBlogDetailBySlugDocument,
 };
 
 /**
@@ -37,7 +39,11 @@ export function graphql(source: string): unknown;
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "\n  query Faq($documentId: ID!) {\n    faq(documentId: $documentId) {\n      question\n      answer\n    }\n  }\n"): (typeof documents)["\n  query Faq($documentId: ID!) {\n    faq(documentId: $documentId) {\n      question\n      answer\n    }\n  }\n"];
+export function graphql(source: "\n  query GetBlogList(\n    $pagination: PaginationArg\n    $sort: [String]\n    $status: PublicationStatus\n  ) {\n    blogs_connection(pagination: $pagination, sort: $sort, status: $status) {\n      nodes {\n        title\n        slug\n        content\n        createdAt\n        documentId\n        image {\n          url\n          alternativeText\n        }\n      }\n      pageInfo {\n        page\n        pageCount\n        pageSize\n        total\n      }\n    }\n  }\n"): (typeof documents)["\n  query GetBlogList(\n    $pagination: PaginationArg\n    $sort: [String]\n    $status: PublicationStatus\n  ) {\n    blogs_connection(pagination: $pagination, sort: $sort, status: $status) {\n      nodes {\n        title\n        slug\n        content\n        createdAt\n        documentId\n        image {\n          url\n          alternativeText\n        }\n      }\n      pageInfo {\n        page\n        pageCount\n        pageSize\n        total\n      }\n    }\n  }\n"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "\n  query GetBlogDetailBySlug(\n    $filters: BlogFiltersInput\n    $status: PublicationStatus\n  ) {\n    blogs(filters: $filters, status: $status) {\n      content\n      documentId\n      image {\n        url\n        alternativeText\n      }\n      slug\n      title\n    }\n  }\n"): (typeof documents)["\n  query GetBlogDetailBySlug(\n    $filters: BlogFiltersInput\n    $status: PublicationStatus\n  ) {\n    blogs(filters: $filters, status: $status) {\n      content\n      documentId\n      image {\n        url\n        alternativeText\n      }\n      slug\n      title\n    }\n  }\n"];
 
 export function graphql(source: string) {
   return (documents as any)[source] ?? {};

@@ -7,7 +7,7 @@ export default {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/*{ strapi }*/) {},
+  register(/*{ strapi }*/) { },
 
   /**
    * An asynchronous bootstrap function that runs before
@@ -21,7 +21,7 @@ export default {
       where: { type: 'public' },
     });
 
-    const publicActions = ['api::faq.faq.find', 'api::faq.faq.findOne'];
+    const publicActions = ['api::blog.blog.find', 'api::blog.blog.findOne'];
 
     async function ensurePermissions(roleId: number, actions: string[]) {
       for (const action of actions) {
