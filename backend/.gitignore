@@ -164,3 +164,4 @@ apps/**/types/generated
 templates/yarn.lock
 
 database/
+data/
