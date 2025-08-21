@@ -28,7 +28,7 @@ export default function BlogsList({
 
   return (
     <div className="space-y-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+      <div className="flex flex-wrap justify-center gap-8">
         {data.map((blog) => (
           <BlogCard
             key={blog.documentId}

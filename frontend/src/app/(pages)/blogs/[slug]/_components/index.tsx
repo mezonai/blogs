@@ -38,7 +38,7 @@ const BlogsDetails = async ({
             src={getMediaUrl(blog.image.url)}
             alt={blog.image.alternativeText || blog.title}
             fill
-            className="object-fill rounded-lg"
+            className="object-cover rounded-lg"
           />
         </div>
       )}
