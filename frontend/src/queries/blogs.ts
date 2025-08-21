@@ -13,6 +13,7 @@ export const GET_BLOG_LIST = gql`
         content
         createdAt
         documentId
+        description
         image {
           url
           alternativeText
@@ -42,6 +43,7 @@ export const GET_DETAIL_BY_SLUG = gql`
       }
       slug
       title
+      description
     }
   }
 `;

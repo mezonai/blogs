@@ -16,7 +16,7 @@ interface BlogCardProps {
 export function BlogCard({ image, title, content, slug }: BlogCardProps) {
   return (
     <Link href={`${ROUTES.BLOGS}${slug}`}>
-      <Card className="w-[350px] rounded-2xl overflow-hidden h-[390px] cursor-pointer hover:shadow-xl transition-shadow">
+      <Card className="max-[375px]:w-[300px] w-[350px] rounded-2xl overflow-hidden h-[390px] cursor-pointer hover:shadow-xl transition-shadow">
         <div className="relative h-[235px] w-full">
           <Image
             src={getMediaUrl(image)}

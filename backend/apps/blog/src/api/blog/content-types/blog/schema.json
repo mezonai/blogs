@@ -11,8 +11,17 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
     "title": {
       "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
       "required": true
     },
     "image": {
@@ -25,11 +34,6 @@
         "videos",
         "audios"
       ]
-    },
-    "slug": {
-      "type": "string",
-      "required": true,
-      "unique": true
     },
     "content": {
       "type": "richtext",

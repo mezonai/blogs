@@ -10,6 +10,7 @@ interface BlogsListProps {
     slug: string;
     content: string;
     image?: { url: string; alternativeText?: string } | null;
+    description: string;
   }[];
   totalPages: number;
   currentPage: number;
@@ -34,7 +35,7 @@ export default function BlogsList({
             key={blog.documentId}
             image={blog.image?.url || ''}
             title={blog.title}
-            content={blog.content}
+            content={blog.description}
             slug={blog.slug}
           />
         ))}
