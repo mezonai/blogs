@@ -1,7 +1,6 @@
 import { graphqlQuery } from '@/lib/graphql-client';
 import { GET_DETAIL_BY_SLUG } from '@/queries/blogs';
 import { ROUTES } from '@/shared/constants';
-import { getMediaUrl } from '@/shared/utils';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
@@ -32,7 +31,7 @@ const BlogsDetails = async ({ params }: { params: { slug?: string } }) => {
       {blog.image?.url && (
         <div className="relative w-full aspect-[16/9] max-h-[550px]">
           <Image
-            src={getMediaUrl(blog.image.url)}
+            src={blog.image.url}
             alt={blog.image.alternativeText || blog.title}
             fill
             className="object-cover rounded-lg"
