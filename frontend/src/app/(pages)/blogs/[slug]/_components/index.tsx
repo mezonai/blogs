@@ -8,7 +8,7 @@ import ReactMarkdown from 'react-markdown';
 import ContactSection from './ContactSection';
 
 const BlogsDetails = async ({ params }: { params: { slug?: string } }) => {
-  const { slug } = await params;
+  const { slug } = params;
 
   const res = await graphqlQuery(GET_DETAIL_BY_SLUG, {
     filters: {
