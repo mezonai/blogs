@@ -1,6 +1,9 @@
 export default function ContactSection() {
   return (
-    <div className="text-base space-y-2">
+    <div
+      className="text-base space-y-2"
+      style={{ fontFamily: '"Times New Roman", Times, serif' }}
+    >
       <div>----------------------------------------------</div>
       <div>
         <span role="img" aria-label="icon">

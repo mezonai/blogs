@@ -1,16 +1,15 @@
 import BlogsDetails from './_components';
 
-interface SearchParams {
-  searchParams: Promise<{
-    slug?: string;
-  }>;
+interface PageProps {
+  params: { slug: string };
 }
 
-const BlogsPageDetail = async ({ searchParams }: SearchParams) => {
-  const { slug } = await searchParams;
+const BlogsPageDetail = async ({ params }: PageProps) => {
+  const slug = decodeURIComponent(params.slug);
+
   return (
     <div className="space-y-8 p-4">
-      <BlogsDetails searchParams={{ slug }} />
+      <BlogsDetails params={{ slug }} />
     </div>
   );
 };

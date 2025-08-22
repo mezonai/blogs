@@ -7,12 +7,8 @@ import { redirect } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import ContactSection from './ContactSection';
 
-const BlogsDetails = async ({
-  searchParams,
-}: {
-  searchParams: { slug?: string };
-}) => {
-  const { slug } = searchParams;
+const BlogsDetails = async ({ params }: { params: { slug?: string } }) => {
+  const { slug } = await params;
 
   const res = await graphqlQuery(GET_DETAIL_BY_SLUG, {
     filters: {
@@ -20,6 +16,7 @@ const BlogsDetails = async ({
         eq: slug,
       },
     },
+    status: 'PUBLISHED',
   });
 
   const blog = res.blogs[0];
@@ -43,12 +40,28 @@ const BlogsDetails = async ({
         </div>
       )}
 
-      <div className="prose max-w-none">
+      <div
+        className="prose max-w-none"
+        style={{ fontFamily: '"Times New Roman", Times, serif' }}
+      >
         <ReactMarkdown
           components={{
             img: ({ ...props }) => (
-              <img {...props} className="w-[100vw] rounded-lg" />
+              <img {...props} className="w-[100vw] !rounded-lg my-4" />
             ),
+            h1: ({ ...props }) => (
+              <h1 {...props} className="text-[20px] py-2" />
+            ),
+            h2: ({ ...props }) => (
+              <h2 {...props} className="font-bold py-2 text-[19px]" />
+            ),
+            h3: ({ ...props }) => (
+              <h3 {...props} className="font-bold py-2 text-[18px]" />
+            ),
+            h4: ({ ...props }) => (
+              <h4 {...props} className="font-bold py-2 text-[17px]" />
+            ),
+            p: ({ ...props }) => <p {...props} className="text-[17px]" />,
           }}
         >
           {blog.content}

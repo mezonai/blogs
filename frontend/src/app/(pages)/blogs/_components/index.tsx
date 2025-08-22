@@ -17,6 +17,8 @@ const BlogsContent = async ({
       page: currentPage,
       pageSize: 6,
     },
+    sort: 'createdAt:DESC',
+    status: 'PUBLISHED',
   });
 
   const blogsConnection = res.blogs_connection;
