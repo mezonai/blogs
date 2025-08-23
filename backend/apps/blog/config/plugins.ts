@@ -24,4 +24,29 @@ module.exports = ({ env }) => ({
       maxLimit: 20,
     },
   },
+  upload: {
+    config: {
+      provider: 'aws-s3',
+      providerOptions: {
+        s3Options: {
+          credentials: {
+            accessKeyId: env('AWS_ACCESS_KEY_ID'),
+            secretAccessKey: env('AWS_SECRET_ACCESS_KEY'),
+          },
+          endpoint: env('AWS_ENDPOINT'),
+          region: env('AWS_REGION'),
+          forcePathStyle: true,
+        },
+        baseUrl: env('AWS_BASE_URL'),
+        params: {
+          Bucket: env('AWS_BUCKET'),
+        },
+      },
+      actionOptions: {
+        upload: {},
+        uploadStream: {},
+        delete: {},
+      },
+    },
+  },
 });

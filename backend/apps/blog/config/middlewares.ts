@@ -1,7 +1,32 @@
 export default [
   'strapi::logger',
   'strapi::errors',
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            'http://localhost:9000',
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            'http://localhost:9000',
+          ],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
   {
     name: 'strapi::cors',
     config: {
