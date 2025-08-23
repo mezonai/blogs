@@ -180,8 +180,6 @@
   "isStrapiMonorepo": true,
   "dependencies": {
     "@strapi/plugin-graphql": "workspace:*",
-    "@strapi/provider-upload-aws-s3": "workspace:*",
-    "pg": "8.16.3",
-    "strapi-provider-upload-minio-ce": "1.2.0"
+    "pg": "8.16.3"
   }
 }

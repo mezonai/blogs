@@ -2,24 +2,25 @@ export default [
   'strapi::logger',
   'strapi::errors',
   {
-    // https://github.com/flyce/strapi-provider-upload-minio-ce?tab=readme-ov-file#pictures-cannot-be-displayed
-    name: "strapi::security",
+    name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:", "http:"],
-          "img-src": [
+          'connect-src': ["'self'", 'https:'],
+          'img-src': [
             "'self'",
-            "data:",
-            "blob:",
-            "localhost:9000",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            'http://localhost:9000',
           ],
-          "media-src": [
+          'media-src': [
             "'self'",
-            "data:",
-            "blob:",
-            "localhost:9000",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            'http://localhost:9000',
           ],
           upgradeInsecureRequests: null,
         },
