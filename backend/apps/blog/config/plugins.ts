@@ -26,26 +26,16 @@ module.exports = ({ env }) => ({
   },
   upload: {
     config: {
-      provider: 'aws-s3',
+      provider: 'strapi-provider-upload-minio-ce',
       providerOptions: {
-        s3Options: {
-          credentials: {
-            accessKeyId: env('AWS_ACCESS_KEY_ID'),
-            secretAccessKey: env('AWS_SECRET_ACCESS_KEY'),
-          },
-          endpoint: env('AWS_ENDPOINT'),
-          region: env('AWS_REGION'),
-          forcePathStyle: true,
-        },
-        baseUrl: env('AWS_BASE_URL'),
-        params: {
-          Bucket: env('AWS_BUCKET'),
-        },
-      },
-      actionOptions: {
-        upload: {},
-        uploadStream: {},
-        delete: {},
+        accessKey: env('AWS_ACCESS_KEY_ID', 'minioadmin'),
+        secretKey: env('AWS_SECRET_ACCESS_KEY', 'minioadmin'),
+        bucket: env('AWS_BUCKET', 'mezonblogs'),
+        endPoint: env('AWS_ENDPOINT', 'localhost'),
+        port: env('MINIO_PORT', 9000),
+        // useSSL: env('MINIO_USE_SSL', false), // default is false for localhost
+        folder: env('AWS_FOLDER', 'images'),
+        // private: env('MINIO_PRIVATE', false),
       },
     },
   },
