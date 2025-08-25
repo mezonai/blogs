@@ -1,8 +1,8 @@
-$text-font-stack: 'gg sans', 'Helvetica Neue Light', 'Helvetica Neue',
-    'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: "gg sans", "Helvetica Neue Light", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif !default;
 
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-    'Monaco', monospace !default;
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+  "Monaco", monospace !default;
 
 $body-color: #333;
 $p-color: #333;
@@ -11,7 +11,7 @@ $a-color: #0969da;
 
 $base-font-size: 16px;
 
-$font-gg-sans: 'gg sans', sans-serif;
+$font-gg-sans: "gg sans", sans-serif;
 
 $text-color: rgb(34, 34, 34) !default;
 
@@ -36,8 +36,8 @@ $category-selected: rgb(88 101 242);
 
 $category-hover: rgb(243 244 246);
 
-$assets-dir: 'assets/' !default;
-$images-dir: 'assets/images/' !default;
-$plugins-dir: 'assets/images/' !default;
+$assets-dir: "assets/" !default;
+$images-dir: "assets/images/" !default;
+$plugins-dir: "assets/images/" !default;
 
-$path-prefix: '/' !default;
+$path-prefix: "/blogs/" !default;

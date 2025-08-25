@@ -72,24 +72,21 @@ img {
 /* --------------------- 1.2 Fonts --------------------- */
 @font-face {
   font-family: "gg sans";
-  src: url("/assets/fonts/ggsans-Medium.523e1206a60f2c67a464.woff2")
-    format("woff2");
+  src: url("/blogs/assets/fonts/ggsans-Medium.523e1206a60f2c67a464.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "gg sans";
-  src: url("/assets/fonts/ggsans-Semibold.739415029df017604b41.woff2")
-    format("woff2");
+  src: url("/blogs/assets/fonts/ggsans-Semibold.739415029df017604b41.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "gg sans";
-  src: url("/assets/fonts/ggsans-Bold.7e70b94e6d7ca5e2b322.woff2")
-    format("woff2");
+  src: url("/blogs/assets/fonts/ggsans-Bold.7e70b94e6d7ca5e2b322.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -2687,23 +2684,13 @@ ul.linear-list li {
 #header .header-container .header-content .menu__nav .header__logo:hover {
   text-decoration: none;
 }
-#header
-  .header-container
-  .header-content
-  .menu__nav
-  .header__logo
-  .header__logo-img {
+#header .header-container .header-content .menu__nav .header__logo .header__logo-img {
   aspect-ratio: 1/1;
   width: 44px;
   height: 44px;
   object-fit: cover;
 }
-#header
-  .header-container
-  .header-content
-  .menu__nav
-  .header__logo
-  .header__logo-text {
+#header .header-container .header-content .menu__nav .header__logo .header__logo-text {
   color: rgb(17, 24, 39);
   font-weight: 600;
   font-size: 22.15px;
@@ -2720,12 +2707,7 @@ ul.linear-list li {
     display: flex;
   }
 }
-#header
-  .header-container
-  .header-content
-  .menu__nav
-  .menu__nav-items
-  .menu__nav-item {
+#header .header-container .header-content .menu__nav .menu__nav-items .menu__nav-item {
   display: flex;
   align-items: center;
   transition: color 0.2s ease;
@@ -2736,12 +2718,7 @@ ul.linear-list li {
   line-height: 24px;
   text-decoration: none;
 }
-#header
-  .header-container
-  .header-content
-  .menu__nav
-  .menu__nav-items
-  .menu__nav-item:hover {
+#header .header-container .header-content .menu__nav .menu__nav-items .menu__nav-item:hover {
   color: #5865f2;
   text-decoration: none;
 }
@@ -2770,12 +2747,7 @@ ul.linear-list li {
   height: 24px;
   color: rgb(75, 85, 99);
 }
-#header
-  .header-container
-  .header-content
-  .menu__bar
-  .menu__bar-button
-  svg:hover {
+#header .header-container .header-content .menu__bar .menu__bar-button svg:hover {
   background-color: rgb(243, 244, 246);
   color: rgb(17, 24, 39);
 }
@@ -2805,11 +2777,7 @@ ul.linear-list li {
   flex-direction: column;
   gap: 12px;
 }
-#header
-  .mobile-menu
-  .mobile-menu__content
-  .mobile-menu__nav
-  .mobile-menu__nav-item {
+#header .mobile-menu .mobile-menu__content .mobile-menu__nav .mobile-menu__nav-item {
   transition: color 0.2s ease;
   transition-property: background-color, border-color;
   padding: 12px 16px;
@@ -2820,11 +2788,7 @@ ul.linear-list li {
   line-height: 24px;
   text-decoration: none;
 }
-#header
-  .mobile-menu
-  .mobile-menu__content
-  .mobile-menu__nav
-  .mobile-menu__nav-item:hover {
+#header .mobile-menu .mobile-menu__content .mobile-menu__nav .mobile-menu__nav-item:hover {
   color: #5865f2;
 }
 
@@ -3008,8 +2972,8 @@ ul.linear-list li {
 }
 #main .main-container .blogs__list .blog__card-image {
   width: 100%;
-  aspect-ratio: 3 / 2;
   background: #f5f5f5;
+  aspect-ratio: 3/2;
 }
 #main .main-container .blogs__list .blog__card-content {
   padding: 20px 20px 16px 20px;
@@ -3064,12 +3028,7 @@ ul.linear-list li {
   display: flex;
   justify-content: flex-start;
 }
-#main
-  .main-container
-  .blogs__list
-  .blog__card-content
-  .content__footer
-  .read-more {
+#main .main-container .blogs__list .blog__card-content .content__footer .read-more {
   color: #2563eb;
   font-weight: 600;
   text-decoration: none;
@@ -3079,22 +3038,11 @@ ul.linear-list li {
   font-size: 14px;
   transition: color 0.2s;
 }
-#main
-  .main-container
-  .blogs__list
-  .blog__card-content
-  .content__footer
-  .read-more:hover {
+#main .main-container .blogs__list .blog__card-content .content__footer .read-more:hover {
   color: #1d4ed8;
   text-decoration: underline;
 }
-#main
-  .main-container
-  .blogs__list
-  .blog__card-content
-  .content__footer
-  .read-more
-  svg {
+#main .main-container .blogs__list .blog__card-content .content__footer .read-more svg {
   width: 18px;
   height: 18px;
   stroke: currentColor;
@@ -3119,10 +3067,7 @@ ul.linear-list li {
   box-shadow: 0 0 0 1px #e5e7eb;
 }
 #main .main-container .pagination .page-btn:hover:not(:disabled):not(.active),
-#main
-  .main-container
-  .pagination
-  .page-number:hover:not(:disabled):not(.active) {
+#main .main-container .pagination .page-number:hover:not(:disabled):not(.active) {
   background-color: #e5e7eb;
 }
 #main .main-container .pagination .page-btn:disabled,
@@ -3186,42 +3131,23 @@ ul.linear-list li {
     gap: 16px;
   }
 }
-.post-container
-  .content__header
-  .content__header-info
-  .header-info__stats
-  .header-info__stats--left {
+.post-container .content__header .content__header-info .header-info__stats .header-info__stats--left {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.post-container
-  .content__header
-  .content__header-info
-  .header-info__stats
-  .header-info__stats--left
-  .stats__avatar {
+.post-container .content__header .content__header-info .header-info__stats .header-info__stats--left .stats__avatar {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.post-container
-  .content__header
-  .content__header-info
-  .header-info__stats
-  .header-info__stats--left
-  .stats__avatar
-  img {
+.post-container .content__header .content__header-info .header-info__stats .header-info__stats--left .stats__avatar img {
   width: 40px;
   height: 40px;
   border-radius: 10%;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #E0E0E0;
 }
-.post-container
-  .content__header
-  .content__header-info
-  .header-info__stats
-  .header-info__stats--right {
+.post-container .content__header .content__header-info .header-info__stats .header-info__stats--right {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -3235,8 +3161,7 @@ ul.linear-list li {
   border-radius: 8px;
   object-fit: cover;
   display: block;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 /* --------------------- 4.3 Mezon competition page --------------------- */
 .mezon-competition {
