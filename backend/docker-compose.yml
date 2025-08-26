@@ -11,7 +11,7 @@ services:
     ports:
       - '5439:5432'
     volumes:
-      - ./database/mezonblogs:/var/lib/postgresql/data
+      - ./db_data/mezonblogs:/var/lib/postgresql/data
     restart: always
 
   minio:
@@ -24,8 +24,8 @@ services:
     volumes:
       - ./minio_data:/data:rw
     ports:
-      - "9000:9000"
-      - "9001:9001"
+      - '9000:9000'
+      - '9001:9001'
 
   mc-init:
     image: minio/mc:latest
