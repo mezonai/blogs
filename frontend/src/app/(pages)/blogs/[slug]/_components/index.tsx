@@ -29,18 +29,18 @@ const BlogsDetails = async ({ params }: { params: { slug?: string } }) => {
       </h1>
 
       {blog.image?.url && (
-        <div className="relative w-full aspect-[16/9] max-h-[550px]">
+        <div className="relative w-full aspect-[3/2] max-h-[550px]">
           <Image
             src={blog.image.url}
             alt={blog.image.alternativeText || blog.title}
             fill
-            className="object-cover rounded-lg"
+            className="object-fill rounded-lg"
           />
         </div>
       )}
 
       <div
-        className="prose max-w-none"
+        className="prose max-w-none whitespace-pre-line leading-1"
         style={{ fontFamily: '"Times New Roman", Times, serif' }}
       >
         <ReactMarkdown
@@ -49,16 +49,16 @@ const BlogsDetails = async ({ params }: { params: { slug?: string } }) => {
               <img {...props} className="w-[100vw] !rounded-lg my-4" />
             ),
             h1: ({ ...props }) => (
-              <h1 {...props} className="text-[20px] py-2" />
+              <h1 {...props} className="font-bold text-[20px]" />
             ),
             h2: ({ ...props }) => (
-              <h2 {...props} className="font-bold py-2 text-[19px]" />
+              <h2 {...props} className="font-bold text-[19px]" />
             ),
             h3: ({ ...props }) => (
-              <h3 {...props} className="font-bold py-2 text-[18px]" />
+              <h3 {...props} className="font-bold text-[18px]" />
             ),
             h4: ({ ...props }) => (
-              <h4 {...props} className="font-bold py-2 text-[17px]" />
+              <h4 {...props} className="font-bold text-[17px]" />
             ),
             p: ({ ...props }) => <p {...props} className="text-[17px]" />,
           }}
