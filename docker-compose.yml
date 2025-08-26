@@ -1,6 +1,43 @@
-version: '3.9'
-
+version: "3"
 services:
+  # nginx:
+  #   image: nginx:latest
+  #   restart: unless-stopped
+  #   container_name: nginx
+  #   ports:
+  #     - 80:80
+  #     - 443:443
+  #   volumes:
+  #     - ./backend/public:/app/backend/public
+  #     - ./frontend/public:/app/frontend/public
+  #     - ./conf/nginx/:/etc/nginx:ro
+  #     - ./logs/nginx/:/var/log/nginx
+  #     - /etc/localtime:/etc/localtime:ro
+  #   depends_on:
+  #     - frontend
+  #     - backend
+
+  frontend:
+    build:
+      context: .
+      dockerfile: ./docker/frontend/Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "3000:3000"
+
+  backend:
+    build:
+      context: .
+      dockerfile: ./docker/backend/Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "1337:1337"
+    depends_on:
+      - postgres
+      - minio
+
   postgres:
     image: postgres:latest
     platform: linux/amd64
@@ -13,7 +50,7 @@ services:
     volumes:
       - ./db_data:/var/lib/postgresql/data
     ports:
-      - '5432:5432'
+      - "5432:5432"
 
   minio:
     image: quay.io/minio/minio:latest
@@ -25,12 +62,12 @@ services:
     volumes:
       - ./minio_data:/data:rw
     ports:
-      - '9000:9000'
-      - '9001:9001'
+      - "9000:9000"
+      - "9001:9001"
 
   mc-init:
     image: minio/mc:latest
-    restart: 'no'
+    restart: "no"
     depends_on:
       - minio
     entrypoint: >

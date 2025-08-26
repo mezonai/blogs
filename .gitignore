@@ -1,0 +1,9 @@
+db_data/
+minio_data/
+
+logs/
+node_modules/
+app/
+etc/
+
+.env

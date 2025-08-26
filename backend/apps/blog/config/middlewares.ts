@@ -14,6 +14,7 @@ export default [
             'blob:',
             'market-assets.strapi.io',
             'http://localhost:9000',
+            'http://minio:9000',
           ],
           'media-src': [
             "'self'",
@@ -21,6 +22,7 @@ export default [
             'blob:',
             'market-assets.strapi.io',
             'http://localhost:9000',
+            'http://minio:9000',
           ],
           upgradeInsecureRequests: null,
         },

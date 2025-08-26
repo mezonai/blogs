@@ -21,6 +21,12 @@ const nextConfig: NextConfig = {
         port: '9000',
         pathname: '/mezonblogs/**',
       },
+      {
+        protocol: 'http',
+        hostname: 'minio',
+        port: '9000',
+        pathname: '/mezonblogs/**',
+      },
     ],
   },
 };
