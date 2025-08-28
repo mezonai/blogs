@@ -22,10 +22,9 @@ module.exports = {
     const getHostPart = () => {
       const protocol = isUseSSL ? 'https://' : 'http://';
       const portSuffix = ((isUseSSL && +port === 443) || (isUseSSL && +port === 80)) ? '' : `:${port}`;
-      return protocol + endPoint + portSuffix + '/';
+      return protocol + endPoint + '/';
     };
     const getFilePath = (file) => {
-      // const hostPart = getHostPart() + bucket + '/';
       const hostPart = getHostPart() + '/';
       const path = file.url.replace(hostPart, '');
 
@@ -51,7 +50,6 @@ module.exports = {
                 return reject(err);
               }
               const hostPart = getHostPart();
-              // const filePath = `${bucket}/${path}`;
               const filePath = `${path}`;
               file.url = `${hostPart}${filePath}`;
               resolve();
