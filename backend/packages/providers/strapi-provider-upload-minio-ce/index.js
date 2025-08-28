@@ -59,15 +59,16 @@ module.exports = {
       },
       delete(file) {
         return new Promise((resolve, reject) => {
-          const path = getFilePath(file);
+          resolve();
+          // const path = getFilePath(file);
 
-          MINIO.removeObject(bucket, path, err => {
-            if (err) {
-              return reject(err);
-            }
+          // MINIO.removeObject(bucket, path, err => {
+          //   if (err) {
+          //     return reject(err);
+          //   }
 
-            resolve();
-          });
+          //   resolve();
+          // });
         });
       },
       isPrivate: () => {
