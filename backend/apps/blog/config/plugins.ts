@@ -28,14 +28,13 @@ module.exports = ({ env }) => ({
     config: {
       provider: 'strapi-provider-upload-minio-ce',
       providerOptions: {
-        accessKey: env('AWS_ACCESS_KEY_ID', 'minioadmin'),
-        secretKey: env('AWS_SECRET_ACCESS_KEY', 'minioadmin'),
-        bucket: env('AWS_BUCKET', 'mezonblogs'),
-        endPoint: env('AWS_ENDPOINT', 'localhost'),
-        port: env('MINIO_PORT', 9000),
-        // useSSL: env('MINIO_USE_SSL', false), // default is false for localhost
-        folder: env('AWS_FOLDER', 'images'),
-        // private: env('MINIO_PRIVATE', false),
+        accessKey: env('AWS_ACCESS_KEY_ID'),
+        secretKey: env('AWS_SECRET_ACCESS_KEY'),
+        bucket: env('AWS_BUCKET', 'mezon'),
+        endPoint: env('AWS_ENDPOINT'),
+        port: env('MINIO_PORT', 443),
+        useSSL: env('MINIO_USE_SSL', true),
+        folder: env('AWS_FOLDER', 'mezonblogs'),
       },
     },
   },

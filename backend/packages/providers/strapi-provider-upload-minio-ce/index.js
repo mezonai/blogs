@@ -25,7 +25,8 @@ module.exports = {
       return protocol + endPoint + portSuffix + '/';
     };
     const getFilePath = (file) => {
-      const hostPart = getHostPart() + bucket + '/';
+      // const hostPart = getHostPart() + bucket + '/';
+      const hostPart = getHostPart() + '/';
       const path = file.url.replace(hostPart, '');
 
       return path;
@@ -50,7 +51,8 @@ module.exports = {
                 return reject(err);
               }
               const hostPart = getHostPart();
-              const filePath = `${bucket}/${path}`;
+              // const filePath = `${bucket}/${path}`;
+              const filePath = `${path}`;
               file.url = `${hostPart}${filePath}`;
               resolve();
             }
