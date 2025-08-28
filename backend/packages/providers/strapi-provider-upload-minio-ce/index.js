@@ -22,7 +22,7 @@ module.exports = {
     const getHostPart = () => {
       const protocol = isUseSSL ? 'https://' : 'http://';
       const portSuffix = ((isUseSSL && +port === 443) || (isUseSSL && +port === 80)) ? '' : `:${port}`;
-      return 'http://' + endPoint + '/';
+      return 'https://' + endPoint + '/';
     };
     const getFilePath = (file) => {
       const hostPart = getHostPart() + '/';
