@@ -4,7 +4,6 @@ import { ROUTES } from '@/shared/constants';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
-import ContactSection from './ContactSection';
 
 const BlogsDetails = async ({ params }: { params: { slug?: string } }) => {
   const { slug } = params;
@@ -60,13 +59,35 @@ const BlogsDetails = async ({ params }: { params: { slug?: string } }) => {
             h4: ({ ...props }) => (
               <h4 {...props} className="font-bold text-[17px]" />
             ),
-            p: ({ ...props }) => <p {...props} className="text-[17px]" />,
+            p: ({ children }) => <p className="text-[17px]">{children}</p>,
+            a: ({ ...props }) => (
+              <a
+                {...props}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[17px] text-[#1155cc] underline"
+              />
+            ),
+            ul: ({ ...props }) => (
+              <ul
+                {...props}
+                className="list-disc list-inside text-[17px] whitespace-normal"
+              />
+            ),
+            ol: ({ ...props }) => (
+              <ol
+                {...props}
+                className="list-decimal list-inside text-[17px] whitespace-normal"
+              />
+            ),
+            li: ({ ...props }) => (
+              <li {...props} className="whitespace-normal" />
+            ),
           }}
         >
           {blog.content}
         </ReactMarkdown>
       </div>
-      <ContactSection />
     </div>
   );
 };
