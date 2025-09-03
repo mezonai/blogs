@@ -35,9 +35,20 @@
         "audios"
       ]
     },
-    "content": {
-      "type": "richtext",
-      "required": true
+    "contents": {
+      "type": "blocks"
+    },
+    "hashtags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hashtag.hashtag",
+      "mappedBy": "blog"
+    },
+    "contact": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::contact.contact",
+      "inversedBy": "blog"
     }
   }
 }
