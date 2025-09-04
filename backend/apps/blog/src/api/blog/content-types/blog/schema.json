@@ -36,19 +36,20 @@
       ]
     },
     "contents": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     },
     "hashtags": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::hashtag.hashtag",
-      "mappedBy": "blog"
+      "mappedBy": "blogs"
     },
     "contact": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::contact.contact",
-      "inversedBy": "blog"
+      "inversedBy": "blogs"
     }
   }
 }

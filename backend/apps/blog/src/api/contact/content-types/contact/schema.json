@@ -12,14 +12,17 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "contents": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     },
-    "blog": {
+    "blogs": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::blog.blog",
       "mappedBy": "contact"
     }

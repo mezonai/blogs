@@ -10,7 +10,6 @@ export const GET_BLOG_LIST = gql`
       nodes {
         title
         slug
-        content
         createdAt
         documentId
         description
@@ -35,7 +34,6 @@ export const GET_DETAIL_BY_SLUG = gql`
     $status: PublicationStatus
   ) {
     blogs(filters: $filters, status: $status, pagination: { pageSize: 1 }) {
-      content
       documentId
       image {
         url
@@ -44,6 +42,13 @@ export const GET_DETAIL_BY_SLUG = gql`
       slug
       title
       description
+      contents
+      hashtags {
+        name
+      }
+      contact {
+        contents
+      }
     }
   }
 `;
