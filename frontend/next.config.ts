@@ -2,7 +2,9 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  output: 'standalone',
+  ...(process.env.ENV === 'production'
+    ? { basePath: '/blogs' }
+    : {}),
   images: {
     remotePatterns: [
       {
@@ -23,15 +25,6 @@ const nextConfig: NextConfig = {
         pathname: '/mezonblogs/**',
       },
     ],
-  },
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/blogs',
-        permanent: true,
-      },
-    ];
   },
 };
 
