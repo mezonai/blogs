@@ -2,7 +2,9 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  basePath: '/blogs',
+  ...(process.env.ENV === 'production'
+    ? { basePath: '/blogs' }
+    : {}),
   images: {
     remotePatterns: [
       {
