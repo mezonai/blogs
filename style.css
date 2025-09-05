@@ -3164,15 +3164,6 @@ ul.linear-list li {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 /* --------------------- 4.3 Mezon competition page --------------------- */
-.mezon-competition {
-  /* .c9 {
-    max-width: 451.4pt;
-    padding: 72pt 72pt 72pt 72pt;
-  } */
-  /* .c3 {
-    background-color: #ffffff;
-  } */
-}
 .mezon-competition .lst-kix_ngdpakdt69du-3 > li:before {
   content: "●  ";
 }
@@ -3283,6 +3274,15 @@ ul.linear-list li {
 .mezon-competition .c7 {
   color: #1155cc;
   text-decoration: inherit;
+}
+.mezon-competition {
+  /* .c9 {
+    max-width: 451.4pt;
+    padding: 72pt 72pt 72pt 72pt;
+  } */
+  /* .c3 {
+    background-color: #ffffff;
+  } */
 }
 .mezon-competition .title {
   padding-top: 0pt;
@@ -9473,6 +9473,241 @@ ul.linear-list li {
   orphans: 2;
   widows: 2;
   text-align: left;
+}
+
+.fifty-teams ol {
+  margin: 0;
+  padding: 0;
+}
+.fifty-teams table td,
+.fifty-teams table th {
+  padding: 0;
+}
+.fifty-teams .c1 {
+  -webkit-text-decoration-skip: none;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  font-size: 13pt;
+  font-family: "Times New Roman";
+}
+.fifty-teams .c7 {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-size: 11pt;
+  font-style: normal;
+}
+.fifty-teams .c0 {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-size: 13pt;
+  font-family: "Times New Roman";
+  font-style: normal;
+}
+.fifty-teams .c5 {
+  padding-top: 10px;
+  padding-bottom: 4px;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.fifty-teams .c14 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.fifty-teams .c6 {
+  padding-top: 10px;
+  padding-bottom: 4px;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.fifty-teams .c4 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.fifty-teams .c11 {
+  font-weight: 700;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-size: 13pt;
+  font-family: "Times New Roman";
+  font-style: normal;
+}
+.fifty-teams .c15 {
+  color: #434343;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-style: normal;
+}
+.fifty-teams .c13 {
+  font-size: 13pt;
+  font-weight: 700;
+  font-family: "Times New Roman";
+}
+.fifty-teams .c2 {
+  font-size: 13pt;
+  font-weight: 400;
+  font-family: "Times New Roman";
+}
+.fifty-teams .c12 {
+  text-decoration: inherit;
+}
+.fifty-teams .c17 {
+  max-width: 451.4pt;
+  padding: 72pt 72pt 72pt 72pt;
+}
+.fifty-teams .c3 {
+  color: #000000;
+}
+.fifty-teams .c10 {
+  color: #000000;
+}
+.fifty-teams .c16 {
+  font-style: italic;
+}
+.fifty-teams .c9 {
+  height: 11pt;
+}
+.fifty-teams .title {
+  padding-top: 0pt;
+  color: #000000;
+  font-size: 26pt;
+  padding-bottom: 3pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.fifty-teams .subtitle {
+  padding-top: 0pt;
+  color: #666666;
+  font-size: 15pt;
+  padding-bottom: 16pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.fifty-teams li {
+  color: #000000;
+  font-size: 11pt;
+}
+.fifty-teams p {
+  margin: 0;
+  color: #000000;
+  font-size: 11pt;
+}
+.fifty-teams h1 {
+  padding-top: 20pt;
+  color: #000000;
+  font-size: 20pt;
+  padding-bottom: 6pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.fifty-teams h2 {
+  padding-top: 18pt;
+  color: #000000;
+  font-size: 16pt;
+  padding-bottom: 6pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.fifty-teams h3 {
+  padding-top: 16pt;
+  color: #434343;
+  font-size: 14pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.fifty-teams h4 {
+  padding-top: 14pt;
+  color: #666666;
+  font-size: 12pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.fifty-teams h5 {
+  padding-top: 12pt;
+  color: #666666;
+  font-size: 11pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.fifty-teams h6 {
+  padding-top: 12pt;
+  color: #666666;
+  font-size: 11pt;
+  padding-bottom: 4pt;
+  line-height: 1.15;
+  page-break-after: avoid;
+  font-style: italic;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+.fifty-teams .team-card {
+  font-family: "Times New Roman !important";
+  display: flex;
+  gap: 4px;
+  flex-direction: row;
+}
+.fifty-teams .team-content {
+  font-size: 13pt !important;
+}
+.fifty-teams .wrap-img {
+  flex: 0 0 40%;
+  width: 390px;
+  height: auto;
+}
+.fifty-teams img {
+  border-radius: 10px !important;
+}
+@media (max-width: 768px) {
+  .fifty-teams .team-card {
+    flex-direction: column-reverse;
+  }
+  .fifty-teams .wrap-img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+  }
 }
 
 /**
