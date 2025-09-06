@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Deploy on nginx reverse proxy server
 
-## Getting Started
+1. config /etc/hosts
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+10.10.60.146 test-mezon.ai www.test-mezon.ai
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. ssl config
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+sudo mkdir -p /etc/nginx/ssl_cert
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+openssl req -x509 -nodes -days 365 \
+  -newkey rsa:2048 \
+  -keyout /etc/nginx/ssl_cert/test-mezon.ai.key \
+  -out /etc/nginx/ssl_cert/test-mezon.ai.pem \
+  -subj "/C=VN/ST=Test/L=Test/O=Test/OU=Dev/CN=test-mezon.ai"
+```
 
-## Learn More
+3. nginx config
+```nginx
+server {
+  server_name test-mezon.ai;
+  listen 443 ssl http2;
+  listen [::]:443 ssl http2;
+  #add_header alt-svc 'h3=":443"; ma=86400';
 
-To learn more about Next.js, take a look at the following resources:
+  ssl_certificate /etc/nginx/ssl_cert/test-mezon.ai.pem;
+  ssl_certificate_key /etc/nginx/ssl_cert/test-mezon.ai.key;
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  location /blogs {
+      rewrite ^/blogs$ /blogs/ last;  # Use 'last' instead of 'permanent' to avoid 301 loops
+  }
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  location /blogs/ {
+      proxy_pass http://127.0.0.1:1338;
+      proxy_http_version 1.1;
 
-## Deploy on Vercel
+      # websocket / upgrade headers
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection $http_connection;
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+      proxy_read_timeout 86400;
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+      # forwarded headers
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+
+      # bypass cache for upgrades
+      proxy_cache_bypass $http_upgrade;
+  }
+
+  gzip on;
+  gzip_disable "msie6";
+
+  gzip_vary on;
+  gzip_proxied any;
+  gzip_comp_level 6;
+  gzip_buffers 16 8k;
+  gzip_http_version 1.1;
+  gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+}
+```
+
+4. restart nginx
+
+```bash
+sudo nginx -t
+sudo systemctl reload nginx
+```

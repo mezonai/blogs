@@ -21,28 +21,27 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 0);
-  };
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
 
-  handleScroll();
+    handleScroll();
 
-  window.addEventListener('scroll', handleScroll);
-  return () => window.removeEventListener('scroll', handleScroll);
-}, []);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
 
   return (
     <div
-      className={`fixed top-0 w-full z-50 transition-colors duration-300 w-full p-4 ${
-        scrolled ? 'bg-white shadow-md' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 w-full z-50 transition-colors duration-300 w-full p-4 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        }`}
     >
       <div className="hidden lg:flex space-x-4 justify-between items-center max-w-[1200px] mx-auto ">
         <div className="flex gap-8 items-center">
           <Link href={ROUTES.BLOGS} className="flex items-center">
             <Image
-              src="/Logo_mezon_light.png"
+              src="/blogs/Logo_mezon_light.png"
               alt="Logo_mezon_light.png"
               width={44}
               height={44}
@@ -71,11 +70,10 @@ export default function Header() {
               <Link
                 key={tab.path}
                 href={tab.path}
-                className={`font-[500] transition-colors ${
-                  pathname === tab.path
-                    ? 'text-[#5865f2] underline underline-offset-4 decoration-[#5865f2] decoration-2'
-                    : 'text-[#4b5563] hover:text-[#5865f2]'
-                }`}
+                className={`font-[500] transition-colors ${pathname === tab.path
+                  ? 'text-[#5865f2] underline underline-offset-4 decoration-[#5865f2] decoration-2'
+                  : 'text-[#4b5563] hover:text-[#5865f2]'
+                  }`}
               >
                 {tab.label}
               </Link>
@@ -86,7 +84,7 @@ export default function Header() {
       <div className="lg:hidden flex items-center justify-between">
         <Link href={ROUTES.BLOGS} className="flex items-center">
           <Image
-            src="/Logo_mezon_light.png"
+            src="/blogs/Logo_mezon_light.png"
             alt="Logo_mezon_light.png"
             width={44}
             height={44}
@@ -107,7 +105,7 @@ export default function Header() {
               <SheetTitle>
                 <Link href={ROUTES.BLOGS} className="flex items-center">
                   <Image
-                    src="/Logo_mezon_light.png"
+                    src="/blogs/Logo_mezon_light.png"
                     alt="Logo_mezon_light.png"
                     width={44}
                     height={44}
@@ -143,11 +141,10 @@ export default function Header() {
                     key={tab.path}
                     href={tab.path}
                     onClick={() => setOpen(false)}
-                    className={`font-[500] transition-colors ${
-                      pathname === tab.path
-                        ? 'text-[#5865f2] underline underline-offset-4 decoration-[#5865f2] decoration-2'
-                        : 'text-[#4b5563] hover:text-[#5865f2]'
-                    }`}
+                    className={`font-[500] transition-colors ${pathname === tab.path
+                      ? 'text-[#5865f2] underline underline-offset-4 decoration-[#5865f2] decoration-2'
+                      : 'text-[#4b5563] hover:text-[#5865f2]'
+                      }`}
                   >
                     {tab.label}
                   </Link>

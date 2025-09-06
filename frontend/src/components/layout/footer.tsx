@@ -113,7 +113,7 @@ export default function Footer() {
       <div className="border-t border-gray-700 mt-10 pt-6 flex items-center justify-between max-w-[1200px] mx-auto">
         <Link href={ROUTES.BLOGS} className="flex items-center gap-3">
           <Image
-            src="/Logo_mezon_dark.png"
+            src="/blogs/Logo_mezon_dark.png"
             alt="Logo_mezon_dark.png"
             width={44}
             height={44}
