@@ -39,7 +39,7 @@ export default function Header() {
     >
       <div className="hidden lg:flex space-x-4 justify-between items-center max-w-[1200px] mx-auto ">
         <div className="flex gap-8 items-center">
-          <Link href={ROUTES.BLOGS} className="flex items-center">
+          <Link href={ROUTES.HOME} className="flex items-center">
             <Image
               src="/blogs/Logo_mezon_light.png"
               alt="Logo_mezon_light.png"
@@ -82,7 +82,7 @@ export default function Header() {
         </div>
       </div>
       <div className="lg:hidden flex items-center justify-between">
-        <Link href={ROUTES.BLOGS} className="flex items-center">
+        <Link href={ROUTES.HOME} className="flex items-center">
           <Image
             src="/blogs/Logo_mezon_light.png"
             alt="Logo_mezon_light.png"
@@ -103,7 +103,7 @@ export default function Header() {
           >
             <SheetHeader>
               <SheetTitle>
-                <Link href={ROUTES.BLOGS} className="flex items-center">
+                <Link href={ROUTES.HOME} className="flex items-center">
                   <Image
                     src="/blogs/Logo_mezon_light.png"
                     alt="Logo_mezon_light.png"

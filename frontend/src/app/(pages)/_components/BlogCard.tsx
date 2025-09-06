@@ -1,5 +1,4 @@
 import { Card } from '@/components/atoms/card';
-import { ROUTES } from '@/shared/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -12,7 +11,7 @@ interface BlogCardProps {
 
 export function BlogCard({ image, title, content, slug }: BlogCardProps) {
   return (
-    <Link href={`${ROUTES.BLOGS}/${slug}`}>
+    <Link href={`/${slug}`}>
       <Card className="max-[375px]:w-[300px] w-[350px] rounded-2xl overflow-hidden h-[390px] cursor-pointer hover:shadow-xl transition-shadow">
         <div className="relative aspect-[3/2] w-full">
           <Image
