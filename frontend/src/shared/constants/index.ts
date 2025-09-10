@@ -1,5 +1,5 @@
 export const ROUTES = {
-  BLOGS: '/',
+  BLOGS: '/blogs',
   HOME: 'https://mezon.ai',
   NOT_FOUND: 'not-found',
   WHAT_NEW: '/what-new',
