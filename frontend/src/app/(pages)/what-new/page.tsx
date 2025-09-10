@@ -2,7 +2,7 @@
 const WhatNewPage = () => {
   return (
     <div className="container">
-      <h1 className="text-4xl font-bold">What's New</h1>
+      <h2 className="text-4xl font-bold">{"What's New"}</h2>
     </div>
   );
 };

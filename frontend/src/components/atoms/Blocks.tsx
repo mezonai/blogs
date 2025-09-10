@@ -4,6 +4,7 @@ import {
   BlocksRenderer,
   type BlocksContent,
 } from '@strapi/blocks-react-renderer';
+import Image from 'next/image';
 import { JSX } from 'react';
 
 type BlocksProps = {
@@ -41,7 +42,7 @@ export function Blocks({ content }: BlocksProps) {
           </a>
         ),
         image: ({ image }) => (
-          <img
+          <Image
             src={image?.url || ''}
             className="my-4 rounded-lg"
             alt={image?.alternativeText || 'Image'}
