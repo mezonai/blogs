@@ -13711,7 +13711,7 @@ __metadata:
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-router-dom: "npm:6.22.3"
-    strapi-provider-upload-minio-ce: "npm:1.2.0"
+    strapi-provider-upload-minio-ce: "workspace:*"
     styled-components: "npm:6.1.8"
   languageName: unknown
   linkType: soft
@@ -29028,15 +29028,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"strapi-provider-upload-minio-ce@npm:1.2.0":
-  version: 1.2.0
-  resolution: "strapi-provider-upload-minio-ce@npm:1.2.0"
+"strapi-provider-upload-minio-ce@workspace:*, strapi-provider-upload-minio-ce@workspace:packages/providers/strapi-provider-upload-minio-ce":
+  version: 0.0.0-use.local
+  resolution: "strapi-provider-upload-minio-ce@workspace:packages/providers/strapi-provider-upload-minio-ce"
   dependencies:
     mime-types: "npm:2.1.35"
     minio: "npm:7.1.1"
-  checksum: 10c0/288c7788de687fbdf112ea72f9731efc0b61e7583f0e542775c7fbc76a3553564903964e8588bbcbb3ec15d050deee3a9676ef569d7f534cc967b59b311e68bd
-  languageName: node
-  linkType: hard
+  languageName: unknown
+  linkType: soft
 
 "strapi@workspace:.":
   version: 0.0.0-use.local
