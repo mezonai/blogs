@@ -41,7 +41,7 @@ export default function Header() {
         <div className="flex gap-8 items-center">
           <Link href={ROUTES.HOME} className="flex items-center">
             <Image
-              src="/blogs/Logo_mezon_light.png"
+              src="/Logo_mezon_light.png"
               alt="Logo_mezon_light.png"
               width={44}
               height={44}
@@ -50,27 +50,12 @@ export default function Header() {
           </Link>
 
           {HEADER_TABS.map((tab) => {
-            const isExternal = tab.path.startsWith('http');
-
-            if (isExternal) {
-              return (
-                <a
-                  key={tab.path}
-                  href={tab.path}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#4b5563] font-[500] hover:text-[#5865f2]"
-                >
-                  {tab.label}
-                </a>
-              );
-            }
 
             return (
               <Link
                 key={tab.path}
                 href={tab.path}
-                className={`font-[500] transition-colors ${pathname === tab.path
+                className={`font-[500] transition-colors ${pathname.startsWith(tab.path)
                   ? 'text-[#5865f2] underline underline-offset-4 decoration-[#5865f2] decoration-2'
                   : 'text-[#4b5563] hover:text-[#5865f2]'
                   }`}
@@ -84,7 +69,7 @@ export default function Header() {
       <div className="lg:hidden flex items-center justify-between">
         <Link href={ROUTES.HOME} className="flex items-center">
           <Image
-            src="/blogs/Logo_mezon_light.png"
+            src="/Logo_mezon_light.png"
             alt="Logo_mezon_light.png"
             width={44}
             height={44}
@@ -105,7 +90,7 @@ export default function Header() {
               <SheetTitle>
                 <Link href={ROUTES.HOME} className="flex items-center">
                   <Image
-                    src="/blogs/Logo_mezon_light.png"
+                    src="/Logo_mezon_light.png"
                     alt="Logo_mezon_light.png"
                     width={44}
                     height={44}
@@ -119,29 +104,12 @@ export default function Header() {
 
             <div className="mt-4 flex flex-col gap-3 items-center">
               {HEADER_TABS.map((tab) => {
-                const isExternal = tab.path.startsWith('http');
-
-                if (isExternal) {
-                  return (
-                    <a
-                      key={tab.path}
-                      href={tab.path}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => setOpen(false)}
-                      className="text-[#4b5563] font-[500] hover:text-[#5865f2]"
-                    >
-                      {tab.label}
-                    </a>
-                  );
-                }
-
                 return (
                   <Link
                     key={tab.path}
                     href={tab.path}
                     onClick={() => setOpen(false)}
-                    className={`font-[500] transition-colors ${pathname === tab.path
+                    className={`font-[500] transition-colors ${pathname.startsWith(tab.path)
                       ? 'text-[#5865f2] underline underline-offset-4 decoration-[#5865f2] decoration-2'
                       : 'text-[#4b5563] hover:text-[#5865f2]'
                       }`}

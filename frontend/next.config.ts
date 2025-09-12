@@ -2,7 +2,6 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  basePath: '/blogs',
   /**
    * By default (false), Next.js redirects /path to /path/ (or vice versa, depending on the trailingSlash config in next.config.js). 
    * With basePath: '/blogs', it might redirect /blogs to /blogs/ repeatedly if the server doesn’t recognize the path correctly.

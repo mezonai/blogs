@@ -1,6 +1,6 @@
 export const ROUTES = {
-  BLOGS: '/',
-  HOME: process.env.ENV === "production" ? 'https://mezon.ai' : '/',
+  BLOGS: '/blogs',
+  HOME: 'https://mezon.ai',
   NOT_FOUND: 'not-found',
 };
 
