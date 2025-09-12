@@ -2,7 +2,6 @@ export const ROUTES = {
   BLOGS: '/blogs',
   HOME: 'https://mezon.ai',
   NOT_FOUND: 'not-found',
-  WHAT_NEW: '/what-new',
 };
 
 export const HEADER_TABS = [
@@ -29,10 +28,6 @@ export const HEADER_TABS = [
   {
     label: 'Blogs',
     path: ROUTES.BLOGS,
-  },
-  {
-    label: "What's New",
-    path: ROUTES.WHAT_NEW,
   },
 ];
 
