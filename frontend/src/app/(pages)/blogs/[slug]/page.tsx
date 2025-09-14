@@ -2,11 +2,11 @@ import { draftMode } from "next/headers";
 import BlogsDetails from "./_components";
 
 interface PageProps {
-  params: Promise<{ slug: string }>; // 👈 params là Promise
+  params: Promise<{ slug: string }>;
 }
 
 const BlogsPageDetail = async ({ params }: PageProps) => {
-  const { slug } = await params; // 👈 phải await
+  const { slug } = await params;
   const slugDecode = decodeURIComponent(slug);
 
   const { isEnabled } = await draftMode();
