@@ -19,7 +19,7 @@ const BlogsDetails = async ({ params }: Props) => {
     status: params.status || "PUBLISHED",
   });
 
-  const blog = res.blogs[0];
+  const blog = res.blogs.at(0);
 
   if (!blog) return redirect(ROUTES.NOT_FOUND);
 
