@@ -2,12 +2,20 @@ import { draftMode } from "next/headers";
 import BlogsDetails from "./_components";
 
 interface PageProps {
+  searchParams: Promise<{ status?: string }>
   params: Promise<{ slug: string }>;
 }
 
-const BlogsPageDetail = async ({ params }: PageProps) => {
+const BlogsPageDetail = async ({ params, searchParams }: PageProps) => {
   const { slug } = await params;
   const slugDecode = decodeURIComponent(slug);
+  
+  const draft = await draftMode();
+  if ((await searchParams).status?.toLowerCase() === "draft") {
+    draft.enable();
+  } else {
+    draft.disable();
+  }
 
   const { isEnabled } = await draftMode();
   const status = isEnabled ? "DRAFT" : "PUBLISHED";
