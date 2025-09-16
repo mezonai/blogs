@@ -13,11 +13,16 @@ const BlogsContent = async ({
   const currentPage = isNaN(numPage) || numPage < 1 ? 1 : numPage;
 
   const res = await graphqlQuery(GET_BLOG_LIST, {
+    filters: {
+      isComingSoon: {
+        eq: false,
+      },
+    },
     pagination: {
       page: currentPage,
       pageSize: 6,
     },
-    sort: 'createdAt:DESC',
+    sort: ['createdAt:DESC'],
     status: 'PUBLISHED',
   });
 
