@@ -2,6 +2,7 @@ export const ROUTES = {
   BLOGS: '/blogs',
   HOME: 'https://mezon.ai',
   NOT_FOUND: 'not-found',
+  COMING_SOON: '/blogs/coming-soon',
 };
 
 export const HEADER_TABS = [
