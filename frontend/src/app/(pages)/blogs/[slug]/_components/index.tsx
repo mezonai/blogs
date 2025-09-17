@@ -20,7 +20,7 @@ const BlogsDetails = async ({ params }: { params: { slug?: string } }) => {
 
   const blog = res.blogs[0];
 
-  if (!blog) return redirect(ROUTES.NOT_FOUND);
+  if (!blog) return redirect(ROUTES.COMING_SOON);
 
   return (
     <div className="max-w-[1000px] mx-auto p-6 space-y-8">
