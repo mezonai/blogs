@@ -2,11 +2,10 @@ import { draftMode } from "next/headers";
 import BlogsDetails from "./_components";
 
 interface PageProps {
-  searchParams: Promise<{ status?: string }>
   params: Promise<{ slug: string }>;
 }
 
-const BlogsPageDetail = async ({ params, searchParams }: PageProps) => {
+const BlogsPageDetail = async ({ params }: PageProps) => {
   const { slug } = await params;
   const slugDecode = decodeURIComponent(slug);
 
