@@ -9,13 +9,6 @@ interface PageProps {
 const BlogsPageDetail = async ({ params, searchParams }: PageProps) => {
   const { slug } = await params;
   const slugDecode = decodeURIComponent(slug);
-  
-  const draft = await draftMode();
-  if ((await searchParams).status?.toLowerCase() === "draft") {
-    draft.enable();
-  } else {
-    draft.disable();
-  }
 
   const { isEnabled } = await draftMode();
   const status = isEnabled ? "DRAFT" : "PUBLISHED";

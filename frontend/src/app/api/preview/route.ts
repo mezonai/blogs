@@ -1,4 +1,4 @@
-import { draftMode } from "next/headers";
+import { draftMode, cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 function getPreviewPath(
@@ -33,11 +33,24 @@ export async function GET(request: Request) {
   const contentType = uid?.split(".").pop();
   const previewPath = getPreviewPath(contentType, slug, status);
   const draft = await draftMode();
+  const cookie = await cookies();
 
   if (status.toLowerCase() === "draft") {
     draft.enable();
   } else {
     draft.disable();
+  }
+  
+  const bypassCookie = cookie.get('__prerender_bypass');
+  if (bypassCookie) {
+    cookie.set({
+      name: '__prerender_bypass',
+      value: bypassCookie.value,
+      httpOnly: true, // Keep existing attributes
+      secure: process.env.ENV === 'production' ? true : false,   // Ensure Secure is set with SameSite=None
+      sameSite: process.env.ENV === 'production' ? 'none' : 'lax', // Set SameSite to None
+      path: '/',
+    });
   }
   return redirect(previewPath);
 }
