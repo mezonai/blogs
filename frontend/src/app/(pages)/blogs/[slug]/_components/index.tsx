@@ -6,19 +6,20 @@ import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import Hashtags from './Hashtags';
 
-const BlogsDetails = async ({ params }: { params: { slug?: string } }) => {
-  const { slug } = params;
 
+interface Props {
+  params: { slug?: string; status?: "DRAFT" | "PUBLISHED" };
+}
+
+const BlogsDetails = async ({ params }: Props) => {
   const res = await graphqlQuery(GET_DETAIL_BY_SLUG, {
     filters: {
-      slug: {
-        eq: slug,
-      },
+      slug: { eq: params.slug },
     },
-    status: 'PUBLISHED',
+    status: params.status || "PUBLISHED",
   });
 
-  const blog = res.blogs[0];
+  const blog = res.blogs.at(0);
 
   if (!blog) return redirect(ROUTES.COMING_SOON);
 
