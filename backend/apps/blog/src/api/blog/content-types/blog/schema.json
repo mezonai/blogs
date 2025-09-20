@@ -50,6 +50,10 @@
       "relation": "manyToOne",
       "target": "api::contact.contact",
       "inversedBy": "blogs"
+    },
+    "isComingSoon": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

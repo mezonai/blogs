@@ -21,35 +21,49 @@ const BlogsDetails = async ({ params }: Props) => {
 
   const blog = res.blogs.at(0);
 
-  if (!blog) return redirect(ROUTES.NOT_FOUND);
+  if (!blog) return redirect(ROUTES.COMING_SOON);
 
   return (
     <div className="max-w-[1000px] mx-auto p-6 space-y-8">
-      <h1 className="text-[36px] font-bold mb-6 text-[#333333]">
-        {blog.title}
-      </h1>
-
-      {blog.image?.url && (
-        <div className="relative w-full aspect-[3/2] max-h-[550px]">
+      {blog?.isComingSoon ? (
+        <div className="relative w-full flex justify-center items-center min-h-[60vh]">
           <Image
-            src={blog.image.url}
-            alt={blog.image.alternativeText || blog.title}
-            fill
-            className="object-fill rounded-lg"
+            src="/coming-soon.png"
+            alt="coming-soon.png"
+            width="300"
+            height="300"
+            className="h-[300px] w-[300px]"
           />
         </div>
-      )}
+      ) : (
+        <>
+          <h1 className="text-[36px] font-bold mb-6 text-[#333333]">
+            {blog.title}
+          </h1>
 
-      <div style={{ fontFamily: '"Times New Roman", Times, serif' }}>
-        <Blocks content={blog.contents} />
-        {blog.hashtags && <Hashtags hashtags={blog.hashtags} />}
-        {blog.contact?.contents && (
-          <>
-            <p>------------------------------------------------</p>
-            <Blocks content={blog?.contact?.contents} />
-          </>
-        )}
-      </div>
+          {blog.image?.url && (
+            <div className="relative w-full aspect-[3/2] max-h-[550px]">
+              <Image
+                src={blog.image.url}
+                alt={blog.image.alternativeText || blog.title}
+                fill
+                className="object-fill rounded-lg"
+              />
+            </div>
+          )}
+
+          <div style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+            <Blocks content={blog.contents} />
+            {blog.hashtags && <Hashtags hashtags={blog.hashtags} />}
+            {blog.contact?.contents && (
+              <>
+                <p>------------------------------------------------</p>
+                <Blocks content={blog?.contact?.contents} />
+              </>
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 };
