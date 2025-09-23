@@ -37,7 +37,7 @@ export function Blocks({ content }: BlocksProps) {
         ),
         'list-item': ({ children }) => <li className="ml-4">{children}</li>,
         link: ({ children, url }) => (
-          <a href={url} className="text-blue-600 underline hover:text-blue-800">
+          <a href={url} target='_blank' className="text-blue-600 underline hover:text-blue-800">
             {children}
           </a>
         ),
