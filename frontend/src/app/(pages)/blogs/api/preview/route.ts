@@ -7,11 +7,6 @@ function getPreviewPath(
   status: string | null
 ): string {
   const basePath = (() => {
-    if (!contentType) return "/";
-
-    if (contentType === "blog") {
-      return slug ? "/blogs/" + slug : "/blogs";
-    }
 
     return "/"
   })();
