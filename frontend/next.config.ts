@@ -1,5 +1,12 @@
 import type { NextConfig } from 'next';
 
+const securityHeaders = [
+  {
+    key: "Content-Security-Policy",
+    value: "frame-ancestors 'self' https://cms-blog.mezon.ai;",
+  },
+];
+
 const nextConfig: NextConfig = {
   /* config options here */
   /**
@@ -32,6 +39,14 @@ const nextConfig: NextConfig = {
         pathname: '/mezonblogs/**',
       },
     ],
+  },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: securityHeaders,
+      },
+    ];
   },
 };
 
