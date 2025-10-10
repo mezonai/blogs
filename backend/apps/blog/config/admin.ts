@@ -33,7 +33,7 @@ const adminConfig = ({ env }) => ({
           status,
         });
 
-        const previewURL = `${env("CLIENT_URL")}/blogs/api/preview?${urlSearchParams}`;
+        const previewURL = `${env("CLIENT_URL")}/api/preview?${urlSearchParams}`;
         return previewURL;
       },
     },
