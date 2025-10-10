@@ -24,6 +24,7 @@ export default [
             'http://localhost:9000',
             'cdn.mezon.ai',
           ],
+          'frame-src': ["'self'", "https://mezon.ai/blogs", "https://mezon.ai"],
           upgradeInsecureRequests: null,
         },
       },
