@@ -45,6 +45,8 @@ export function Blocks({ content }: BlocksProps) {
           <Image
             src={image?.url || ''}
             className="my-4 rounded-lg"
+            width={image?.width || 0}
+            height={image?.height || 0}
             alt={image?.alternativeText || 'Image'}
           />
         ),
