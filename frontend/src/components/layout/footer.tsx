@@ -11,9 +11,9 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-xs md:text-md uppercase tracking-wider mb-4 md:mb-5 text-white">Platform</h3>
             <div className="space-y-2 md:space-y-3">
-              <Link href="https://mezon.ai/about" className="text-white/90 hover:text-white transition-colors text-xs md:text-sm leading-relaxed block">About</Link>
-              <Link href="https://mezon.ai/blogs/" target="_blank" rel="noreferrer" className="text-white/90 hover:text-white transition-colors text-xs md:text-sm leading-relaxed block">Blog</Link>
-              <Link href="https://mezon.ai/developers" target="_blank" rel="noreferrer" className="text-white/90 hover:text-white transition-colors text-xs md:text-sm leading-relaxed block">Tích Hợp API Cho Nhà Phát Triển</Link>
+              <Link href="https://mezon.ai/about" target="_blank" rel="noreferrer" className="text-white/90 hover:text-white transition-colors text-xs md:text-sm leading-relaxed block">About</Link>
+              <Link href="https://mezon.ai/blogs/" className="text-white/90 hover:text-white transition-colors text-xs md:text-sm leading-relaxed block">Blog</Link>
+              <Link href="https://mezon.ai/developers" target="_blank" rel="noreferrer" className="text-white/90 hover:text-white transition-colors text-xs md:text-sm leading-relaxed block">Developer API Integration</Link>
             </div>
           </div>
           <div>
@@ -28,7 +28,7 @@ export default function Footer() {
             <h3 className="font-semibold text-xs md:text-md uppercase tracking-wider mb-4 md:mb-5 text-white">Company</h3>
             <div className="space-y-2 md:space-y-3">
               <Link href="https://mezon.ai/brand-center" target="_blank" rel="noreferrer" className="text-white/90 hover:text-white transition-colors text-xs md:text-sm leading-relaxed block">Brand Center</Link>
-              <Link href="https://mezon.ai/contact-us" className="text-white/90 hover:text-white transition-colors text-xs md:text-sm leading-relaxed block">Contact</Link>
+              <Link href="https://mezon.ai/contact-us" target="_blank" rel="noreferrer"  className="text-white/90 hover:text-white transition-colors text-xs md:text-sm leading-relaxed block">Contact</Link>
               <Link href="https://mezon.ai/clans/" target="_blank" rel="noreferrer" className="text-white/90 hover:text-white transition-colors text-xs md:text-sm leading-relaxed block">Mezon Clan</Link>
             </div>
           </div>
