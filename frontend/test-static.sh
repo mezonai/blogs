@@ -18,18 +18,18 @@ echo "✅ Found 'out' directory"
 echo ""
 
 # Check if Python is available (for simple HTTP server)
-if command -v python3 &> /dev/null; then
+if command -v py &> /dev/null; then
   echo "🚀 Starting local server on http://localhost:3000"
   echo "   Press Ctrl+C to stop the server"
   echo ""
   cd out
-  python3 -m http.server 3000
-elif command -v python &> /dev/null; then
+  py -m http.server 3000
+elif command -v py &> /dev/null; then
   echo "🚀 Starting local server on http://localhost:3000"
   echo "   Press Ctrl+C to stop the server"
   echo ""
   cd out
-  python -m SimpleHTTPServer 3000
+  py -m SimpleHTTPServer 3000
 elif command -v npx &> /dev/null; then
   echo "🚀 Starting local server on http://localhost:3000"
   echo "   Press Ctrl+C to stop the server"

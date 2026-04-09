@@ -33,7 +33,7 @@ module.exports = ({ env }) => ({
         bucket: env('AWS_BUCKET', 'mezon'),
         endPoint: env('AWS_ENDPOINT'),
         port: env('MINIO_PORT', 9000),
-        useSSL: env('MINIO_USE_SSL', true),
+        useSSL: env('MINIO_USE_SSL', false),
         folder: env('AWS_FOLDER', 'mezonblogs'),
       },
     },
