@@ -19,8 +19,10 @@ export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
     };
@@ -34,7 +36,7 @@ export default function Header() {
 
   return (
     <div
-      className={`fixed top-0 w-full z-50 transition-colors duration-300 w-full p-4 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'
+      className={`fixed top-0 w-full z-50 transition-colors duration-300 w-full p-4 ${mounted && scrolled ? 'bg-white shadow-md' : 'bg-transparent'
         }`}
     >
       <div className="hidden lg:flex space-x-4 justify-between items-center max-w-[1200px] mx-auto ">

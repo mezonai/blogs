@@ -13,6 +13,8 @@ export async function graphqlQuery(
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ query: queryString, variables }),
+    // Enable caching for static generation but allow revalidation
+    next: { revalidate: false }, // No revalidation for fully static
   });
 
   const json = await res.json();

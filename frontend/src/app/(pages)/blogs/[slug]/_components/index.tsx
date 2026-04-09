@@ -42,7 +42,7 @@ const BlogsDetails = async ({ params }: Props) => {
           </h1>
 
           {blog.image?.url && (
-            <div className="relative w-full aspect-[3/2] max-h-[550px]">
+            <div className="relative w-full aspect-[3/2]">
               <Image
                 src={blog.image.url}
                 alt={blog.image.alternativeText || blog.title}

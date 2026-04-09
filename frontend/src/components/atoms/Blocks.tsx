@@ -41,15 +41,24 @@ export function Blocks({ content }: BlocksProps) {
             {children}
           </a>
         ),
-        image: ({ image }) => (
-          <Image
-            src={image?.url || ''}
-            className="my-4 rounded-lg"
-            width={image?.width || 0}
-            height={image?.height || 0}
-            alt={image?.alternativeText || 'Image'}
-          />
-        ),
+        image: ({ image }) => {
+          if (!image?.url) return null;
+          
+          // Use width and height if available, otherwise use a reasonable default
+          const width = image.width || 800;
+          const height = image.height || 600;
+          
+          return (
+            <Image
+              src={image.url}
+              width={width}
+              height={height}
+              className="my-4 rounded-lg w-auto h-auto max-w-full"
+              alt={image.alternativeText || 'Image'}
+              priority={false}
+            />
+          );
+        },
       }}
     />
   );

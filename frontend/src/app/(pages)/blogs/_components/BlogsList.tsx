@@ -2,6 +2,7 @@
 
 import { BlogCard } from './BlogCard';
 import { BlogsPagination } from './BlogsPagination';
+import { useRouter } from 'next/navigation';
 
 interface BlogsListProps {
   data: {
@@ -21,10 +22,15 @@ export default function BlogsList({
   totalPages,
   currentPage,
 }: BlogsListProps) {
+  const router = useRouter();
+  
   const handlePageChange = (page: number) => {
-    const params = new URLSearchParams(window.location.search);
-    params.set('page', page.toString());
-    window.location.search = params.toString();
+    // Use path-based pagination for static export
+    if (page === 1) {
+      router.push('/blogs/');
+    } else {
+      router.push(`/blogs/page/${page}/`);
+    }
   };
 
   return (

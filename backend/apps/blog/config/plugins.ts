@@ -20,8 +20,8 @@ module.exports = ({ env }) => ({
   graphql: {
     enabled: true,
     config: {
-      defaultLimit: 10,
-      maxLimit: 20,
+      defaultLimit: 100,
+      maxLimit: 100,
     },
   },
   upload: {
