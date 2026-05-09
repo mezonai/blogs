@@ -27,20 +27,15 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
   },
   upload: {
     config: {
-      provider: 'aws-s3',
+      provider: 'cloudinary',
       providerOptions: {
-        s3Options: {
-          credentials: {
-            accessKeyId: env('AWS_ACCESS_KEY_ID'),
-            secretAccessKey: env('AWS_SECRET_ACCESS_KEY'),
-          },
-          endpoint: env('AWS_ENDPOINT'),
-          forcePathStyle: true,
-          region: env('AWS_REGION', 'us-east-1'),
-        },
-        params: {
-          Bucket: env('AWS_BUCKET'),
-        },
+        cloud_name: env('CLOUDINARY_NAME'),
+        api_key: env('CLOUDINARY_KEY'),
+        api_secret: env('CLOUDINARY_SECRET'),
+      },
+      actionOptions: {
+        upload: {},
+        delete: {},
       },
     },
   },
