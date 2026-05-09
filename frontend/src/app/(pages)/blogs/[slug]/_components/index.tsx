@@ -17,7 +17,7 @@ const BlogsDetails = async ({ params }: Props) => {
       slug: { eq: params.slug },
     },
     status: params.status || "PUBLISHED",
-  });
+  }, { tags: ['blog'] });
 
   const blog = res.blogs.at(0);
 

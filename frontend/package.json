@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "dotenv -e .env -- next dev --turbopack",
-    "build": "next build",
+    "build": "dotenv -e .env -- next build",
     "build:static": "./build-static.sh",
     "test:static": "./test-static.sh",
     "start": "dotenv -e .env -- next start",

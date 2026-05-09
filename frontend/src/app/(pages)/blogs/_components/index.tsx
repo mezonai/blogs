@@ -24,7 +24,7 @@ const BlogsContent = async ({
     },
     sort: ['createdAt:DESC'],
     status: 'PUBLISHED',
-  });
+  }, { tags: ['blog'] });
 
   const blogsConnection = res.blogs_connection;
   if (!blogsConnection) return redirect(ROUTES.NOT_FOUND);

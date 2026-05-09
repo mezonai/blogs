@@ -1,27 +1,20 @@
 import type { NextConfig } from 'next';
 
+const isStatic = process.env.NEXT_PUBLIC_STATIC_BUILD === 'true';
+
 const nextConfig: NextConfig = {
-  /* config options here */
-  /**
-   * By default (false), Next.js redirects /path to /path/ (or vice versa, depending on the trailingSlash config in next.config.js). 
-   * With basePath: '/blogs', it might redirect /blogs to /blogs/ repeatedly if the server doesn't recognize the path correctly.
-   * In this case, nginx server config is:
-   * location /blogs/ {
-      proxy_pass http://127.0.0.1:1338;
-    }
-   * so make trailing slash true to resolve the redirect loop and CSS loading issues!   
-   */
   trailingSlash: true,
-  
-  // Enable static export
-  output: 'export',
+  output: isStatic ? 'export' : undefined,
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: isStatic,
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
+      {
+        protocol: 'https',
         hostname: '**',
-        pathname: '/**',
       },
       {
         protocol: 'http',
@@ -29,16 +22,8 @@ const nextConfig: NextConfig = {
         port: '1337',
         pathname: '/uploads/**',
       },
-      {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '9000',
-        pathname: '/mezonblogs/**',
-      },
     ],
   },
-  // Note: headers() is not supported in static export
-  // Security headers should be configured at the server level (nginx, etc.)
 };
 
 export default nextConfig;

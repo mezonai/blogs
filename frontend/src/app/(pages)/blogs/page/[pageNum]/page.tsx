@@ -22,7 +22,7 @@ export async function generateStaticParams() {
       },
       sort: ['createdAt:DESC'],
       status: 'PUBLISHED',
-    });
+    }, { tags: ['blog'] });
 
     const pageCount = res.blogs_connection?.pageInfo?.pageCount || 1;
     

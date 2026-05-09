@@ -6,6 +6,7 @@ import { DocumentNode, print } from 'graphql';
 export async function graphqlQuery(
   query: string | DocumentNode,
   variables?: Record<string, any>,
+  options: { tags?: string[]; revalidate?: number | false } = {}
 ) {
   const queryString = typeof query === 'string' ? query : print(query);
 
@@ -13,8 +14,11 @@ export async function graphqlQuery(
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ query: queryString, variables }),
-    // Enable caching for static generation but allow revalidation
-    next: { revalidate: false }, // No revalidation for fully static
+    // Use tags for on-demand revalidation and respect the revalidate setting
+    next: { 
+      tags: options.tags,
+      revalidate: options.revalidate 
+    },
   });
 
   const json = await res.json();
